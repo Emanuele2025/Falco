@@ -34,6 +34,9 @@
             esciToolStripMenuItem = new ToolStripMenuItem();
             fatturaToolStripMenuItem = new ToolStripMenuItem();
             creaToolStripMenuItem = new ToolStripMenuItem();
+            opzioniToolStripMenuItem = new ToolStripMenuItem();
+            toolStripMenuItem1 = new ToolStripMenuItem();
+            informazioniToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -53,7 +56,7 @@
             // menuStrip1
             // 
             menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, fatturaToolStripMenuItem });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, fatturaToolStripMenuItem, opzioniToolStripMenuItem, toolStripMenuItem1 });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(800, 28);
@@ -87,6 +90,25 @@
             creaToolStripMenuItem.Size = new Size(224, 26);
             creaToolStripMenuItem.Text = "Crea";
             // 
+            // opzioniToolStripMenuItem
+            // 
+            opzioniToolStripMenuItem.Name = "opzioniToolStripMenuItem";
+            opzioniToolStripMenuItem.Size = new Size(75, 24);
+            opzioniToolStripMenuItem.Text = "Opzioni";
+            // 
+            // toolStripMenuItem1
+            // 
+            toolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { informazioniToolStripMenuItem });
+            toolStripMenuItem1.Name = "toolStripMenuItem1";
+            toolStripMenuItem1.Size = new Size(30, 24);
+            toolStripMenuItem1.Text = "?";
+            // 
+            // informazioniToolStripMenuItem
+            // 
+            informazioniToolStripMenuItem.Name = "informazioniToolStripMenuItem";
+            informazioniToolStripMenuItem.Size = new Size(224, 26);
+            informazioniToolStripMenuItem.Text = "Informazioni";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -113,5 +135,8 @@
         private ToolStripMenuItem esciToolStripMenuItem;
         private ToolStripMenuItem fatturaToolStripMenuItem;
         private ToolStripMenuItem creaToolStripMenuItem;
+        private ToolStripMenuItem opzioniToolStripMenuItem;
+        private ToolStripMenuItem toolStripMenuItem1;
+        private ToolStripMenuItem informazioniToolStripMenuItem;
     }
 }
