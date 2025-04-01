@@ -37,6 +37,8 @@
             opzioniToolStripMenuItem = new ToolStripMenuItem();
             toolStripMenuItem1 = new ToolStripMenuItem();
             informazioniToolStripMenuItem = new ToolStripMenuItem();
+            clientiToolStripMenuItem = new ToolStripMenuItem();
+            anagraficaToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -56,7 +58,7 @@
             // menuStrip1
             // 
             menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, fatturaToolStripMenuItem, opzioniToolStripMenuItem, toolStripMenuItem1 });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, clientiToolStripMenuItem, fatturaToolStripMenuItem, opzioniToolStripMenuItem, toolStripMenuItem1 });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Size = new Size(800, 28);
@@ -109,6 +111,19 @@
             informazioniToolStripMenuItem.Size = new Size(224, 26);
             informazioniToolStripMenuItem.Text = "Informazioni";
             // 
+            // clientiToolStripMenuItem
+            // 
+            clientiToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { anagraficaToolStripMenuItem });
+            clientiToolStripMenuItem.Name = "clientiToolStripMenuItem";
+            clientiToolStripMenuItem.Size = new Size(65, 24);
+            clientiToolStripMenuItem.Text = "Clienti";
+            // 
+            // anagraficaToolStripMenuItem
+            // 
+            anagraficaToolStripMenuItem.Name = "anagraficaToolStripMenuItem";
+            anagraficaToolStripMenuItem.Size = new Size(224, 26);
+            anagraficaToolStripMenuItem.Text = "Anagrafica";
+            // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -138,5 +153,7 @@
         private ToolStripMenuItem opzioniToolStripMenuItem;
         private ToolStripMenuItem toolStripMenuItem1;
         private ToolStripMenuItem informazioniToolStripMenuItem;
+        private ToolStripMenuItem clientiToolStripMenuItem;
+        private ToolStripMenuItem anagraficaToolStripMenuItem;
     }
 }
