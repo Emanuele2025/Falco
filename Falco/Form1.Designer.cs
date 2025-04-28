@@ -32,13 +32,14 @@
             menuStrip1 = new MenuStrip();
             fileToolStripMenuItem = new ToolStripMenuItem();
             esciToolStripMenuItem = new ToolStripMenuItem();
+            clientiToolStripMenuItem = new ToolStripMenuItem();
+            anagraficaToolStripMenuItem = new ToolStripMenuItem();
             fatturaToolStripMenuItem = new ToolStripMenuItem();
             creaToolStripMenuItem = new ToolStripMenuItem();
             opzioniToolStripMenuItem = new ToolStripMenuItem();
             toolStripMenuItem1 = new ToolStripMenuItem();
             informazioniToolStripMenuItem = new ToolStripMenuItem();
-            clientiToolStripMenuItem = new ToolStripMenuItem();
-            anagraficaToolStripMenuItem = new ToolStripMenuItem();
+            inviateToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -79,9 +80,22 @@
             esciToolStripMenuItem.Text = "Esci";
             esciToolStripMenuItem.Click += esciToolStripMenuItem_Click;
             // 
+            // clientiToolStripMenuItem
+            // 
+            clientiToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { anagraficaToolStripMenuItem });
+            clientiToolStripMenuItem.Name = "clientiToolStripMenuItem";
+            clientiToolStripMenuItem.Size = new Size(65, 24);
+            clientiToolStripMenuItem.Text = "Clienti";
+            // 
+            // anagraficaToolStripMenuItem
+            // 
+            anagraficaToolStripMenuItem.Name = "anagraficaToolStripMenuItem";
+            anagraficaToolStripMenuItem.Size = new Size(224, 26);
+            anagraficaToolStripMenuItem.Text = "Anagrafica";
+            // 
             // fatturaToolStripMenuItem
             // 
-            fatturaToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { creaToolStripMenuItem });
+            fatturaToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { creaToolStripMenuItem, inviateToolStripMenuItem });
             fatturaToolStripMenuItem.Name = "fatturaToolStripMenuItem";
             fatturaToolStripMenuItem.Size = new Size(68, 24);
             fatturaToolStripMenuItem.Text = "Fattura";
@@ -108,21 +122,14 @@
             // informazioniToolStripMenuItem
             // 
             informazioniToolStripMenuItem.Name = "informazioniToolStripMenuItem";
-            informazioniToolStripMenuItem.Size = new Size(224, 26);
+            informazioniToolStripMenuItem.Size = new Size(176, 26);
             informazioniToolStripMenuItem.Text = "Informazioni";
             // 
-            // clientiToolStripMenuItem
+            // inviateToolStripMenuItem
             // 
-            clientiToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { anagraficaToolStripMenuItem });
-            clientiToolStripMenuItem.Name = "clientiToolStripMenuItem";
-            clientiToolStripMenuItem.Size = new Size(65, 24);
-            clientiToolStripMenuItem.Text = "Clienti";
-            // 
-            // anagraficaToolStripMenuItem
-            // 
-            anagraficaToolStripMenuItem.Name = "anagraficaToolStripMenuItem";
-            anagraficaToolStripMenuItem.Size = new Size(224, 26);
-            anagraficaToolStripMenuItem.Text = "Anagrafica";
+            inviateToolStripMenuItem.Name = "inviateToolStripMenuItem";
+            inviateToolStripMenuItem.Size = new Size(224, 26);
+            inviateToolStripMenuItem.Text = "Inviate";
             // 
             // Form1
             // 
@@ -155,5 +162,6 @@
         private ToolStripMenuItem informazioniToolStripMenuItem;
         private ToolStripMenuItem clientiToolStripMenuItem;
         private ToolStripMenuItem anagraficaToolStripMenuItem;
+        private ToolStripMenuItem inviateToolStripMenuItem;
     }
 }
