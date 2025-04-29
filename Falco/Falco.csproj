@@ -9,7 +9,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Immagini\" />
+    <Folder Include="Immagini\Icone\" />
   </ItemGroup>
 
 </Project>
