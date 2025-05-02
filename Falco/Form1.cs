@@ -19,5 +19,11 @@ namespace Falco
             //https://www.agenziaentrate.gov.it/portale/normativa-prassi-e-regole-tecniche-fatture-elettroniche
             //Scaricare il file di Stile
         }
+
+        private void informazioniToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmInformazioni frmInformazioni = new FrmInformazioni();
+            frmInformazioni.ShowDialog();
+        }
     }
 }

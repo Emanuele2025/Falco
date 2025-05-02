@@ -36,10 +36,10 @@
             anagraficaToolStripMenuItem = new ToolStripMenuItem();
             fatturaToolStripMenuItem = new ToolStripMenuItem();
             creaToolStripMenuItem = new ToolStripMenuItem();
+            inviateToolStripMenuItem = new ToolStripMenuItem();
             opzioniToolStripMenuItem = new ToolStripMenuItem();
             toolStripMenuItem1 = new ToolStripMenuItem();
             informazioniToolStripMenuItem = new ToolStripMenuItem();
-            inviateToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -90,7 +90,7 @@
             // anagraficaToolStripMenuItem
             // 
             anagraficaToolStripMenuItem.Name = "anagraficaToolStripMenuItem";
-            anagraficaToolStripMenuItem.Size = new Size(224, 26);
+            anagraficaToolStripMenuItem.Size = new Size(164, 26);
             anagraficaToolStripMenuItem.Text = "Anagrafica";
             // 
             // fatturaToolStripMenuItem
@@ -103,8 +103,14 @@
             // creaToolStripMenuItem
             // 
             creaToolStripMenuItem.Name = "creaToolStripMenuItem";
-            creaToolStripMenuItem.Size = new Size(224, 26);
+            creaToolStripMenuItem.Size = new Size(136, 26);
             creaToolStripMenuItem.Text = "Crea";
+            // 
+            // inviateToolStripMenuItem
+            // 
+            inviateToolStripMenuItem.Name = "inviateToolStripMenuItem";
+            inviateToolStripMenuItem.Size = new Size(136, 26);
+            inviateToolStripMenuItem.Text = "Inviate";
             // 
             // opzioniToolStripMenuItem
             // 
@@ -122,14 +128,9 @@
             // informazioniToolStripMenuItem
             // 
             informazioniToolStripMenuItem.Name = "informazioniToolStripMenuItem";
-            informazioniToolStripMenuItem.Size = new Size(176, 26);
+            informazioniToolStripMenuItem.Size = new Size(224, 26);
             informazioniToolStripMenuItem.Text = "Informazioni";
-            // 
-            // inviateToolStripMenuItem
-            // 
-            inviateToolStripMenuItem.Name = "inviateToolStripMenuItem";
-            inviateToolStripMenuItem.Size = new Size(224, 26);
-            inviateToolStripMenuItem.Text = "Inviate";
+            informazioniToolStripMenuItem.Click += informazioniToolStripMenuItem_Click;
             // 
             // Form1
             // 
