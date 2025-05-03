@@ -18,6 +18,7 @@ namespace Falco
             //https://www.agenziaentrate.gov.it/portale/specifiche-tecniche-versione-1.9
             //https://www.agenziaentrate.gov.it/portale/normativa-prassi-e-regole-tecniche-fatture-elettroniche
             //Scaricare il file di Stile
+            //Leggere anche la firma
         }
 
         private void informazioniToolStripMenuItem_Click(object sender, EventArgs e)
