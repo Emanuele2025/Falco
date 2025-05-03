@@ -40,6 +40,7 @@
             opzioniToolStripMenuItem = new ToolStripMenuItem();
             toolStripMenuItem1 = new ToolStripMenuItem();
             informazioniToolStripMenuItem = new ToolStripMenuItem();
+            gestioneToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -76,7 +77,7 @@
             // esciToolStripMenuItem
             // 
             esciToolStripMenuItem.Name = "esciToolStripMenuItem";
-            esciToolStripMenuItem.Size = new Size(117, 26);
+            esciToolStripMenuItem.Size = new Size(224, 26);
             esciToolStripMenuItem.Text = "Esci";
             esciToolStripMenuItem.Click += esciToolStripMenuItem_Click;
             // 
@@ -90,12 +91,12 @@
             // anagraficaToolStripMenuItem
             // 
             anagraficaToolStripMenuItem.Name = "anagraficaToolStripMenuItem";
-            anagraficaToolStripMenuItem.Size = new Size(164, 26);
+            anagraficaToolStripMenuItem.Size = new Size(224, 26);
             anagraficaToolStripMenuItem.Text = "Anagrafica";
             // 
             // fatturaToolStripMenuItem
             // 
-            fatturaToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { creaToolStripMenuItem, inviateToolStripMenuItem });
+            fatturaToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { creaToolStripMenuItem, inviateToolStripMenuItem, gestioneToolStripMenuItem });
             fatturaToolStripMenuItem.Name = "fatturaToolStripMenuItem";
             fatturaToolStripMenuItem.Size = new Size(68, 24);
             fatturaToolStripMenuItem.Text = "Fattura";
@@ -103,13 +104,13 @@
             // creaToolStripMenuItem
             // 
             creaToolStripMenuItem.Name = "creaToolStripMenuItem";
-            creaToolStripMenuItem.Size = new Size(136, 26);
+            creaToolStripMenuItem.Size = new Size(224, 26);
             creaToolStripMenuItem.Text = "Crea";
             // 
             // inviateToolStripMenuItem
             // 
             inviateToolStripMenuItem.Name = "inviateToolStripMenuItem";
-            inviateToolStripMenuItem.Size = new Size(136, 26);
+            inviateToolStripMenuItem.Size = new Size(224, 26);
             inviateToolStripMenuItem.Text = "Inviate";
             // 
             // opzioniToolStripMenuItem
@@ -128,9 +129,15 @@
             // informazioniToolStripMenuItem
             // 
             informazioniToolStripMenuItem.Name = "informazioniToolStripMenuItem";
-            informazioniToolStripMenuItem.Size = new Size(224, 26);
+            informazioniToolStripMenuItem.Size = new Size(176, 26);
             informazioniToolStripMenuItem.Text = "Informazioni";
             informazioniToolStripMenuItem.Click += informazioniToolStripMenuItem_Click;
+            // 
+            // gestioneToolStripMenuItem
+            // 
+            gestioneToolStripMenuItem.Name = "gestioneToolStripMenuItem";
+            gestioneToolStripMenuItem.Size = new Size(224, 26);
+            gestioneToolStripMenuItem.Text = "Gestione";
             // 
             // Form1
             // 
@@ -164,5 +171,6 @@
         private ToolStripMenuItem clientiToolStripMenuItem;
         private ToolStripMenuItem anagraficaToolStripMenuItem;
         private ToolStripMenuItem inviateToolStripMenuItem;
+        private ToolStripMenuItem gestioneToolStripMenuItem;
     }
 }
