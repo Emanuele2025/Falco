@@ -26,7 +26,7 @@ namespace Falco
             XmlElement root = doc.CreateElement("FatturaElettronica");
             doc.AppendChild(root);
 
-            // Dati dell'emittente
+            // Dati dell'emittente 
             XmlElement cedente = doc.CreateElement("CedentePrestatore");
             root.AppendChild(cedente);
             XmlElement nomeCedente = doc.CreateElement("Nome");
