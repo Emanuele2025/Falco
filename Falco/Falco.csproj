@@ -6,10 +6,11 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>Immagini\Icone\falco.ico</ApplicationIcon>
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Immagini\Icone\" />
+    <Content Include="Immagini\Icone\falco.ico" />
   </ItemGroup>
 
 </Project>

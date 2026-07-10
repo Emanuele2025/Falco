@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             label1 = new Label();
             menuStrip1 = new MenuStrip();
             fileToolStripMenuItem = new ToolStripMenuItem();
@@ -37,10 +38,10 @@
             fatturaToolStripMenuItem = new ToolStripMenuItem();
             creaToolStripMenuItem = new ToolStripMenuItem();
             inviateToolStripMenuItem = new ToolStripMenuItem();
+            gestioneToolStripMenuItem = new ToolStripMenuItem();
             opzioniToolStripMenuItem = new ToolStripMenuItem();
             toolStripMenuItem1 = new ToolStripMenuItem();
             informazioniToolStripMenuItem = new ToolStripMenuItem();
-            gestioneToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -50,9 +51,9 @@
             label1.Dock = DockStyle.Top;
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
             label1.ForeColor = SystemColors.ButtonHighlight;
-            label1.Location = new Point(0, 28);
+            label1.Location = new Point(0, 24);
             label1.Name = "label1";
-            label1.Size = new Size(800, 28);
+            label1.Size = new Size(700, 21);
             label1.TabIndex = 1;
             label1.Text = "Gestione e funzionalità per la fattura elettronica";
             label1.TextAlign = ContentAlignment.TopCenter;
@@ -63,7 +64,8 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, clientiToolStripMenuItem, fatturaToolStripMenuItem, opzioniToolStripMenuItem, toolStripMenuItem1 });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(800, 28);
+            menuStrip1.Padding = new Padding(5, 2, 0, 2);
+            menuStrip1.Size = new Size(700, 24);
             menuStrip1.TabIndex = 2;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -71,13 +73,13 @@
             // 
             fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { esciToolStripMenuItem });
             fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            fileToolStripMenuItem.Size = new Size(46, 24);
+            fileToolStripMenuItem.Size = new Size(37, 20);
             fileToolStripMenuItem.Text = "File";
             // 
             // esciToolStripMenuItem
             // 
             esciToolStripMenuItem.Name = "esciToolStripMenuItem";
-            esciToolStripMenuItem.Size = new Size(224, 26);
+            esciToolStripMenuItem.Size = new Size(180, 22);
             esciToolStripMenuItem.Text = "Esci";
             esciToolStripMenuItem.Click += esciToolStripMenuItem_Click;
             // 
@@ -85,68 +87,70 @@
             // 
             clientiToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { anagraficaToolStripMenuItem });
             clientiToolStripMenuItem.Name = "clientiToolStripMenuItem";
-            clientiToolStripMenuItem.Size = new Size(65, 24);
+            clientiToolStripMenuItem.Size = new Size(53, 20);
             clientiToolStripMenuItem.Text = "Clienti";
             // 
             // anagraficaToolStripMenuItem
             // 
             anagraficaToolStripMenuItem.Name = "anagraficaToolStripMenuItem";
-            anagraficaToolStripMenuItem.Size = new Size(224, 26);
+            anagraficaToolStripMenuItem.Size = new Size(131, 22);
             anagraficaToolStripMenuItem.Text = "Anagrafica";
             // 
             // fatturaToolStripMenuItem
             // 
             fatturaToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { creaToolStripMenuItem, inviateToolStripMenuItem, gestioneToolStripMenuItem });
             fatturaToolStripMenuItem.Name = "fatturaToolStripMenuItem";
-            fatturaToolStripMenuItem.Size = new Size(68, 24);
+            fatturaToolStripMenuItem.Size = new Size(56, 20);
             fatturaToolStripMenuItem.Text = "Fattura";
             // 
             // creaToolStripMenuItem
             // 
             creaToolStripMenuItem.Name = "creaToolStripMenuItem";
-            creaToolStripMenuItem.Size = new Size(224, 26);
+            creaToolStripMenuItem.Size = new Size(120, 22);
             creaToolStripMenuItem.Text = "Crea";
             // 
             // inviateToolStripMenuItem
             // 
             inviateToolStripMenuItem.Name = "inviateToolStripMenuItem";
-            inviateToolStripMenuItem.Size = new Size(224, 26);
+            inviateToolStripMenuItem.Size = new Size(120, 22);
             inviateToolStripMenuItem.Text = "Inviate";
+            // 
+            // gestioneToolStripMenuItem
+            // 
+            gestioneToolStripMenuItem.Name = "gestioneToolStripMenuItem";
+            gestioneToolStripMenuItem.Size = new Size(120, 22);
+            gestioneToolStripMenuItem.Text = "Gestione";
             // 
             // opzioniToolStripMenuItem
             // 
             opzioniToolStripMenuItem.Name = "opzioniToolStripMenuItem";
-            opzioniToolStripMenuItem.Size = new Size(75, 24);
+            opzioniToolStripMenuItem.Size = new Size(60, 20);
             opzioniToolStripMenuItem.Text = "Opzioni";
             // 
             // toolStripMenuItem1
             // 
             toolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { informazioniToolStripMenuItem });
             toolStripMenuItem1.Name = "toolStripMenuItem1";
-            toolStripMenuItem1.Size = new Size(30, 24);
+            toolStripMenuItem1.Size = new Size(24, 20);
             toolStripMenuItem1.Text = "?";
             // 
             // informazioniToolStripMenuItem
             // 
             informazioniToolStripMenuItem.Name = "informazioniToolStripMenuItem";
-            informazioniToolStripMenuItem.Size = new Size(176, 26);
+            informazioniToolStripMenuItem.Size = new Size(141, 22);
             informazioniToolStripMenuItem.Text = "Informazioni";
             informazioniToolStripMenuItem.Click += informazioniToolStripMenuItem_Click;
             // 
-            // gestioneToolStripMenuItem
-            // 
-            gestioneToolStripMenuItem.Name = "gestioneToolStripMenuItem";
-            gestioneToolStripMenuItem.Size = new Size(224, 26);
-            gestioneToolStripMenuItem.Text = "Gestione";
-            // 
             // Form1
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(700, 338);
             Controls.Add(label1);
             Controls.Add(menuStrip1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             MainMenuStrip = menuStrip1;
+            Margin = new Padding(3, 2, 3, 2);
             Name = "Form1";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Falco - Fattura Elettronica";
