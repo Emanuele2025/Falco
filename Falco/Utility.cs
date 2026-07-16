@@ -6,10 +6,14 @@ namespace Falco
 {
     public static class Utility
     {
+        #region Campi e proprietà
+        const string titolo = "Falco";
+        #endregion
+
 
         #region Messaggi a video
 
-        const string titolo = "Falco";
+
         /// <summary>
         /// Messaggio informativo
         /// </summary>
@@ -49,6 +53,22 @@ namespace Falco
 
 
         #endregion
+
+
+        #region Funzioni
+
+        //TODO: fare funzione da importo euro a testo
+
+
+
+        #endregion
+
+
+
+
+
+
+
 
 
 
