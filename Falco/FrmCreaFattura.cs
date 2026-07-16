@@ -52,5 +52,18 @@ namespace Falco
 
             Console.WriteLine("Fattura Elettronica Creata con Successo!");
         }
+
+        private void FrmCreaFattura_Load(object sender, EventArgs e)
+        {
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+        }
     }
 }
