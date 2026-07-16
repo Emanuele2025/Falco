@@ -13,7 +13,7 @@ namespace Falco
         /// <summary>
         /// Messaggio informativo
         /// </summary>
-        /// <param name="testo"></param>
+        /// <param name="testo">testo da visualizzare</param>
         public static void MessaggioInfo(string testo)
         {
             MessageBox.Show(testo, titolo, MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -21,7 +21,7 @@ namespace Falco
         /// <summary>
         /// MEssaggio di errore
         /// </summary>
-        /// <param name="test"></param>
+        /// <param name="testo"> testo da visualizzare</param>
         public static void MessaggioErrore(string testo)
         {
             MessageBox.Show(testo, titolo, MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -37,7 +37,7 @@ namespace Falco
         /// <summary>
         /// Messaggio di scelta si e no generico
         /// </summary>
-        /// <param name="testo"></param>
+        /// <param name="testo">testo da visualizzare</param>
         /// <returns></returns>
         public static bool MessaggioSiNo(string testo)
         {

@@ -39,11 +39,11 @@
             creaToolStripMenuItem = new ToolStripMenuItem();
             inviateToolStripMenuItem = new ToolStripMenuItem();
             gestioneToolStripMenuItem = new ToolStripMenuItem();
+            fattureRicevuteToolStripMenuItem = new ToolStripMenuItem();
+            fattureInviateToolStripMenuItem = new ToolStripMenuItem();
             opzioniToolStripMenuItem = new ToolStripMenuItem();
             toolStripMenuItem1 = new ToolStripMenuItem();
             informazioniToolStripMenuItem = new ToolStripMenuItem();
-            fattureRicevuteToolStripMenuItem = new ToolStripMenuItem();
-            fattureInviateToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -55,7 +55,7 @@
             label1.ForeColor = SystemColors.ControlLightLight;
             label1.Location = new Point(0, 24);
             label1.Name = "label1";
-            label1.Size = new Size(700, 21);
+            label1.Size = new Size(1096, 21);
             label1.TabIndex = 1;
             label1.Text = "Gestione delle fatture Elettroniche - Principale";
             label1.TextAlign = ContentAlignment.TopCenter;
@@ -67,7 +67,7 @@
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Padding = new Padding(5, 2, 0, 2);
-            menuStrip1.Size = new Size(700, 24);
+            menuStrip1.Size = new Size(1096, 24);
             menuStrip1.TabIndex = 2;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -81,7 +81,7 @@
             // esciToolStripMenuItem
             // 
             esciToolStripMenuItem.Name = "esciToolStripMenuItem";
-            esciToolStripMenuItem.Size = new Size(180, 22);
+            esciToolStripMenuItem.Size = new Size(94, 22);
             esciToolStripMenuItem.Text = "Esci";
             esciToolStripMenuItem.Click += esciToolStripMenuItem_Click;
             // 
@@ -95,7 +95,7 @@
             // mniAnagrafica
             // 
             mniAnagrafica.Name = "mniAnagrafica";
-            mniAnagrafica.Size = new Size(180, 22);
+            mniAnagrafica.Size = new Size(140, 22);
             mniAnagrafica.Text = "Anagrafica...";
             mniAnagrafica.Click += mniAnagrafica_Click;
             // 
@@ -109,20 +109,32 @@
             // creaToolStripMenuItem
             // 
             creaToolStripMenuItem.Name = "creaToolStripMenuItem";
-            creaToolStripMenuItem.Size = new Size(180, 22);
+            creaToolStripMenuItem.Size = new Size(168, 22);
             creaToolStripMenuItem.Text = "Crea";
             // 
             // inviateToolStripMenuItem
             // 
             inviateToolStripMenuItem.Name = "inviateToolStripMenuItem";
-            inviateToolStripMenuItem.Size = new Size(180, 22);
+            inviateToolStripMenuItem.Size = new Size(168, 22);
             inviateToolStripMenuItem.Text = "Inviate";
             // 
             // gestioneToolStripMenuItem
             // 
             gestioneToolStripMenuItem.Name = "gestioneToolStripMenuItem";
-            gestioneToolStripMenuItem.Size = new Size(180, 22);
+            gestioneToolStripMenuItem.Size = new Size(168, 22);
             gestioneToolStripMenuItem.Text = "Gestione";
+            // 
+            // fattureRicevuteToolStripMenuItem
+            // 
+            fattureRicevuteToolStripMenuItem.Name = "fattureRicevuteToolStripMenuItem";
+            fattureRicevuteToolStripMenuItem.Size = new Size(168, 22);
+            fattureRicevuteToolStripMenuItem.Text = "Fatture Ricevute...";
+            // 
+            // fattureInviateToolStripMenuItem
+            // 
+            fattureInviateToolStripMenuItem.Name = "fattureInviateToolStripMenuItem";
+            fattureInviateToolStripMenuItem.Size = new Size(168, 22);
+            fattureInviateToolStripMenuItem.Text = "Fatture Inviate...";
             // 
             // opzioniToolStripMenuItem
             // 
@@ -140,27 +152,15 @@
             // informazioniToolStripMenuItem
             // 
             informazioniToolStripMenuItem.Name = "informazioniToolStripMenuItem";
-            informazioniToolStripMenuItem.Size = new Size(180, 22);
+            informazioniToolStripMenuItem.Size = new Size(150, 22);
             informazioniToolStripMenuItem.Text = "Informazioni...";
             informazioniToolStripMenuItem.Click += informazioniToolStripMenuItem_Click;
-            // 
-            // fattureRicevuteToolStripMenuItem
-            // 
-            fattureRicevuteToolStripMenuItem.Name = "fattureRicevuteToolStripMenuItem";
-            fattureRicevuteToolStripMenuItem.Size = new Size(180, 22);
-            fattureRicevuteToolStripMenuItem.Text = "Fatture Ricevute...";
-            // 
-            // fattureInviateToolStripMenuItem
-            // 
-            fattureInviateToolStripMenuItem.Name = "fattureInviateToolStripMenuItem";
-            fattureInviateToolStripMenuItem.Size = new Size(180, 22);
-            fattureInviateToolStripMenuItem.Text = "Fatture Inviate...";
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(700, 338);
+            ClientSize = new Size(1096, 525);
             Controls.Add(label1);
             Controls.Add(menuStrip1);
             Icon = (Icon)resources.GetObject("$this.Icon");
