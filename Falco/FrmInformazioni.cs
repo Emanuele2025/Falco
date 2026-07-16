@@ -41,5 +41,18 @@ namespace Falco
             };
             System.Diagnostics.Process.Start(psi);
         }
+
+        private void FrmInformazioni_Load(object sender, EventArgs e)
+        {
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+        }
     }
 }

@@ -29,24 +29,11 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmInformazioni));
-            label1 = new Label();
             BtnChiudi = new Button();
             label3 = new Label();
             LnkIcon = new LinkLabel();
+            label2 = new Label();
             SuspendLayout();
-            // 
-            // label1
-            // 
-            label1.BackColor = SystemColors.ControlDarkDark;
-            label1.Dock = DockStyle.Top;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            label1.ForeColor = SystemColors.ButtonHighlight;
-            label1.Location = new Point(0, 0);
-            label1.Name = "label1";
-            label1.Size = new Size(700, 21);
-            label1.TabIndex = 2;
-            label1.Text = "Informazioni Falco - Programma per la gestione della fatturazione elettronica";
-            label1.TextAlign = ContentAlignment.TopCenter;
             // 
             // BtnChiudi
             // 
@@ -80,15 +67,28 @@
             LnkIcon.Text = "icons by https://icons8.it/";
             LnkIcon.LinkClicked += LnkIcon_LinkClicked;
             // 
+            // label2
+            // 
+            label2.BackColor = Color.DeepSkyBlue;
+            label2.Dock = DockStyle.Top;
+            label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
+            label2.ForeColor = SystemColors.ControlLightLight;
+            label2.Location = new Point(0, 0);
+            label2.Name = "label2";
+            label2.Size = new Size(700, 21);
+            label2.TabIndex = 7;
+            label2.Text = "Informazioni Falco - Programma per la gestione della fatturazione elettronica";
+            label2.TextAlign = ContentAlignment.TopCenter;
+            // 
             // FrmInformazioni
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(700, 338);
+            Controls.Add(label2);
             Controls.Add(LnkIcon);
             Controls.Add(label3);
             Controls.Add(BtnChiudi);
-            Controls.Add(label1);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(3, 2, 3, 2);
@@ -97,15 +97,15 @@
             Name = "FrmInformazioni";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Informazioni";
+            Load += FrmInformazioni_Load;
             ResumeLayout(false);
             PerformLayout();
         }
 
         #endregion
-
-        private Label label1;
         private Button BtnChiudi;
         private Label label3;
         private LinkLabel LnkIcon;
+        private Label label2;
     }
 }
