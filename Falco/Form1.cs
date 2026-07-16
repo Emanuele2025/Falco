@@ -40,5 +40,11 @@ namespace Falco
             FrmInformazioni frmInformazioni = new FrmInformazioni();
             frmInformazioni.ShowDialog();
         }
+
+        private void mniAnagrafica_Click(object sender, EventArgs e)
+        {
+            //Apre la form dell'anagrafica
+
+        }
     }
 }

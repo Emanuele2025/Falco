@@ -34,7 +34,7 @@
             fileToolStripMenuItem = new ToolStripMenuItem();
             esciToolStripMenuItem = new ToolStripMenuItem();
             clientiToolStripMenuItem = new ToolStripMenuItem();
-            anagraficaToolStripMenuItem = new ToolStripMenuItem();
+            mniAnagrafica = new ToolStripMenuItem();
             fatturaToolStripMenuItem = new ToolStripMenuItem();
             creaToolStripMenuItem = new ToolStripMenuItem();
             inviateToolStripMenuItem = new ToolStripMenuItem();
@@ -42,20 +42,22 @@
             opzioniToolStripMenuItem = new ToolStripMenuItem();
             toolStripMenuItem1 = new ToolStripMenuItem();
             informazioniToolStripMenuItem = new ToolStripMenuItem();
+            fattureRicevuteToolStripMenuItem = new ToolStripMenuItem();
+            fattureInviateToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // label1
             // 
-            label1.BackColor = SystemColors.ControlDarkDark;
+            label1.BackColor = Color.DeepSkyBlue;
             label1.Dock = DockStyle.Top;
             label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold);
-            label1.ForeColor = SystemColors.ButtonHighlight;
+            label1.ForeColor = SystemColors.ControlLightLight;
             label1.Location = new Point(0, 24);
             label1.Name = "label1";
             label1.Size = new Size(700, 21);
             label1.TabIndex = 1;
-            label1.Text = "Gestione e funzionalità per la fattura elettronica";
+            label1.Text = "Gestione delle fatture Elettroniche - Principale";
             label1.TextAlign = ContentAlignment.TopCenter;
             // 
             // menuStrip1
@@ -85,20 +87,21 @@
             // 
             // clientiToolStripMenuItem
             // 
-            clientiToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { anagraficaToolStripMenuItem });
+            clientiToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { mniAnagrafica });
             clientiToolStripMenuItem.Name = "clientiToolStripMenuItem";
             clientiToolStripMenuItem.Size = new Size(53, 20);
             clientiToolStripMenuItem.Text = "Clienti";
             // 
-            // anagraficaToolStripMenuItem
+            // mniAnagrafica
             // 
-            anagraficaToolStripMenuItem.Name = "anagraficaToolStripMenuItem";
-            anagraficaToolStripMenuItem.Size = new Size(131, 22);
-            anagraficaToolStripMenuItem.Text = "Anagrafica";
+            mniAnagrafica.Name = "mniAnagrafica";
+            mniAnagrafica.Size = new Size(180, 22);
+            mniAnagrafica.Text = "Anagrafica...";
+            mniAnagrafica.Click += mniAnagrafica_Click;
             // 
             // fatturaToolStripMenuItem
             // 
-            fatturaToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { creaToolStripMenuItem, inviateToolStripMenuItem, gestioneToolStripMenuItem });
+            fatturaToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { creaToolStripMenuItem, inviateToolStripMenuItem, gestioneToolStripMenuItem, fattureRicevuteToolStripMenuItem, fattureInviateToolStripMenuItem });
             fatturaToolStripMenuItem.Name = "fatturaToolStripMenuItem";
             fatturaToolStripMenuItem.Size = new Size(56, 20);
             fatturaToolStripMenuItem.Text = "Fattura";
@@ -106,19 +109,19 @@
             // creaToolStripMenuItem
             // 
             creaToolStripMenuItem.Name = "creaToolStripMenuItem";
-            creaToolStripMenuItem.Size = new Size(120, 22);
+            creaToolStripMenuItem.Size = new Size(180, 22);
             creaToolStripMenuItem.Text = "Crea";
             // 
             // inviateToolStripMenuItem
             // 
             inviateToolStripMenuItem.Name = "inviateToolStripMenuItem";
-            inviateToolStripMenuItem.Size = new Size(120, 22);
+            inviateToolStripMenuItem.Size = new Size(180, 22);
             inviateToolStripMenuItem.Text = "Inviate";
             // 
             // gestioneToolStripMenuItem
             // 
             gestioneToolStripMenuItem.Name = "gestioneToolStripMenuItem";
-            gestioneToolStripMenuItem.Size = new Size(120, 22);
+            gestioneToolStripMenuItem.Size = new Size(180, 22);
             gestioneToolStripMenuItem.Text = "Gestione";
             // 
             // opzioniToolStripMenuItem
@@ -137,9 +140,21 @@
             // informazioniToolStripMenuItem
             // 
             informazioniToolStripMenuItem.Name = "informazioniToolStripMenuItem";
-            informazioniToolStripMenuItem.Size = new Size(141, 22);
-            informazioniToolStripMenuItem.Text = "Informazioni";
+            informazioniToolStripMenuItem.Size = new Size(180, 22);
+            informazioniToolStripMenuItem.Text = "Informazioni...";
             informazioniToolStripMenuItem.Click += informazioniToolStripMenuItem_Click;
+            // 
+            // fattureRicevuteToolStripMenuItem
+            // 
+            fattureRicevuteToolStripMenuItem.Name = "fattureRicevuteToolStripMenuItem";
+            fattureRicevuteToolStripMenuItem.Size = new Size(180, 22);
+            fattureRicevuteToolStripMenuItem.Text = "Fatture Ricevute...";
+            // 
+            // fattureInviateToolStripMenuItem
+            // 
+            fattureInviateToolStripMenuItem.Name = "fattureInviateToolStripMenuItem";
+            fattureInviateToolStripMenuItem.Size = new Size(180, 22);
+            fattureInviateToolStripMenuItem.Text = "Fatture Inviate...";
             // 
             // Form1
             // 
@@ -173,8 +188,10 @@
         private ToolStripMenuItem toolStripMenuItem1;
         private ToolStripMenuItem informazioniToolStripMenuItem;
         private ToolStripMenuItem clientiToolStripMenuItem;
-        private ToolStripMenuItem anagraficaToolStripMenuItem;
+        private ToolStripMenuItem mniAnagrafica;
         private ToolStripMenuItem inviateToolStripMenuItem;
         private ToolStripMenuItem gestioneToolStripMenuItem;
+        private ToolStripMenuItem fattureRicevuteToolStripMenuItem;
+        private ToolStripMenuItem fattureInviateToolStripMenuItem;
     }
 }
