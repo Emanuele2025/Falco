@@ -35,6 +35,8 @@
             label2 = new Label();
             lnkduckduckgo = new LinkLabel();
             pcbLogo = new PictureBox();
+            LblDescrizione = new Label();
+            label1 = new Label();
             ((System.ComponentModel.ISupportInitialize)pcbLogo).BeginInit();
             SuspendLayout();
             // 
@@ -105,11 +107,32 @@
             pcbLogo.TabIndex = 28;
             pcbLogo.TabStop = false;
             // 
+            // LblDescrizione
+            // 
+            LblDescrizione.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            LblDescrizione.Location = new Point(302, 40);
+            LblDescrizione.Name = "LblDescrizione";
+            LblDescrizione.Size = new Size(473, 65);
+            LblDescrizione.TabIndex = 29;
+            LblDescrizione.Text = "Programma gratuito per la gestione delle fatture elettroniche";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(302, 21);
+            label1.Name = "label1";
+            label1.Size = new Size(83, 17);
+            label1.TabIndex = 30;
+            label1.Text = "Descrizione:";
+            // 
             // FrmInformazioni
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(787, 469);
+            Controls.Add(label1);
+            Controls.Add(LblDescrizione);
             Controls.Add(pcbLogo);
             Controls.Add(lnkduckduckgo);
             Controls.Add(label2);
@@ -137,5 +160,7 @@
         private Label label2;
         private LinkLabel lnkduckduckgo;
         private PictureBox pcbLogo;
+        private Label LblDescrizione;
+        private Label label1;
     }
 }

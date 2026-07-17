@@ -40,7 +40,7 @@ namespace Falco
                 FileName = "https://icons8.it/",
                 UseShellExecute = true
             };
-            System.Diagnostics.Process.Start(psi);
+            Process.Start(psi);
         }
 
         private void FrmInformazioni_Load(object sender, EventArgs e)
