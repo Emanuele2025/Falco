@@ -50,8 +50,7 @@ namespace Falco
             }
             catch (Exception ex)
             {
-
-                throw;
+                Utility.MessaggioErrore("Si è verificato il seguente errore: " + ex.Message);
             }
         }
     }

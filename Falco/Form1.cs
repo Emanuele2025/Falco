@@ -31,7 +31,14 @@ namespace Falco
             //Leggere anche la firma
             //Icone
             //https://graphicsurf.com/all-graphics/
+            try
+            {
 
+            }
+            catch (Exception ex)
+            {
+                Utility.MessaggioErrore("Si è verificato il seguente errore: " + ex.Message);
+            }
 
         }
 
