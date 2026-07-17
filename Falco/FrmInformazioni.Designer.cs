@@ -33,11 +33,15 @@
             label3 = new Label();
             LnkIcon = new LinkLabel();
             label2 = new Label();
+            lnkduckduckgo = new LinkLabel();
+            pcbLogo = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pcbLogo).BeginInit();
             SuspendLayout();
             // 
             // BtnChiudi
             // 
-            BtnChiudi.Location = new Point(586, 307);
+            BtnChiudi.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            BtnChiudi.Location = new Point(675, 436);
             BtnChiudi.Margin = new Padding(3, 2, 3, 2);
             BtnChiudi.Name = "BtnChiudi";
             BtnChiudi.Size = new Size(82, 22);
@@ -50,7 +54,7 @@
             // 
             label3.AutoSize = true;
             label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label3.Location = new Point(0, 167);
+            label3.Location = new Point(302, 265);
             label3.Name = "label3";
             label3.Size = new Size(358, 15);
             label3.TabIndex = 5;
@@ -59,7 +63,7 @@
             // LnkIcon
             // 
             LnkIcon.AutoSize = true;
-            LnkIcon.Location = new Point(0, 209);
+            LnkIcon.Location = new Point(302, 321);
             LnkIcon.Name = "LnkIcon";
             LnkIcon.Size = new Size(143, 15);
             LnkIcon.TabIndex = 6;
@@ -75,16 +79,39 @@
             label2.ForeColor = SystemColors.ControlLightLight;
             label2.Location = new Point(0, 0);
             label2.Name = "label2";
-            label2.Size = new Size(700, 21);
+            label2.Size = new Size(787, 21);
             label2.TabIndex = 7;
             label2.Text = "Informazioni Falco - Programma per la gestione della fatturazione elettronica";
             label2.TextAlign = ContentAlignment.TopCenter;
+            // 
+            // lnkduckduckgo
+            // 
+            lnkduckduckgo.AutoSize = true;
+            lnkduckduckgo.Location = new Point(302, 292);
+            lnkduckduckgo.Name = "lnkduckduckgo";
+            lnkduckduckgo.Size = new Size(455, 15);
+            lnkduckduckgo.TabIndex = 27;
+            lnkduckduckgo.TabStop = true;
+            lnkduckduckgo.Text = "L'immagine del falco creata tramite Duckduckgo AI Image Generator https://duck.ai/";
+            lnkduckduckgo.LinkClicked += lnkduckduckgo_LinkClicked;
+            // 
+            // pcbLogo
+            // 
+            pcbLogo.Image = Properties.Resources.Falco;
+            pcbLogo.Location = new Point(0, 21);
+            pcbLogo.Name = "pcbLogo";
+            pcbLogo.Size = new Size(296, 239);
+            pcbLogo.SizeMode = PictureBoxSizeMode.Zoom;
+            pcbLogo.TabIndex = 28;
+            pcbLogo.TabStop = false;
             // 
             // FrmInformazioni
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(700, 338);
+            ClientSize = new Size(787, 469);
+            Controls.Add(pcbLogo);
+            Controls.Add(lnkduckduckgo);
             Controls.Add(label2);
             Controls.Add(LnkIcon);
             Controls.Add(label3);
@@ -98,6 +125,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Informazioni";
             Load += FrmInformazioni_Load;
+            ((System.ComponentModel.ISupportInitialize)pcbLogo).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -107,5 +135,7 @@
         private Label label3;
         private LinkLabel LnkIcon;
         private Label label2;
+        private LinkLabel lnkduckduckgo;
+        private PictureBox pcbLogo;
     }
 }
