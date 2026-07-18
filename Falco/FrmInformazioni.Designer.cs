@@ -30,13 +30,19 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmInformazioni));
             BtnChiudi = new Button();
-            label3 = new Label();
             LnkIcon = new LinkLabel();
             label2 = new Label();
             lnkduckduckgo = new LinkLabel();
             pcbLogo = new PictureBox();
             LblDescrizione = new Label();
             label1 = new Label();
+            label4 = new Label();
+            label5 = new Label();
+            label6 = new Label();
+            label7 = new Label();
+            lnlEmail = new LinkLabel();
+            label8 = new Label();
+            label3 = new Label();
             ((System.ComponentModel.ISupportInitialize)pcbLogo).BeginInit();
             SuspendLayout();
             // 
@@ -52,20 +58,10 @@
             BtnChiudi.UseVisualStyleBackColor = true;
             BtnChiudi.Click += BtnChiudi_Click;
             // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
-            label3.Location = new Point(302, 265);
-            label3.Name = "label3";
-            label3.Size = new Size(358, 15);
-            label3.TabIndex = 5;
-            label3.Text = "Un grazie ai siti qui di seguito per le icone ed immagini gratuite.";
-            // 
             // LnkIcon
             // 
             LnkIcon.AutoSize = true;
-            LnkIcon.Location = new Point(302, 321);
+            LnkIcon.Location = new Point(302, 368);
             LnkIcon.Name = "LnkIcon";
             LnkIcon.Size = new Size(143, 15);
             LnkIcon.TabIndex = 6;
@@ -89,7 +85,7 @@
             // lnkduckduckgo
             // 
             lnkduckduckgo.AutoSize = true;
-            lnkduckduckgo.Location = new Point(302, 292);
+            lnkduckduckgo.Location = new Point(302, 339);
             lnkduckduckgo.Name = "lnkduckduckgo";
             lnkduckduckgo.Size = new Size(455, 15);
             lnkduckduckgo.TabIndex = 27;
@@ -112,7 +108,7 @@
             LblDescrizione.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             LblDescrizione.Location = new Point(302, 40);
             LblDescrizione.Name = "LblDescrizione";
-            LblDescrizione.Size = new Size(473, 65);
+            LblDescrizione.Size = new Size(473, 48);
             LblDescrizione.TabIndex = 29;
             LblDescrizione.Text = "Programma gratuito per la gestione delle fatture elettroniche";
             // 
@@ -126,18 +122,91 @@
             label1.TabIndex = 30;
             label1.Text = "Descrizione:";
             // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.Location = new Point(302, 88);
+            label4.Name = "label4";
+            label4.Size = new Size(63, 17);
+            label4.TabIndex = 31;
+            label4.Text = "Ideatore:";
+            // 
+            // label5
+            // 
+            label5.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.Location = new Point(302, 105);
+            label5.Name = "label5";
+            label5.Size = new Size(485, 44);
+            label5.TabIndex = 32;
+            label5.Text = "Realizzato da Emanuele Mattei con amore - Made with love by Emanuele Mattei";
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Font = new Font("Segoe UI", 9.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label6.Location = new Point(303, 149);
+            label6.Name = "label6";
+            label6.Size = new Size(62, 17);
+            label6.TabIndex = 33;
+            label6.Text = "Contatti:";
+            // 
+            // label7
+            // 
+            label7.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label7.Location = new Point(302, 166);
+            label7.Name = "label7";
+            label7.Size = new Size(485, 63);
+            label7.TabIndex = 34;
+            label7.Text = "Per informazioni o altro contattare Emanuele al numeo di telefono 339.1980065 oppure  tramite email - For info or anything else, get in touch with Emanuele at 339.1980065 or by email:\r\n";
+            // 
+            // lnlEmail
+            // 
+            lnlEmail.AutoSize = true;
+            lnlEmail.Location = new Point(611, 238);
+            lnlEmail.Name = "lnlEmail";
+            lnlEmail.Size = new Size(176, 15);
+            lnlEmail.TabIndex = 35;
+            lnlEmail.TabStop = true;
+            lnlEmail.Text = "emanuelemattei@tutanota.com";
+            lnlEmail.LinkClicked += lnlEmail_LinkClicked;
+            // 
+            // label8
+            // 
+            label8.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label8.Location = new Point(303, 264);
+            label8.Name = "label8";
+            label8.Size = new Size(484, 37);
+            label8.TabIndex = 36;
+            label8.Text = "Le icone e le immagini utilizzate in questo programma provengono dai siti elencati di seguito, che le mettono gratuitamente a disposizione dei propri utenti.";
+            // 
+            // label3
+            // 
+            label3.Font = new Font("Segoe UI", 9F, FontStyle.Bold);
+            label3.Location = new Point(307, 301);
+            label3.Name = "label3";
+            label3.Size = new Size(58, 22);
+            label3.TabIndex = 37;
+            label3.Text = "Crediti";
+            // 
             // FrmInformazioni
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(787, 469);
+            Controls.Add(label3);
+            Controls.Add(label8);
+            Controls.Add(lnlEmail);
+            Controls.Add(label7);
+            Controls.Add(label6);
+            Controls.Add(label5);
+            Controls.Add(label4);
             Controls.Add(label1);
             Controls.Add(LblDescrizione);
             Controls.Add(pcbLogo);
             Controls.Add(lnkduckduckgo);
             Controls.Add(label2);
             Controls.Add(LnkIcon);
-            Controls.Add(label3);
             Controls.Add(BtnChiudi);
             FormBorderStyle = FormBorderStyle.FixedSingle;
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -155,12 +224,18 @@
 
         #endregion
         private Button BtnChiudi;
-        private Label label3;
         private LinkLabel LnkIcon;
         private Label label2;
         private LinkLabel lnkduckduckgo;
         private PictureBox pcbLogo;
         private Label LblDescrizione;
         private Label label1;
+        private Label label4;
+        private Label label5;
+        private Label label6;
+        private Label label7;
+        private LinkLabel lnlEmail;
+        private Label label8;
+        private Label label3;
     }
 }

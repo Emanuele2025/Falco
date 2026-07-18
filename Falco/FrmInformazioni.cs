@@ -72,5 +72,24 @@ namespace Falco
 
             }
         }
+
+        private void lnlEmail_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            var psi = new ProcessStartInfo
+            {
+                FileName = "mailto:emanuelemattei@tutanota.com",
+                UseShellExecute = true
+            };
+
+            try
+            {
+                Process.Start(psi);
+            }
+            catch (Exception ex)
+            {
+                Utility.MessaggioErrore("Impossibile aprire il programma di posta elettronica: " + ex.Message);
+
+            }
+        }
     }
 }
