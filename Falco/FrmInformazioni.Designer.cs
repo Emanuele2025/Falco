@@ -110,7 +110,7 @@
             LblDescrizione.Name = "LblDescrizione";
             LblDescrizione.Size = new Size(473, 48);
             LblDescrizione.TabIndex = 29;
-            LblDescrizione.Text = "Programma gratuito per la gestione delle fatture elettroniche";
+            LblDescrizione.Text = "Programma gratuito per la gestione delle fatture elettroniche - free program for managing electronic invoices";
             // 
             // label1
             // 

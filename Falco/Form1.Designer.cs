@@ -44,6 +44,9 @@
             opzioniToolStripMenuItem = new ToolStripMenuItem();
             toolStripMenuItem1 = new ToolStripMenuItem();
             informazioniToolStripMenuItem = new ToolStripMenuItem();
+            dTTToolStripMenuItem = new ToolStripMenuItem();
+            documentoDiTrasportoToolStripMenuItem = new ToolStripMenuItem();
+            impostazioniToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -63,7 +66,7 @@
             // menuStrip1
             // 
             menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, clientiToolStripMenuItem, fatturaToolStripMenuItem, opzioniToolStripMenuItem, toolStripMenuItem1 });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, clientiToolStripMenuItem, fatturaToolStripMenuItem, dTTToolStripMenuItem, opzioniToolStripMenuItem, toolStripMenuItem1 });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Padding = new Padding(5, 2, 0, 2);
@@ -81,7 +84,7 @@
             // esciToolStripMenuItem
             // 
             esciToolStripMenuItem.Name = "esciToolStripMenuItem";
-            esciToolStripMenuItem.Size = new Size(94, 22);
+            esciToolStripMenuItem.Size = new Size(180, 22);
             esciToolStripMenuItem.Text = "Esci";
             esciToolStripMenuItem.Click += esciToolStripMenuItem_Click;
             // 
@@ -95,7 +98,7 @@
             // mniAnagrafica
             // 
             mniAnagrafica.Name = "mniAnagrafica";
-            mniAnagrafica.Size = new Size(140, 22);
+            mniAnagrafica.Size = new Size(180, 22);
             mniAnagrafica.Text = "Anagrafica...";
             mniAnagrafica.Click += mniAnagrafica_Click;
             // 
@@ -109,35 +112,36 @@
             // creaToolStripMenuItem
             // 
             creaToolStripMenuItem.Name = "creaToolStripMenuItem";
-            creaToolStripMenuItem.Size = new Size(168, 22);
+            creaToolStripMenuItem.Size = new Size(180, 22);
             creaToolStripMenuItem.Text = "Crea";
             // 
             // inviateToolStripMenuItem
             // 
             inviateToolStripMenuItem.Name = "inviateToolStripMenuItem";
-            inviateToolStripMenuItem.Size = new Size(168, 22);
+            inviateToolStripMenuItem.Size = new Size(180, 22);
             inviateToolStripMenuItem.Text = "Inviate";
             // 
             // gestioneToolStripMenuItem
             // 
             gestioneToolStripMenuItem.Name = "gestioneToolStripMenuItem";
-            gestioneToolStripMenuItem.Size = new Size(168, 22);
+            gestioneToolStripMenuItem.Size = new Size(180, 22);
             gestioneToolStripMenuItem.Text = "Gestione";
             // 
             // fattureRicevuteToolStripMenuItem
             // 
             fattureRicevuteToolStripMenuItem.Name = "fattureRicevuteToolStripMenuItem";
-            fattureRicevuteToolStripMenuItem.Size = new Size(168, 22);
+            fattureRicevuteToolStripMenuItem.Size = new Size(180, 22);
             fattureRicevuteToolStripMenuItem.Text = "Fatture Ricevute...";
             // 
             // fattureInviateToolStripMenuItem
             // 
             fattureInviateToolStripMenuItem.Name = "fattureInviateToolStripMenuItem";
-            fattureInviateToolStripMenuItem.Size = new Size(168, 22);
+            fattureInviateToolStripMenuItem.Size = new Size(180, 22);
             fattureInviateToolStripMenuItem.Text = "Fatture Inviate...";
             // 
             // opzioniToolStripMenuItem
             // 
+            opzioniToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { impostazioniToolStripMenuItem });
             opzioniToolStripMenuItem.Name = "opzioniToolStripMenuItem";
             opzioniToolStripMenuItem.Size = new Size(60, 20);
             opzioniToolStripMenuItem.Text = "Opzioni";
@@ -155,6 +159,25 @@
             informazioniToolStripMenuItem.Size = new Size(150, 22);
             informazioniToolStripMenuItem.Text = "Informazioni...";
             informazioniToolStripMenuItem.Click += informazioniToolStripMenuItem_Click;
+            // 
+            // dTTToolStripMenuItem
+            // 
+            dTTToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { documentoDiTrasportoToolStripMenuItem });
+            dTTToolStripMenuItem.Name = "dTTToolStripMenuItem";
+            dTTToolStripMenuItem.Size = new Size(41, 20);
+            dTTToolStripMenuItem.Text = "DDT";
+            // 
+            // documentoDiTrasportoToolStripMenuItem
+            // 
+            documentoDiTrasportoToolStripMenuItem.Name = "documentoDiTrasportoToolStripMenuItem";
+            documentoDiTrasportoToolStripMenuItem.Size = new Size(204, 22);
+            documentoDiTrasportoToolStripMenuItem.Text = "Documento Di Trasporto";
+            // 
+            // impostazioniToolStripMenuItem
+            // 
+            impostazioniToolStripMenuItem.Name = "impostazioniToolStripMenuItem";
+            impostazioniToolStripMenuItem.Size = new Size(180, 22);
+            impostazioniToolStripMenuItem.Text = "Impostazioni...";
             // 
             // Form1
             // 
@@ -193,5 +216,8 @@
         private ToolStripMenuItem gestioneToolStripMenuItem;
         private ToolStripMenuItem fattureRicevuteToolStripMenuItem;
         private ToolStripMenuItem fattureInviateToolStripMenuItem;
+        private ToolStripMenuItem dTTToolStripMenuItem;
+        private ToolStripMenuItem documentoDiTrasportoToolStripMenuItem;
+        private ToolStripMenuItem impostazioniToolStripMenuItem;
     }
 }
