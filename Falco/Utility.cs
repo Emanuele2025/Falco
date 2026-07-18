@@ -8,6 +8,20 @@ namespace Falco
     {
         #region Campi e proprietà
         const string titolo = "Falco";
+
+        private static readonly string[] Unita = { "zero", "uno", "due", "tre", "quattro", "cinque", "sei", "sette", "otto", "nove" };
+
+        private static readonly string[] Decine = { "", "dieci", "venti", "trenta", "quaranta", "cinquanta", "sessanta", "settanta", "ottanta", "novanta" };
+
+        private static readonly string[] DecineSpeciali = { "dieci", "undici", "dodici", "tredici", "quattordici", "quindici", "sedici", "diciassette", "diciotto", "diciannove" };
+
+
+
+
+
+
+
+
         #endregion
 
 
@@ -59,6 +73,15 @@ namespace Falco
 
         //TODO: fare funzione da importo euro a testo
         //https://emanuelemattei.blogspot.com/search?q=estendere&updated-max=2026-02-11T06:00:00%2B01:00&max-results=20&start=3&by-date=true
+
+
+
+        
+
+
+
+
+
 
 
         #endregion
