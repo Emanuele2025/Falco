@@ -34,6 +34,17 @@ namespace Falco
             try
             {
 
+                decimal numero = 1875.23m;
+
+               // string risultato = numero.ConvertiEuroInLettere(true);
+                string risultato = numero.ConvertiEuroInLettere();
+                MessageBox.Show(risultato);
+
+
+
+
+
+
             }
             catch (Exception ex)
             {

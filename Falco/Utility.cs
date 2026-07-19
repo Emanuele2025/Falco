@@ -76,8 +76,40 @@ namespace Falco
 
 
 
-        
+        public static string ConvertiEuroInLettere(this decimal importo, bool centesimiTesto = false)
+        {
+            if (importo == 0)
+                return "zero euro";
 
+            long euro = (long)Math.Floor(importo);
+            int centesimi = (int)((importo - euro) * 100);
+
+            string euroTesto = ConvertiNumeroInLettere(euro);
+
+            if (!centesimiTesto)
+                return $"{euroTesto} euro /{centesimi:00}";
+
+            string centesimiTestoStr = ConvertiNumeroInLettere(centesimi);
+            return $"{euroTesto} euro e {centesimiTestoStr} centesimi";
+        }
+
+        private static string ConvertiNumeroInLettere(long numero)
+        {
+            return numero switch
+            {
+                < 10 => Unita[numero],
+                < 20 => DecineSpeciali[numero - 10],
+                < 100 => Decine[numero / 10] + (numero % 10 > 0 ? Unita[numero % 10] : ""),
+                < 1000 => (numero / 100 == 1 ? "cento" : Unita[numero / 100] + "cento")
+                          + (numero % 100 > 0 ? ConvertiNumeroInLettere(numero % 100) : ""),
+                < 1_000_000 => (numero / 1000 == 1 ? "mille" : ConvertiNumeroInLettere(numero / 1000) + "mila")
+                               + (numero % 1000 > 0 ? ConvertiNumeroInLettere(numero % 1000) : ""),
+                < 1_000_000_000 => (numero / 1_000_000 == 1 ? "un milione" : ConvertiNumeroInLettere(numero / 1_000_000) + " milioni")
+                                   + (numero % 1_000_000 > 0 ? ConvertiNumeroInLettere(numero % 1_000_000) : ""),
+                _ => (numero / 1_000_000_000 == 1 ? "un miliardo" : ConvertiNumeroInLettere(numero / 1_000_000_000) + " miliardi")
+                     + (numero % 1_000_000_000 > 0 ? ConvertiNumeroInLettere(numero % 1_000_000_000) : "")
+            };
+        }
 
 
 
