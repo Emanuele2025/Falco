@@ -43,6 +43,7 @@
             lnlEmail = new LinkLabel();
             label8 = new Label();
             label3 = new Label();
+            lkluxwing = new LinkLabel();
             ((System.ComponentModel.ISupportInitialize)pcbLogo).BeginInit();
             SuspendLayout();
             // 
@@ -61,12 +62,12 @@
             // LnkIcon
             // 
             LnkIcon.AutoSize = true;
-            LnkIcon.Location = new Point(302, 368);
+            LnkIcon.Location = new Point(303, 347);
             LnkIcon.Name = "LnkIcon";
-            LnkIcon.Size = new Size(143, 15);
+            LnkIcon.Size = new Size(471, 15);
             LnkIcon.TabIndex = 6;
             LnkIcon.TabStop = true;
-            LnkIcon.Text = "icons by https://icons8.it/";
+            LnkIcon.Text = "Alcune icone utilizzate in questo programma sono fornite da   icons by https://icons8.it/";
             LnkIcon.LinkClicked += LnkIcon_LinkClicked;
             // 
             // label2
@@ -85,7 +86,7 @@
             // lnkduckduckgo
             // 
             lnkduckduckgo.AutoSize = true;
-            lnkduckduckgo.Location = new Point(302, 339);
+            lnkduckduckgo.Location = new Point(302, 323);
             lnkduckduckgo.Name = "lnkduckduckgo";
             lnkduckduckgo.Size = new Size(455, 15);
             lnkduckduckgo.TabIndex = 27;
@@ -189,11 +190,23 @@
             label3.TabIndex = 37;
             label3.Text = "Crediti";
             // 
+            // lkluxwing
+            // 
+            lkluxwing.AutoSize = true;
+            lkluxwing.Location = new Point(302, 372);
+            lkluxwing.Name = "lkluxwing";
+            lkluxwing.Size = new Size(483, 15);
+            lkluxwing.TabIndex = 38;
+            lkluxwing.TabStop = true;
+            lkluxwing.Text = "Alcune icone utilizzate in questo programma sono fornite da  uxwing https://uxwing.com/";
+            lkluxwing.LinkClicked += lkluxwing_LinkClicked;
+            // 
             // FrmInformazioni
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(787, 469);
+            Controls.Add(lkluxwing);
             Controls.Add(label3);
             Controls.Add(label8);
             Controls.Add(lnlEmail);
@@ -237,5 +250,6 @@
         private LinkLabel lnlEmail;
         private Label label8;
         private Label label3;
+        private LinkLabel lkluxwing;
     }
 }

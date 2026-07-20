@@ -41,12 +41,12 @@
             gestioneToolStripMenuItem = new ToolStripMenuItem();
             fattureRicevuteToolStripMenuItem = new ToolStripMenuItem();
             fattureInviateToolStripMenuItem = new ToolStripMenuItem();
-            opzioniToolStripMenuItem = new ToolStripMenuItem();
-            toolStripMenuItem1 = new ToolStripMenuItem();
-            informazioniToolStripMenuItem = new ToolStripMenuItem();
             dTTToolStripMenuItem = new ToolStripMenuItem();
             documentoDiTrasportoToolStripMenuItem = new ToolStripMenuItem();
+            opzioniToolStripMenuItem = new ToolStripMenuItem();
             impostazioniToolStripMenuItem = new ToolStripMenuItem();
+            toolStripMenuItem1 = new ToolStripMenuItem();
+            informazioniToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -84,7 +84,7 @@
             // esciToolStripMenuItem
             // 
             esciToolStripMenuItem.Name = "esciToolStripMenuItem";
-            esciToolStripMenuItem.Size = new Size(180, 22);
+            esciToolStripMenuItem.Size = new Size(94, 22);
             esciToolStripMenuItem.Text = "Esci";
             esciToolStripMenuItem.Click += esciToolStripMenuItem_Click;
             // 
@@ -98,7 +98,7 @@
             // mniAnagrafica
             // 
             mniAnagrafica.Name = "mniAnagrafica";
-            mniAnagrafica.Size = new Size(180, 22);
+            mniAnagrafica.Size = new Size(140, 22);
             mniAnagrafica.Text = "Anagrafica...";
             mniAnagrafica.Click += mniAnagrafica_Click;
             // 
@@ -112,53 +112,32 @@
             // creaToolStripMenuItem
             // 
             creaToolStripMenuItem.Name = "creaToolStripMenuItem";
-            creaToolStripMenuItem.Size = new Size(180, 22);
+            creaToolStripMenuItem.Size = new Size(168, 22);
             creaToolStripMenuItem.Text = "Crea";
             // 
             // inviateToolStripMenuItem
             // 
             inviateToolStripMenuItem.Name = "inviateToolStripMenuItem";
-            inviateToolStripMenuItem.Size = new Size(180, 22);
+            inviateToolStripMenuItem.Size = new Size(168, 22);
             inviateToolStripMenuItem.Text = "Inviate";
             // 
             // gestioneToolStripMenuItem
             // 
             gestioneToolStripMenuItem.Name = "gestioneToolStripMenuItem";
-            gestioneToolStripMenuItem.Size = new Size(180, 22);
+            gestioneToolStripMenuItem.Size = new Size(168, 22);
             gestioneToolStripMenuItem.Text = "Gestione";
             // 
             // fattureRicevuteToolStripMenuItem
             // 
             fattureRicevuteToolStripMenuItem.Name = "fattureRicevuteToolStripMenuItem";
-            fattureRicevuteToolStripMenuItem.Size = new Size(180, 22);
+            fattureRicevuteToolStripMenuItem.Size = new Size(168, 22);
             fattureRicevuteToolStripMenuItem.Text = "Fatture Ricevute...";
             // 
             // fattureInviateToolStripMenuItem
             // 
             fattureInviateToolStripMenuItem.Name = "fattureInviateToolStripMenuItem";
-            fattureInviateToolStripMenuItem.Size = new Size(180, 22);
+            fattureInviateToolStripMenuItem.Size = new Size(168, 22);
             fattureInviateToolStripMenuItem.Text = "Fatture Inviate...";
-            // 
-            // opzioniToolStripMenuItem
-            // 
-            opzioniToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { impostazioniToolStripMenuItem });
-            opzioniToolStripMenuItem.Name = "opzioniToolStripMenuItem";
-            opzioniToolStripMenuItem.Size = new Size(60, 20);
-            opzioniToolStripMenuItem.Text = "Opzioni";
-            // 
-            // toolStripMenuItem1
-            // 
-            toolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { informazioniToolStripMenuItem });
-            toolStripMenuItem1.Name = "toolStripMenuItem1";
-            toolStripMenuItem1.Size = new Size(24, 20);
-            toolStripMenuItem1.Text = "?";
-            // 
-            // informazioniToolStripMenuItem
-            // 
-            informazioniToolStripMenuItem.Name = "informazioniToolStripMenuItem";
-            informazioniToolStripMenuItem.Size = new Size(150, 22);
-            informazioniToolStripMenuItem.Text = "Informazioni...";
-            informazioniToolStripMenuItem.Click += informazioniToolStripMenuItem_Click;
             // 
             // dTTToolStripMenuItem
             // 
@@ -173,11 +152,33 @@
             documentoDiTrasportoToolStripMenuItem.Size = new Size(204, 22);
             documentoDiTrasportoToolStripMenuItem.Text = "Documento Di Trasporto";
             // 
+            // opzioniToolStripMenuItem
+            // 
+            opzioniToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { impostazioniToolStripMenuItem });
+            opzioniToolStripMenuItem.Name = "opzioniToolStripMenuItem";
+            opzioniToolStripMenuItem.Size = new Size(60, 20);
+            opzioniToolStripMenuItem.Text = "Opzioni";
+            // 
             // impostazioniToolStripMenuItem
             // 
             impostazioniToolStripMenuItem.Name = "impostazioniToolStripMenuItem";
-            impostazioniToolStripMenuItem.Size = new Size(180, 22);
+            impostazioniToolStripMenuItem.Size = new Size(151, 22);
             impostazioniToolStripMenuItem.Text = "Impostazioni...";
+            // 
+            // toolStripMenuItem1
+            // 
+            toolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { informazioniToolStripMenuItem });
+            toolStripMenuItem1.Name = "toolStripMenuItem1";
+            toolStripMenuItem1.Size = new Size(24, 20);
+            toolStripMenuItem1.Text = "?";
+            // 
+            // informazioniToolStripMenuItem
+            // 
+            informazioniToolStripMenuItem.Image = Properties.Resources.Informazioni;
+            informazioniToolStripMenuItem.Name = "informazioniToolStripMenuItem";
+            informazioniToolStripMenuItem.Size = new Size(184, 26);
+            informazioniToolStripMenuItem.Text = "Informazioni...";
+            informazioniToolStripMenuItem.Click += informazioniToolStripMenuItem_Click;
             // 
             // Form1
             // 
