@@ -38,7 +38,7 @@ namespace Falco
 
                // string risultato = numero.ConvertiEuroInLettere(true);
                 string risultato = numero.ConvertiEuroInLettere();
-                MessageBox.Show(risultato);
+               // MessageBox.Show(risultato);
 
 
 
