@@ -50,6 +50,8 @@
             // BtnChiudi
             // 
             BtnChiudi.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            BtnChiudi.Image = Properties.Resources.chiudi;
+            BtnChiudi.ImageAlign = ContentAlignment.MiddleRight;
             BtnChiudi.Location = new Point(675, 436);
             BtnChiudi.Margin = new Padding(3, 2, 3, 2);
             BtnChiudi.Name = "BtnChiudi";
