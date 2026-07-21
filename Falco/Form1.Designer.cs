@@ -83,8 +83,9 @@
             // 
             // esciToolStripMenuItem
             // 
+            esciToolStripMenuItem.Image = Properties.Resources.Esci;
             esciToolStripMenuItem.Name = "esciToolStripMenuItem";
-            esciToolStripMenuItem.Size = new Size(94, 22);
+            esciToolStripMenuItem.Size = new Size(184, 26);
             esciToolStripMenuItem.Text = "Esci";
             esciToolStripMenuItem.Click += esciToolStripMenuItem_Click;
             // 
