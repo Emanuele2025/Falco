@@ -31,6 +31,7 @@ namespace Falco
             //Leggere anche la firma
             //Icone
             //https://graphicsurf.com/all-graphics/
+            //Non ancora utiizzato https://allsvgicons.com/pack/dashicons/ 
             try
             {
 
