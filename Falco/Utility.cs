@@ -16,7 +16,7 @@ namespace Falco
         private static readonly string[] DecineSpeciali = { "dieci", "undici", "dodici", "tredici", "quattordici", "quindici", "sedici", "diciassette", "diciotto", "diciannove" };
 
 
-
+        public const string TitoloForm = "Falco - Software gratuito per la gestione della fattura elettronica ";
 
 
 
@@ -71,10 +71,7 @@ namespace Falco
 
         #region Funzioni
 
-        //TODO: fare funzione da importo euro a testo
-        //https://emanuelemattei.blogspot.com/search?q=estendere&updated-max=2026-02-11T06:00:00%2B01:00&max-results=20&start=3&by-date=true
-
-
+      
 
         public static string ConvertiEuroInLettere(this decimal importo, bool centesimiTesto = false)
         {

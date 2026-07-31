@@ -19,7 +19,7 @@ namespace Falco
         {
             try
             {
-
+                this.Text = Utility.TitoloForm;
             }
             catch (Exception ex)
             {
