@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             label1 = new Label();
+            BtnCercaCartella = new Button();
+            lblEtichetta = new Label();
+            TxtPercorsoCartella = new TextBox();
             SuspendLayout();
             // 
             // label1
@@ -44,21 +47,57 @@
             label1.Text = "Gestione delle fatture Elettroniche - Lettura della fattura, estrapolazione informazioni";
             label1.TextAlign = ContentAlignment.TopCenter;
             // 
+            // BtnCercaCartella
+            // 
+            BtnCercaCartella.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
+            BtnCercaCartella.Location = new Point(323, 57);
+            BtnCercaCartella.Name = "BtnCercaCartella";
+            BtnCercaCartella.Size = new Size(30, 29);
+            BtnCercaCartella.TabIndex = 13;
+            BtnCercaCartella.Text = "...";
+            BtnCercaCartella.TextAlign = ContentAlignment.TopLeft;
+            BtnCercaCartella.UseVisualStyleBackColor = true;
+            BtnCercaCartella.Click += BtnCercaCartella_Click;
+            // 
+            // lblEtichetta
+            // 
+            lblEtichetta.AutoSize = true;
+            lblEtichetta.Location = new Point(12, 39);
+            lblEtichetta.Name = "lblEtichetta";
+            lblEtichetta.Size = new Size(152, 15);
+            lblEtichetta.TabIndex = 12;
+            lblEtichetta.Text = "Percorso dove salvare il file:";
+            // 
+            // TxtPercorsoCartella
+            // 
+            TxtPercorsoCartella.Location = new Point(12, 57);
+            TxtPercorsoCartella.Name = "TxtPercorsoCartella";
+            TxtPercorsoCartella.ReadOnly = true;
+            TxtPercorsoCartella.Size = new Size(305, 23);
+            TxtPercorsoCartella.TabIndex = 11;
+            // 
             // FrmLeggiFattura
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(BtnCercaCartella);
+            Controls.Add(lblEtichetta);
+            Controls.Add(TxtPercorsoCartella);
             Controls.Add(label1);
             Name = "FrmLeggiFattura";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Falco - Programma gratuito di Fattura Elettronica";
             Load += FrmLeggiFattura_Load;
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private Label label1;
+        private Button BtnCercaCartella;
+        private Label lblEtichetta;
+        private TextBox TxtPercorsoCartella;
     }
 }

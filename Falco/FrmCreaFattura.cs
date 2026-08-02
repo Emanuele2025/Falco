@@ -64,5 +64,10 @@ namespace Falco
                 Utility.MessaggioErrore("Si è verificato il seguente errore: " + ex.Message);
             }
         }
+
+        private void BtnNuovoCliente_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

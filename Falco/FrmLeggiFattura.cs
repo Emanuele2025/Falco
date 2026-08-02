@@ -26,5 +26,47 @@ namespace Falco
                 Utility.MessaggioErrore("Si è verificato il seguente errore: " + ex.Message);
             }
         }
+
+        private void BtnCercaCartella_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                using (OpenFileDialog openDlg = new OpenFileDialog())
+               {
+
+                   // openDlg.FileName = TxtPercorsoNomeFile.Text;
+
+                    openDlg.Multiselect = false;
+
+                    openDlg.Filter = "XML Files (*.xml)";
+
+                    if (openDlg.ShowDialog(this) == DialogResult.OK)
+
+                    {
+
+                        TxtPercorsoCartella.Text = openDlg.FileName;
+
+                    }
+
+                }
+                //Apro la finestra di dialogo per la selezione della cartella
+                //using (FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog())
+                //{
+                //    folderBrowserDialog.Description = "Seleziona la cartella di destinazione per salvare l'immagine di bing";
+                //    if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
+                //    {
+                //        // Imposto il percorso selezionato nella casella di testo
+                //        TxtPercorsoCartella.Text = folderBrowserDialog.SelectedPath;
+                //    }
+                //}
+
+
+            }
+            catch (Exception ex)
+            {
+                Utility.MessaggioErrore(ex.Message);
+
+            }
+        }
     }
 }

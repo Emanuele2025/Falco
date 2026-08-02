@@ -76,6 +76,7 @@
             BtnNuovoCliente.Text = "...";
             toolTip1.SetToolTip(BtnNuovoCliente, "Crea un nuovo cliente");
             BtnNuovoCliente.UseVisualStyleBackColor = true;
+            BtnNuovoCliente.Click += BtnNuovoCliente_Click;
             // 
             // label1
             // 
