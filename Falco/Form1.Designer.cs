@@ -41,13 +41,13 @@
             gestioneToolStripMenuItem = new ToolStripMenuItem();
             fattureRicevuteToolStripMenuItem = new ToolStripMenuItem();
             fattureInviateToolStripMenuItem = new ToolStripMenuItem();
+            leggiFatturaToolStripMenuItem = new ToolStripMenuItem();
             dTTToolStripMenuItem = new ToolStripMenuItem();
             documentoDiTrasportoToolStripMenuItem = new ToolStripMenuItem();
             opzioniToolStripMenuItem = new ToolStripMenuItem();
             impostazioniToolStripMenuItem = new ToolStripMenuItem();
             toolStripMenuItem1 = new ToolStripMenuItem();
             informazioniToolStripMenuItem = new ToolStripMenuItem();
-            leggiFatturaToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -100,7 +100,7 @@
             // mniAnagrafica
             // 
             mniAnagrafica.Name = "mniAnagrafica";
-            mniAnagrafica.Size = new Size(140, 22);
+            mniAnagrafica.Size = new Size(180, 22);
             mniAnagrafica.Text = "Anagrafica...";
             mniAnagrafica.Click += mniAnagrafica_Click;
             // 
@@ -140,6 +140,13 @@
             fattureInviateToolStripMenuItem.Name = "fattureInviateToolStripMenuItem";
             fattureInviateToolStripMenuItem.Size = new Size(180, 22);
             fattureInviateToolStripMenuItem.Text = "Fatture Inviate...";
+            // 
+            // leggiFatturaToolStripMenuItem
+            // 
+            leggiFatturaToolStripMenuItem.Name = "leggiFatturaToolStripMenuItem";
+            leggiFatturaToolStripMenuItem.Size = new Size(180, 22);
+            leggiFatturaToolStripMenuItem.Text = "Leggi Fattura...";
+            leggiFatturaToolStripMenuItem.Click += leggiFatturaToolStripMenuItem_Click;
             // 
             // dTTToolStripMenuItem
             // 
@@ -181,12 +188,6 @@
             informazioniToolStripMenuItem.Size = new Size(150, 22);
             informazioniToolStripMenuItem.Text = "Informazioni...";
             informazioniToolStripMenuItem.Click += informazioniToolStripMenuItem_Click;
-            // 
-            // leggiFatturaToolStripMenuItem
-            // 
-            leggiFatturaToolStripMenuItem.Name = "leggiFatturaToolStripMenuItem";
-            leggiFatturaToolStripMenuItem.Size = new Size(180, 22);
-            leggiFatturaToolStripMenuItem.Text = "Leggi Fattura...";
             // 
             // Form1
             // 

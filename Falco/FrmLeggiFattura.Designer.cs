@@ -34,6 +34,13 @@
             lblEtichetta = new Label();
             TxtPercorsoCartella = new TextBox();
             BtnChiudi = new Button();
+            groupBox1 = new GroupBox();
+            txtNomeFornitore = new TextBox();
+            label2 = new Label();
+            groupBox2 = new GroupBox();
+            dgvDatiFattura = new DataGridView();
+            groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvDatiFattura).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -44,7 +51,7 @@
             label1.ForeColor = SystemColors.ControlLightLight;
             label1.Location = new Point(0, 0);
             label1.Name = "label1";
-            label1.Size = new Size(800, 21);
+            label1.Size = new Size(1163, 21);
             label1.TabIndex = 8;
             label1.Text = "Gestione delle fatture Elettroniche - Lettura della fattura, estrapolazione informazioni";
             label1.TextAlign = ContentAlignment.TopCenter;
@@ -52,7 +59,7 @@
             // BtnCercaCartella
             // 
             BtnCercaCartella.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            BtnCercaCartella.Location = new Point(323, 57);
+            BtnCercaCartella.Location = new Point(573, 49);
             BtnCercaCartella.Name = "BtnCercaCartella";
             BtnCercaCartella.Size = new Size(30, 29);
             BtnCercaCartella.TabIndex = 13;
@@ -64,18 +71,18 @@
             // lblEtichetta
             // 
             lblEtichetta.AutoSize = true;
-            lblEtichetta.Location = new Point(12, 39);
+            lblEtichetta.Location = new Point(12, 31);
             lblEtichetta.Name = "lblEtichetta";
-            lblEtichetta.Size = new Size(152, 15);
+            lblEtichetta.Size = new Size(254, 15);
             lblEtichetta.TabIndex = 12;
-            lblEtichetta.Text = "Percorso dove salvare il file:";
+            lblEtichetta.Text = "Percorso della fattura elettronica da esaminare:";
             // 
             // TxtPercorsoCartella
             // 
-            TxtPercorsoCartella.Location = new Point(12, 57);
+            TxtPercorsoCartella.Location = new Point(12, 49);
             TxtPercorsoCartella.Name = "TxtPercorsoCartella";
             TxtPercorsoCartella.ReadOnly = true;
-            TxtPercorsoCartella.Size = new Size(305, 23);
+            TxtPercorsoCartella.Size = new Size(555, 23);
             TxtPercorsoCartella.TabIndex = 11;
             // 
             // BtnChiudi
@@ -83,7 +90,7 @@
             BtnChiudi.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             BtnChiudi.Image = Properties.Resources.chiudi;
             BtnChiudi.ImageAlign = ContentAlignment.MiddleRight;
-            BtnChiudi.Location = new Point(693, 408);
+            BtnChiudi.Location = new Point(1056, 645);
             BtnChiudi.Margin = new Padding(3, 2, 3, 2);
             BtnChiudi.Name = "BtnChiudi";
             BtnChiudi.Size = new Size(82, 22);
@@ -92,21 +99,74 @@
             BtnChiudi.UseVisualStyleBackColor = true;
             BtnChiudi.Click += BtnChiudi_Click;
             // 
+            // groupBox1
+            // 
+            groupBox1.Controls.Add(txtNomeFornitore);
+            groupBox1.Controls.Add(label2);
+            groupBox1.Location = new Point(15, 84);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(552, 230);
+            groupBox1.TabIndex = 15;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "Fornitore";
+            // 
+            // txtNomeFornitore
+            // 
+            txtNomeFornitore.Location = new Point(21, 41);
+            txtNomeFornitore.Name = "txtNomeFornitore";
+            txtNomeFornitore.ReadOnly = true;
+            txtNomeFornitore.Size = new Size(502, 23);
+            txtNomeFornitore.TabIndex = 1;
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(17, 24);
+            label2.Name = "label2";
+            label2.Size = new Size(43, 15);
+            label2.TabIndex = 0;
+            label2.Text = "Nome:";
+            // 
+            // groupBox2
+            // 
+            groupBox2.Location = new Point(600, 84);
+            groupBox2.Name = "groupBox2";
+            groupBox2.Size = new Size(552, 230);
+            groupBox2.TabIndex = 16;
+            groupBox2.TabStop = false;
+            groupBox2.Text = "Cliente";
+            // 
+            // dgvDatiFattura
+            // 
+            dgvDatiFattura.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dgvDatiFattura.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvDatiFattura.Location = new Point(12, 320);
+            dgvDatiFattura.Name = "dgvDatiFattura";
+            dgvDatiFattura.Size = new Size(1139, 271);
+            dgvDatiFattura.TabIndex = 17;
+            // 
             // FrmLeggiFattura
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(1163, 687);
+            Controls.Add(dgvDatiFattura);
+            Controls.Add(groupBox2);
+            Controls.Add(groupBox1);
             Controls.Add(BtnChiudi);
             Controls.Add(BtnCercaCartella);
             Controls.Add(lblEtichetta);
             Controls.Add(TxtPercorsoCartella);
             Controls.Add(label1);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximizeBox = false;
             Name = "FrmLeggiFattura";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Falco - Programma gratuito di Fattura Elettronica";
             Load += FrmLeggiFattura_Load;
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)dgvDatiFattura).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -118,5 +178,10 @@
         private Label lblEtichetta;
         private TextBox TxtPercorsoCartella;
         private Button BtnChiudi;
+        private GroupBox groupBox1;
+        private GroupBox groupBox2;
+        private DataGridView dgvDatiFattura;
+        private TextBox txtNomeFornitore;
+        private Label label2;
     }
 }

@@ -9,5 +9,9 @@ namespace Falco.Modelli
     /// </summary>
     public class DtoFattura
     {
+
+
+
+
     }
 }

@@ -38,7 +38,7 @@ namespace Falco
                     // openDlg.FileName = TxtPercorsoNomeFile.Text;
                     openDlg.Multiselect = false;
 
-                    openDlg.Filter = "XML Files (*.xml)";
+                    openDlg.Filter = "XML Files (*.xml) | *.xml";
 
                     if (openDlg.ShowDialog(this) == DialogResult.OK)
                     {

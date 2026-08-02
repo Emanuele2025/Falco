@@ -37,9 +37,9 @@ namespace Falco
 
                 decimal numero = 1875.23m;
 
-               // string risultato = numero.ConvertiEuroInLettere(true);
+                // string risultato = numero.ConvertiEuroInLettere(true);
                 string risultato = numero.ConvertiEuroInLettere();
-               // MessageBox.Show(risultato);
+                // MessageBox.Show(risultato);
 
 
 
@@ -64,6 +64,36 @@ namespace Falco
         {
             //Apre la form dell'anagrafica
 
+        }
+
+        private void leggiFatturaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //TODO mettere cursor a clessidra 
+                FrmLeggiFattura leggiFattura = new FrmLeggiFattura();
+                leggiFattura.ShowDialog();
+
+
+            }
+            catch (Exception ex)
+            {
+                Utility.MessaggioErrore("Si è verificato il seguente errore: " + ex.Message);
+            }
+            finally
+            { 
+            
+            
+            
+            
+            }
+
+
+
+
+
+
+         
         }
     }
 }
