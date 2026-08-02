@@ -28,10 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLeggiFattura));
             label1 = new Label();
             BtnCercaCartella = new Button();
             lblEtichetta = new Label();
             TxtPercorsoCartella = new TextBox();
+            BtnChiudi = new Button();
             SuspendLayout();
             // 
             // label1
@@ -76,15 +78,31 @@
             TxtPercorsoCartella.Size = new Size(305, 23);
             TxtPercorsoCartella.TabIndex = 11;
             // 
+            // BtnChiudi
+            // 
+            BtnChiudi.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            BtnChiudi.Image = Properties.Resources.chiudi;
+            BtnChiudi.ImageAlign = ContentAlignment.MiddleRight;
+            BtnChiudi.Location = new Point(693, 408);
+            BtnChiudi.Margin = new Padding(3, 2, 3, 2);
+            BtnChiudi.Name = "BtnChiudi";
+            BtnChiudi.Size = new Size(82, 22);
+            BtnChiudi.TabIndex = 14;
+            BtnChiudi.Text = "Chiudi";
+            BtnChiudi.UseVisualStyleBackColor = true;
+            BtnChiudi.Click += BtnChiudi_Click;
+            // 
             // FrmLeggiFattura
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(BtnChiudi);
             Controls.Add(BtnCercaCartella);
             Controls.Add(lblEtichetta);
             Controls.Add(TxtPercorsoCartella);
             Controls.Add(label1);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "FrmLeggiFattura";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Falco - Programma gratuito di Fattura Elettronica";
@@ -99,5 +117,6 @@
         private Button BtnCercaCartella;
         private Label lblEtichetta;
         private TextBox TxtPercorsoCartella;
+        private Button BtnChiudi;
     }
 }

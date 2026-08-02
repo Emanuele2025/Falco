@@ -31,17 +31,16 @@ namespace Falco
         {
             try
             {
+                //TODO testare
                 using (OpenFileDialog openDlg = new OpenFileDialog())
-               {
+                {
 
-                   // openDlg.FileName = TxtPercorsoNomeFile.Text;
-
+                    // openDlg.FileName = TxtPercorsoNomeFile.Text;
                     openDlg.Multiselect = false;
 
                     openDlg.Filter = "XML Files (*.xml)";
 
                     if (openDlg.ShowDialog(this) == DialogResult.OK)
-
                     {
 
                         TxtPercorsoCartella.Text = openDlg.FileName;
@@ -67,6 +66,11 @@ namespace Falco
                 Utility.MessaggioErrore(ex.Message);
 
             }
+        }
+
+        private void BtnChiudi_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
