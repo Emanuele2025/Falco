@@ -39,6 +39,13 @@
             label2 = new Label();
             groupBox2 = new GroupBox();
             dgvDatiFattura = new DataGridView();
+            textBox1 = new TextBox();
+            label3 = new Label();
+            button1 = new Button();
+            TxtIndirizzo = new TextBox();
+            label4 = new Label();
+            TxtPartitaIva = new TextBox();
+            label5 = new Label();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvDatiFattura).BeginInit();
             SuspendLayout();
@@ -89,7 +96,7 @@
             // 
             BtnChiudi.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             BtnChiudi.Image = Properties.Resources.chiudi;
-            BtnChiudi.ImageAlign = ContentAlignment.MiddleRight;
+            BtnChiudi.ImageAlign = ContentAlignment.MiddleLeft;
             BtnChiudi.Location = new Point(1056, 645);
             BtnChiudi.Margin = new Padding(3, 2, 3, 2);
             BtnChiudi.Name = "BtnChiudi";
@@ -101,6 +108,13 @@
             // 
             // groupBox1
             // 
+            groupBox1.Controls.Add(TxtPartitaIva);
+            groupBox1.Controls.Add(label5);
+            groupBox1.Controls.Add(TxtIndirizzo);
+            groupBox1.Controls.Add(label4);
+            groupBox1.Controls.Add(textBox1);
+            groupBox1.Controls.Add(label3);
+            groupBox1.Controls.Add(button1);
             groupBox1.Controls.Add(txtNomeFornitore);
             groupBox1.Controls.Add(label2);
             groupBox1.Location = new Point(15, 84);
@@ -145,6 +159,70 @@
             dgvDatiFattura.Size = new Size(1139, 271);
             dgvDatiFattura.TabIndex = 17;
             // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(-280, -189);
+            textBox1.Name = "textBox1";
+            textBox1.ReadOnly = true;
+            textBox1.Size = new Size(502, 23);
+            textBox1.TabIndex = 16;
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(-284, -206);
+            label3.Name = "label3";
+            label3.Size = new Size(43, 15);
+            label3.TabIndex = 15;
+            label3.Text = "Nome:";
+            // 
+            // button1
+            // 
+            button1.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            button1.Image = Properties.Resources.chiudi;
+            button1.ImageAlign = ContentAlignment.MiddleRight;
+            button1.Location = new Point(755, 415);
+            button1.Margin = new Padding(3, 2, 3, 2);
+            button1.Name = "button1";
+            button1.Size = new Size(82, 22);
+            button1.TabIndex = 17;
+            button1.Text = "Chiudi";
+            button1.UseVisualStyleBackColor = true;
+            // 
+            // TxtIndirizzo
+            // 
+            TxtIndirizzo.Location = new Point(21, 93);
+            TxtIndirizzo.Name = "TxtIndirizzo";
+            TxtIndirizzo.ReadOnly = true;
+            TxtIndirizzo.Size = new Size(502, 23);
+            TxtIndirizzo.TabIndex = 19;
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.Location = new Point(17, 76);
+            label4.Name = "label4";
+            label4.Size = new Size(54, 15);
+            label4.TabIndex = 18;
+            label4.Text = "Indirizzo:";
+            // 
+            // TxtPartitaIva
+            // 
+            TxtPartitaIva.Location = new Point(21, 149);
+            TxtPartitaIva.Name = "TxtPartitaIva";
+            TxtPartitaIva.ReadOnly = true;
+            TxtPartitaIva.Size = new Size(502, 23);
+            TxtPartitaIva.TabIndex = 21;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.Location = new Point(17, 132);
+            label5.Name = "label5";
+            label5.Size = new Size(64, 15);
+            label5.TabIndex = 20;
+            label5.Text = "Partita IVA:";
+            // 
             // FrmLeggiFattura
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -183,5 +261,12 @@
         private DataGridView dgvDatiFattura;
         private TextBox txtNomeFornitore;
         private Label label2;
+        private TextBox TxtPartitaIva;
+        private Label label5;
+        private TextBox TxtIndirizzo;
+        private Label label4;
+        private TextBox textBox1;
+        private Label label3;
+        private Button button1;
     }
 }

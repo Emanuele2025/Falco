@@ -31,7 +31,7 @@ namespace Falco
         {
             try
             {
-                //TODO testare
+               
                 using (OpenFileDialog openDlg = new OpenFileDialog())
                 {
 
@@ -42,22 +42,11 @@ namespace Falco
 
                     if (openDlg.ShowDialog(this) == DialogResult.OK)
                     {
-
                         TxtPercorsoCartella.Text = openDlg.FileName;
-
                     }
 
                 }
-                //Apro la finestra di dialogo per la selezione della cartella
-                //using (FolderBrowserDialog folderBrowserDialog = new FolderBrowserDialog())
-                //{
-                //    folderBrowserDialog.Description = "Seleziona la cartella di destinazione per salvare l'immagine di bing";
-                //    if (folderBrowserDialog.ShowDialog() == DialogResult.OK)
-                //    {
-                //        // Imposto il percorso selezionato nella casella di testo
-                //        TxtPercorsoCartella.Text = folderBrowserDialog.SelectedPath;
-                //    }
-                //}
+               
 
 
             }
