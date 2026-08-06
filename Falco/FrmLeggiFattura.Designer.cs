@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLeggiFattura));
             label1 = new Label();
             BtnCercaCartella = new Button();
@@ -48,6 +49,7 @@
             label2 = new Label();
             groupBox2 = new GroupBox();
             dgvDatiFattura = new DataGridView();
+            tltInformazioni = new ToolTip(components);
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvDatiFattura).BeginInit();
             SuspendLayout();
@@ -74,6 +76,7 @@
             BtnCercaCartella.TabIndex = 13;
             BtnCercaCartella.Text = "...";
             BtnCercaCartella.TextAlign = ContentAlignment.TopLeft;
+            tltInformazioni.SetToolTip(BtnCercaCartella, "Apre una finestra per la selezione del file della fattura elettronica");
             BtnCercaCartella.UseVisualStyleBackColor = true;
             BtnCercaCartella.Click += BtnCercaCartella_Click;
             // 
@@ -291,5 +294,6 @@
         private Button button1;
         private TextBox TxtNumeroFattura;
         private Label label6;
+        private ToolTip tltInformazioni;
     }
 }
