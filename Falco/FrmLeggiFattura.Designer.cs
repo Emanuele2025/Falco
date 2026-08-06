@@ -35,6 +35,8 @@
             TxtPercorsoCartella = new TextBox();
             BtnChiudi = new Button();
             groupBox1 = new GroupBox();
+            TxtNumeroFattura = new TextBox();
+            label6 = new Label();
             TxtPartitaIva = new TextBox();
             label5 = new Label();
             TxtIndirizzo = new TextBox();
@@ -46,8 +48,6 @@
             label2 = new Label();
             groupBox2 = new GroupBox();
             dgvDatiFattura = new DataGridView();
-            TxtNumeroFattura = new TextBox();
-            label6 = new Label();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvDatiFattura).BeginInit();
             SuspendLayout();
@@ -68,7 +68,7 @@
             // BtnCercaCartella
             // 
             BtnCercaCartella.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            BtnCercaCartella.Location = new Point(573, 49);
+            BtnCercaCartella.Location = new Point(567, 46);
             BtnCercaCartella.Name = "BtnCercaCartella";
             BtnCercaCartella.Size = new Size(30, 29);
             BtnCercaCartella.TabIndex = 13;
@@ -128,9 +128,26 @@
             groupBox1.TabStop = false;
             groupBox1.Text = "Fornitore";
             // 
+            // TxtNumeroFattura
+            // 
+            TxtNumeroFattura.Location = new Point(21, 164);
+            TxtNumeroFattura.Name = "TxtNumeroFattura";
+            TxtNumeroFattura.ReadOnly = true;
+            TxtNumeroFattura.Size = new Size(502, 23);
+            TxtNumeroFattura.TabIndex = 23;
+            // 
+            // label6
+            // 
+            label6.AutoSize = true;
+            label6.Location = new Point(17, 147);
+            label6.Name = "label6";
+            label6.Size = new Size(94, 15);
+            label6.TabIndex = 22;
+            label6.Text = "Numero Fattura:";
+            // 
             // TxtPartitaIva
             // 
-            TxtPartitaIva.Location = new Point(21, 149);
+            TxtPartitaIva.Location = new Point(21, 122);
             TxtPartitaIva.Name = "TxtPartitaIva";
             TxtPartitaIva.ReadOnly = true;
             TxtPartitaIva.Size = new Size(502, 23);
@@ -139,7 +156,7 @@
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(17, 132);
+            label5.Location = new Point(17, 105);
             label5.Name = "label5";
             label5.Size = new Size(64, 15);
             label5.TabIndex = 20;
@@ -147,7 +164,7 @@
             // 
             // TxtIndirizzo
             // 
-            TxtIndirizzo.Location = new Point(21, 93);
+            TxtIndirizzo.Location = new Point(21, 79);
             TxtIndirizzo.Name = "TxtIndirizzo";
             TxtIndirizzo.ReadOnly = true;
             TxtIndirizzo.Size = new Size(502, 23);
@@ -156,7 +173,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(17, 76);
+            label4.Location = new Point(17, 62);
             label4.Name = "label4";
             label4.Size = new Size(54, 15);
             label4.TabIndex = 18;
@@ -194,7 +211,7 @@
             // 
             // txtNomeFornitore
             // 
-            txtNomeFornitore.Location = new Point(21, 41);
+            txtNomeFornitore.Location = new Point(21, 35);
             txtNomeFornitore.Name = "txtNomeFornitore";
             txtNomeFornitore.ReadOnly = true;
             txtNomeFornitore.Size = new Size(502, 23);
@@ -203,7 +220,7 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(17, 24);
+            label2.Location = new Point(17, 18);
             label2.Name = "label2";
             label2.Size = new Size(43, 15);
             label2.TabIndex = 0;
@@ -211,7 +228,7 @@
             // 
             // groupBox2
             // 
-            groupBox2.Location = new Point(600, 84);
+            groupBox2.Location = new Point(600, 76);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(552, 230);
             groupBox2.TabIndex = 16;
@@ -226,23 +243,6 @@
             dgvDatiFattura.Name = "dgvDatiFattura";
             dgvDatiFattura.Size = new Size(1139, 271);
             dgvDatiFattura.TabIndex = 17;
-            // 
-            // TxtNumeroFattura
-            // 
-            TxtNumeroFattura.Location = new Point(21, 201);
-            TxtNumeroFattura.Name = "TxtNumeroFattura";
-            TxtNumeroFattura.ReadOnly = true;
-            TxtNumeroFattura.Size = new Size(502, 23);
-            TxtNumeroFattura.TabIndex = 23;
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(17, 184);
-            label6.Name = "label6";
-            label6.Size = new Size(94, 15);
-            label6.TabIndex = 22;
-            label6.Text = "Numero Fattura:";
             // 
             // FrmLeggiFattura
             // 

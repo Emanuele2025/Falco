@@ -20,6 +20,12 @@ namespace Falco
             try
             {
                 this.Text = Utility.TitoloForm;
+
+
+
+
+
+
             }
             catch (Exception ex)
             {
@@ -63,6 +69,27 @@ namespace Falco
 
 
         #region Funzioni 
+
+        private void LeggiFattura() {
+
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+                Utility.MessaggioErrore(ex.Message);
+
+            }
+
+
+
+
+
+        }
+
+
+
 
         #endregion
 
