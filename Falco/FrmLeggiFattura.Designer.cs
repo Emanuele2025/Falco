@@ -50,6 +50,7 @@
             groupBox2 = new GroupBox();
             dgvDatiFattura = new DataGridView();
             tltInformazioni = new ToolTip(components);
+            BtnLeggiFattura = new Button();
             groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvDatiFattura).BeginInit();
             SuspendLayout();
@@ -70,7 +71,7 @@
             // BtnCercaCartella
             // 
             BtnCercaCartella.Font = new Font("Segoe UI", 10F, FontStyle.Bold);
-            BtnCercaCartella.Location = new Point(567, 46);
+            BtnCercaCartella.Location = new Point(567, 39);
             BtnCercaCartella.Name = "BtnCercaCartella";
             BtnCercaCartella.Size = new Size(30, 29);
             BtnCercaCartella.TabIndex = 13;
@@ -83,7 +84,7 @@
             // lblEtichetta
             // 
             lblEtichetta.AutoSize = true;
-            lblEtichetta.Location = new Point(12, 31);
+            lblEtichetta.Location = new Point(12, 25);
             lblEtichetta.Name = "lblEtichetta";
             lblEtichetta.Size = new Size(254, 15);
             lblEtichetta.TabIndex = 12;
@@ -91,7 +92,7 @@
             // 
             // TxtPercorsoCartella
             // 
-            TxtPercorsoCartella.Location = new Point(12, 49);
+            TxtPercorsoCartella.Location = new Point(12, 39);
             TxtPercorsoCartella.Name = "TxtPercorsoCartella";
             TxtPercorsoCartella.ReadOnly = true;
             TxtPercorsoCartella.Size = new Size(555, 23);
@@ -124,7 +125,7 @@
             groupBox1.Controls.Add(button1);
             groupBox1.Controls.Add(txtNomeFornitore);
             groupBox1.Controls.Add(label2);
-            groupBox1.Location = new Point(15, 84);
+            groupBox1.Location = new Point(15, 88);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(552, 230);
             groupBox1.TabIndex = 15;
@@ -247,11 +248,22 @@
             dgvDatiFattura.Size = new Size(1139, 271);
             dgvDatiFattura.TabIndex = 17;
             // 
+            // BtnLeggiFattura
+            // 
+            BtnLeggiFattura.Location = new Point(14, 64);
+            BtnLeggiFattura.Name = "BtnLeggiFattura";
+            BtnLeggiFattura.Size = new Size(75, 23);
+            BtnLeggiFattura.TabIndex = 18;
+            BtnLeggiFattura.Text = "Leggi fattura";
+            BtnLeggiFattura.UseVisualStyleBackColor = true;
+            BtnLeggiFattura.Click += BtnLeggiFattura_Click;
+            // 
             // FrmLeggiFattura
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1163, 687);
+            Controls.Add(BtnLeggiFattura);
             Controls.Add(dgvDatiFattura);
             Controls.Add(groupBox2);
             Controls.Add(groupBox1);
@@ -295,5 +307,6 @@
         private TextBox TxtNumeroFattura;
         private Label label6;
         private ToolTip tltInformazioni;
+        private Button BtnLeggiFattura;
     }
 }
