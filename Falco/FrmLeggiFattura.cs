@@ -147,8 +147,12 @@ namespace Falco
                 }
 
                 txtNomeFornitore.Text = fattura.RagioneSocialeMittente;
-
-
+                TxtPartitaIva.Text = fattura.PartitaIvaMittente;
+                TxtIndirizzo.Text = fattura.IndirizzoFornitore;
+                TxtNumeroFattura.Text = fattura.NumeroFattura;
+                TxtNomeCliente.Text = fattura.RagioneSocialeDestinatario;
+                //TxtIndirizzoCliente.Text = fattura
+                dgvDatiFattura.DataSource = fattura.DettagliFattura.ToList();
 
 
 

@@ -51,7 +51,16 @@
             dgvDatiFattura = new DataGridView();
             tltInformazioni = new ToolTip(components);
             BtnLeggiFattura = new Button();
+            TxtNumeroFatturaCliente = new TextBox();
+            label7 = new Label();
+            TxtPartitaIvaClienti = new TextBox();
+            label8 = new Label();
+            TxtIndirizzoCliente = new TextBox();
+            label9 = new Label();
+            TxtNomeCliente = new TextBox();
+            label10 = new Label();
             groupBox1.SuspendLayout();
+            groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvDatiFattura).BeginInit();
             SuspendLayout();
             // 
@@ -232,7 +241,15 @@
             // 
             // groupBox2
             // 
-            groupBox2.Location = new Point(600, 76);
+            groupBox2.Controls.Add(TxtNumeroFatturaCliente);
+            groupBox2.Controls.Add(label7);
+            groupBox2.Controls.Add(TxtPartitaIvaClienti);
+            groupBox2.Controls.Add(label8);
+            groupBox2.Controls.Add(TxtIndirizzoCliente);
+            groupBox2.Controls.Add(label9);
+            groupBox2.Controls.Add(TxtNomeCliente);
+            groupBox2.Controls.Add(label10);
+            groupBox2.Location = new Point(600, 83);
             groupBox2.Name = "groupBox2";
             groupBox2.Size = new Size(552, 230);
             groupBox2.TabIndex = 16;
@@ -258,6 +275,74 @@
             BtnLeggiFattura.UseVisualStyleBackColor = true;
             BtnLeggiFattura.Click += BtnLeggiFattura_Click;
             // 
+            // TxtNumeroFatturaCliente
+            // 
+            TxtNumeroFatturaCliente.Location = new Point(17, 167);
+            TxtNumeroFatturaCliente.Name = "TxtNumeroFatturaCliente";
+            TxtNumeroFatturaCliente.ReadOnly = true;
+            TxtNumeroFatturaCliente.Size = new Size(502, 23);
+            TxtNumeroFatturaCliente.TabIndex = 31;
+            // 
+            // label7
+            // 
+            label7.AutoSize = true;
+            label7.Location = new Point(13, 150);
+            label7.Name = "label7";
+            label7.Size = new Size(94, 15);
+            label7.TabIndex = 30;
+            label7.Text = "Numero Fattura:";
+            // 
+            // TxtPartitaIvaClienti
+            // 
+            TxtPartitaIvaClienti.Location = new Point(17, 125);
+            TxtPartitaIvaClienti.Name = "TxtPartitaIvaClienti";
+            TxtPartitaIvaClienti.ReadOnly = true;
+            TxtPartitaIvaClienti.Size = new Size(502, 23);
+            TxtPartitaIvaClienti.TabIndex = 29;
+            // 
+            // label8
+            // 
+            label8.AutoSize = true;
+            label8.Location = new Point(13, 108);
+            label8.Name = "label8";
+            label8.Size = new Size(64, 15);
+            label8.TabIndex = 28;
+            label8.Text = "Partita IVA:";
+            // 
+            // TxtIndirizzoCliente
+            // 
+            TxtIndirizzoCliente.Location = new Point(17, 82);
+            TxtIndirizzoCliente.Name = "TxtIndirizzoCliente";
+            TxtIndirizzoCliente.ReadOnly = true;
+            TxtIndirizzoCliente.Size = new Size(502, 23);
+            TxtIndirizzoCliente.TabIndex = 27;
+            // 
+            // label9
+            // 
+            label9.AutoSize = true;
+            label9.Location = new Point(13, 65);
+            label9.Name = "label9";
+            label9.Size = new Size(54, 15);
+            label9.TabIndex = 26;
+            label9.Text = "Indirizzo:";
+            // 
+            // TxtNomeCliente
+            // 
+            TxtNomeCliente.Location = new Point(17, 38);
+            TxtNomeCliente.Name = "TxtNomeCliente";
+            TxtNomeCliente.ReadOnly = true;
+            TxtNomeCliente.Size = new Size(502, 23);
+            TxtNomeCliente.TabIndex = 25;
+            // 
+            // label10
+            // 
+            label10.AutoSize = true;
+            label10.Location = new Point(13, 21);
+            label10.Name = "label10";
+            label10.Size = new Size(43, 15);
+            label10.TabIndex = 24;
+            label10.Text = "Nome:";
+            // 
             // FrmLeggiFattura
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -280,6 +365,8 @@
             Load += FrmLeggiFattura_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
+            groupBox2.ResumeLayout(false);
+            groupBox2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvDatiFattura).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -308,5 +395,13 @@
         private Label label6;
         private ToolTip tltInformazioni;
         private Button BtnLeggiFattura;
+        private TextBox TxtNumeroFatturaCliente;
+        private Label label7;
+        private TextBox TxtPartitaIvaClienti;
+        private Label label8;
+        private TextBox TxtIndirizzoCliente;
+        private Label label9;
+        private TextBox TxtNomeCliente;
+        private Label label10;
     }
 }
