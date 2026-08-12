@@ -153,7 +153,15 @@ namespace Falco
                 TxtNomeCliente.Text = fattura.RagioneSocialeDestinatario;
                 //TxtIndirizzoCliente.Text = fattura
                 dgvDatiFattura.DataSource = fattura.DettagliFattura.ToList();
-
+                //if (xmlContent.Contains("FatturaElettronica"))
+                //{
+                //    var fattura = Deserialize<FatturaElettronica>(xmlContent);
+                //    MostraFatturaOrdinaria(fattura);
+                //}
+                //else if (xmlContent.Contains("FatturaElettronicaSemplificata"))
+                //{
+                //    var fattura = Deserialize<FatturaElettronicaSemplificata>(xmlContent);
+                //    MostraFa
 
 
 
@@ -169,7 +177,31 @@ namespace Falco
 
 
         }
+//        private void MostraFatturaSemplificata(FatturaElettronicaSemplificata fattura)
+//        {
+//            var header = fattura.FatturaElettronicaHeader;
+//            var body = fattura.FatturaElettronicaBody;
 
+//            string mittente = header.CedentePrestatore.DatiAnagrafici.Anagrafica.Denominazione;
+//            string cliente = header.CessionarioCommittente.DatiAnagrafici.Anagrafica.Denominazione;
+//            var datiDoc = body.DatiGenerali.DatiGeneraliDocumento;
+
+//            string valore = $@"FORMATO: FATTURA SEMPLIFICATA
+//MITTENTE: {mittente}
+//CLIENTE: {cliente}
+
+//FATTURA N: {datiDoc.Numero} del {datiDoc.Data:dd/MM/yyyy}
+//TOTALE: € {datiDoc.ImportoTotaleDocumento}";
+
+//            var righe = body.DatiBeniServizi.DettaglioLinee.Select(r => new {
+//                Riga = r.NumeroLinea,
+//                Descrizione = r.Descrizione,
+//                Quantita = r.Quantita,
+//                Prezzo = r.PrezzoUnitario,
+//                Totale = r.PrezzoTotale
+//            }).ToList();
+//            dgvDatiFattura.DataSource = righe;
+//        }
 
 
 
