@@ -94,6 +94,9 @@ namespace Falco
                         fattura.PartitaIvaMittente = mittente
                             .Descendants("IdFiscaleIVA")
                             .Descendants("IdCode").FirstOrDefault()?.Value ?? "";
+                        fattura.PartitaIvaMittente += " " + mittente
+                            .Descendants("CodiceFiscale").FirstOrDefault()?.Value ?? "";
+
                     }
 
                     var destinatario = header.Descendants( "CessionarioCommittente").FirstOrDefault();
