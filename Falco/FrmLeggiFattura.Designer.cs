@@ -29,6 +29,9 @@
         private void InitializeComponent()
         {
             components = new System.ComponentModel.Container();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmLeggiFattura));
             label1 = new Label();
             BtnCercaCartella = new Button();
@@ -48,9 +51,6 @@
             txtNomeFornitore = new TextBox();
             label2 = new Label();
             groupBox2 = new GroupBox();
-            dgvDatiFattura = new DataGridView();
-            tltInformazioni = new ToolTip(components);
-            BtnLeggiFattura = new Button();
             TxtNumeroFatturaCliente = new TextBox();
             label7 = new Label();
             TxtPartitaIvaClienti = new TextBox();
@@ -59,6 +59,14 @@
             label9 = new Label();
             TxtNomeCliente = new TextBox();
             label10 = new Label();
+            dgvDatiFattura = new DataGridView();
+            tltInformazioni = new ToolTip(components);
+            BtnLeggiFattura = new Button();
+            Descrizione = new DataGridViewTextBoxColumn();
+            Quantita = new DataGridViewTextBoxColumn();
+            PrezzoUnitario = new DataGridViewTextBoxColumn();
+            IVA = new DataGridViewTextBoxColumn();
+            Importo = new DataGridViewTextBoxColumn();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvDatiFattura).BeginInit();
@@ -256,25 +264,6 @@
             groupBox2.TabStop = false;
             groupBox2.Text = "Cliente";
             // 
-            // dgvDatiFattura
-            // 
-            dgvDatiFattura.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            dgvDatiFattura.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dgvDatiFattura.Location = new Point(12, 320);
-            dgvDatiFattura.Name = "dgvDatiFattura";
-            dgvDatiFattura.Size = new Size(1139, 271);
-            dgvDatiFattura.TabIndex = 17;
-            // 
-            // BtnLeggiFattura
-            // 
-            BtnLeggiFattura.Location = new Point(14, 64);
-            BtnLeggiFattura.Name = "BtnLeggiFattura";
-            BtnLeggiFattura.Size = new Size(75, 23);
-            BtnLeggiFattura.TabIndex = 18;
-            BtnLeggiFattura.Text = "Leggi fattura";
-            BtnLeggiFattura.UseVisualStyleBackColor = true;
-            BtnLeggiFattura.Click += BtnLeggiFattura_Click;
-            // 
             // TxtNumeroFatturaCliente
             // 
             TxtNumeroFatturaCliente.Location = new Point(17, 167);
@@ -343,6 +332,72 @@
             label10.TabIndex = 24;
             label10.Text = "Nome:";
             // 
+            // dgvDatiFattura
+            // 
+            dgvDatiFattura.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            dgvDatiFattura.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvDatiFattura.Columns.AddRange(new DataGridViewColumn[] { Descrizione, Quantita, PrezzoUnitario, IVA, Importo });
+            dgvDatiFattura.Location = new Point(12, 320);
+            dgvDatiFattura.Name = "dgvDatiFattura";
+            dgvDatiFattura.Size = new Size(1139, 271);
+            dgvDatiFattura.TabIndex = 17;
+            // 
+            // BtnLeggiFattura
+            // 
+            BtnLeggiFattura.Location = new Point(14, 64);
+            BtnLeggiFattura.Name = "BtnLeggiFattura";
+            BtnLeggiFattura.Size = new Size(75, 23);
+            BtnLeggiFattura.TabIndex = 18;
+            BtnLeggiFattura.Text = "Leggi fattura";
+            BtnLeggiFattura.UseVisualStyleBackColor = true;
+            BtnLeggiFattura.Click += BtnLeggiFattura_Click;
+            // 
+            // Descrizione
+            // 
+            Descrizione.DataPropertyName = "Descrizione";
+            Descrizione.HeaderText = "Descrizione";
+            Descrizione.MinimumWidth = 100;
+            Descrizione.Name = "Descrizione";
+            Descrizione.Width = 300;
+            // 
+            // Quantita
+            // 
+            Quantita.DataPropertyName = "Quantita";
+            Quantita.HeaderText = "Quantità";
+            Quantita.Name = "Quantita";
+            Quantita.Width = 80;
+            // 
+            // PrezzoUnitario
+            // 
+            PrezzoUnitario.DataPropertyName = "PrezzoUnitario";
+            dataGridViewCellStyle1.Format = "C2";
+            dataGridViewCellStyle1.NullValue = null;
+            PrezzoUnitario.DefaultCellStyle = dataGridViewCellStyle1;
+            PrezzoUnitario.HeaderText = "Prezzo Unitario";
+            PrezzoUnitario.MinimumWidth = 100;
+            PrezzoUnitario.Name = "PrezzoUnitario";
+            PrezzoUnitario.Width = 300;
+            // 
+            // IVA
+            // 
+            IVA.DataPropertyName = "IVA";
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.TopCenter;
+            IVA.DefaultCellStyle = dataGridViewCellStyle2;
+            IVA.HeaderText = "Iva";
+            IVA.Name = "IVA";
+            IVA.Width = 80;
+            // 
+            // Importo
+            // 
+            Importo.DataPropertyName = "Importo";
+            dataGridViewCellStyle3.Format = "C2";
+            dataGridViewCellStyle3.NullValue = null;
+            Importo.DefaultCellStyle = dataGridViewCellStyle3;
+            Importo.HeaderText = "Importo";
+            Importo.MinimumWidth = 100;
+            Importo.Name = "Importo";
+            Importo.Width = 300;
+            // 
             // FrmLeggiFattura
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -403,5 +458,10 @@
         private Label label9;
         private TextBox TxtNomeCliente;
         private Label label10;
+        private DataGridViewTextBoxColumn Descrizione;
+        private DataGridViewTextBoxColumn Quantita;
+        private DataGridViewTextBoxColumn PrezzoUnitario;
+        private DataGridViewTextBoxColumn IVA;
+        private DataGridViewTextBoxColumn Importo;
     }
 }

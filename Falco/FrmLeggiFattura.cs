@@ -154,8 +154,11 @@ namespace Falco
                 TxtIndirizzo.Text = fattura.IndirizzoFornitore;
                 TxtNumeroFattura.Text = fattura.NumeroFattura;
                 TxtNomeCliente.Text = fattura.RagioneSocialeDestinatario;
+                string TotaleFattura = "";
+                var Dettagli = fattura.DettagliFattura.ToList();
+                Dettagli.Add(new Dettagli { Descrizione="Totale Fattura", Importo = fattura.ImportoTotale });
                 //TxtIndirizzoCliente.Text = fattura
-                dgvDatiFattura.DataSource = fattura.DettagliFattura.ToList();
+                dgvDatiFattura.DataSource = Dettagli;
                 //if (xmlContent.Contains("FatturaElettronica"))
                 //{
                 //    var fattura = Deserialize<FatturaElettronica>(xmlContent);

@@ -28,4 +28,8 @@
     </EmbeddedResource>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Documenti\Fatture\" />
+  </ItemGroup>
+
 </Project>
