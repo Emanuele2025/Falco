@@ -21,7 +21,7 @@ namespace Falco
             //https://www.agenziaentrate.gov.it/portale/normativa-prassi-e-regole-tecniche-fatture-elettroniche
             //https://www.agenziaentrate.gov.it/portale/web/guest/fogli-di-stile-per-ricevute
             //https://www.agenziaentrate.gov.it/portale/specifiche-tecniche-versione-1.9
-
+            //https://www.fatturapa.gov.it/it/index.html
 
             //Altri
             //https://www.agenziaentrate.gov.it/portale/specifiche-tecniche-versione-1.9
@@ -32,6 +32,10 @@ namespace Falco
             //Icone
             //https://graphicsurf.com/all-graphics/
             //Non ancora utiizzato https://allsvgicons.com/pack/dashicons/ 
+            //Contatto
+            // supportofatturapa@agenziaentrate.it
+
+
             try
             {
 

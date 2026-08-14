@@ -135,8 +135,8 @@ namespace Falco
                         {
                             Descrizione = linea.Descendants( "Descrizione").FirstOrDefault()?.Value ?? "",
                             Quantita = decimal.Parse(linea.Descendants( "Quantita").FirstOrDefault()?.Value ?? "0"),
-                            PrezzoUnitario = decimal.Parse(linea.Descendants( "PrezzoUnitario").FirstOrDefault()?.Value ?? "0"),
-                            Importo = decimal.Parse(linea.Descendants( "ImportoLinea").FirstOrDefault()?.Value ?? "0"),
+                            PrezzoUnitario = decimal.Parse(linea.Descendants( "PrezzoUnitario").FirstOrDefault()?.Value ?? "0") / 100,
+                            Importo = decimal.Parse(linea.Descendants( "ImportoLinea").FirstOrDefault()?.Value ?? "0")/100,
                             AliquotaIva = decimal.Parse(linea.Descendants( "AliquotaIVA").FirstOrDefault()?.Value ?? "0")
                         };
                         fattura.DettagliFattura.Add(dettaglio);
@@ -158,7 +158,7 @@ namespace Falco
                 TxtNomeCliente.Text = fattura.RagioneSocialeDestinatario;
                 string TotaleFattura = "";
                 var Dettagli = fattura.DettagliFattura.ToList();
-                Dettagli.Add(new Dettagli { Descrizione="Totale Fattura", Importo = fattura.ImportoTotale });
+                Dettagli.Add(new Dettagli { Descrizione="Totale Fattura", Importo =  fattura.ImportoTotale / 100  });
                 //TxtIndirizzoCliente.Text = fattura
                 dgvDatiFattura.DataSource = Dettagli;
                 //if (xmlContent.Contains("FatturaElettronica"))
