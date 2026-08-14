@@ -6,7 +6,9 @@ using System.Data;
 using System.Drawing;
 using System.Text;
 using System.Windows.Forms;
+using System.Xml;
 using System.Xml.Linq;
+using System.Xml.Serialization;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace Falco
@@ -224,6 +226,41 @@ namespace Falco
                 return;
             }
             LeggiFattura();
+            LeggiFatturaXml(TxtPercorsoCartella.Text.Trim());
+        }
+
+        public FatturaElettronicaType LeggiFatturaXml(string percorsoFile)
+        {
+            XmlSerializer serializer = new XmlSerializer(typeof(FatturaElettronicaType));
+
+            using (StreamReader reader = new StreamReader(percorsoFile))
+            {
+                return (FatturaElettronicaType)serializer.Deserialize(reader);
+            }
+        }
+        // Trasforma la tua classe C# in un file XML pronto per lo SDI
+        public void CreaFatturaXml(FatturaElettronicaType fattura, string percorsoFile)
+        {
+            XmlSerializer serializer = new XmlSerializer(typeof(FatturaElettronicaType));
+
+            // Impostiamo i namespace corretti richiesti dall'Agenzia delle Entrate
+            XmlSerializerNamespaces namespaces = new XmlSerializerNamespaces();
+            namespaces.Add("p", "http://ivaservizi.agenziaentrate.gov.it/docs/xsd/fatture/v1.2");
+            namespaces.Add("ds", "http://www.w3.org/2000/09/xmldsig#");
+            namespaces.Add("xsi", "http://www.w3.org/2001/XMLSchema-instance");
+
+            // Impostazioni per avere un XML formattato e pulito
+            XmlWriterSettings settings = new XmlWriterSettings
+            {
+                Indent = true,
+                OmitXmlDeclaration = false,
+                Encoding = System.Text.Encoding.UTF8
+            };
+
+            using (XmlWriter writer = XmlWriter.Create(percorsoFile, settings))
+            {
+                serializer.Serialize(writer, fattura, namespaces);
+            }
         }
     }
 }
