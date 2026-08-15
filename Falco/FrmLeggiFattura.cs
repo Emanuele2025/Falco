@@ -226,7 +226,12 @@ namespace Falco
                 return;
             }
             LeggiFattura();
-            LeggiFatturaXml(TxtPercorsoCartella.Text.Trim());
+          var fattura =  LeggiFatturaXml(TxtPercorsoCartella.Text.Trim());
+            //Gestire per i vari campi
+
+
+
+
         }
 
         public FatturaElettronicaType LeggiFatturaXml(string percorsoFile)
