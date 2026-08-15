@@ -14,6 +14,9 @@ namespace Falco
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            //https://www.agenziaentrate.gov.it/portale/specifiche-tecniche-versione-1.9.1-%C2%A0-utilizzabili-dal-15-maggio-2026-
+
+
             //https://www.agenziaentrate.gov.it/portale/specifiche-tecniche-versione-1.9
 
 
