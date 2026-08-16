@@ -229,7 +229,7 @@ namespace Falco
           var fattura =  LeggiFatturaXml(TxtPercorsoCartella.Text.Trim());
             //Gestire per i vari campi
             //TODO: vedere anche le altre classi di fattura
-
+            //Trovare indirizzo + IVA + indirizzo cliente e mittente TxtIndirizzoCliente.Text = fattura.FatturaElettronicaHeader.CessionarioCommittente
 
 
         }
