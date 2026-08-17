@@ -156,7 +156,7 @@ namespace Falco
                 TxtIndirizzo.Text = fattura.IndirizzoFornitore;
                 TxtNumeroFattura.Text = fattura.NumeroFattura;
                 TxtNomeCliente.Text = fattura.RagioneSocialeDestinatario;
-                string TotaleFattura = "";
+               // string TotaleFattura = "";
                 var Dettagli = fattura.DettagliFattura.ToList();
                 Dettagli.Add(new Dettagli { Descrizione="Totale Fattura", Importo =  fattura.ImportoTotale / 100  });
                 //TxtIndirizzoCliente.Text = fattura
@@ -229,9 +229,9 @@ namespace Falco
           var fattura =  LeggiFatturaXml(TxtPercorsoCartella.Text.Trim());
             //Gestire per i vari campi
             //TODO: vedere anche le altre classi di fattura
-            //Trovare indirizzo + IVA + indirizzo cliente e mittente TxtIndirizzoCliente.Text = fattura.FatturaElettronicaHeader.CessionarioCommittente
-
-
+             //Trovare indirizzo + IVA + indirizzo cliente e mittente TxtIndirizzoCliente.Text = fattura.FatturaElettronicaHeader.CessionarioCommittente
+            TxtIndirizzo.Text = fattura.FatturaElettronicaHeader.CessionarioCommittente.Sede.Indirizzo + " " + fattura.FatturaElettronicaHeader.CessionarioCommittente.Sede.CAP + " " + fattura.FatturaElettronicaHeader.CessionarioCommittente.Sede.Comune;
+            TxtIndirizzoCliente.Text = fattura.FatturaElettronicaHeader.CedentePrestatore.Sede.Indirizzo + " " + fattura.FatturaElettronicaHeader.CedentePrestatore.Sede.CAP + " " + fattura.FatturaElettronicaHeader.CedentePrestatore.Sede.Comune;
         }
 
         public FatturaElettronicaType LeggiFatturaXml(string percorsoFile)

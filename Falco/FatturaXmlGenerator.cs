@@ -121,7 +121,7 @@ namespace Falco
                 AddElement(linea, "UnitaMisura", "pz");
                 AddElement(linea, "PrezzoUnitario", articolo.PrezzoUnitario.ToString("F2"));
 
-                decimal scontoLinea = 0;
+               // decimal scontoLinea = 0;
                 AddElement(linea, "PrezzoTotale",
                     (articolo.Quantita * articolo.PrezzoUnitario).ToString("F2"));
 
