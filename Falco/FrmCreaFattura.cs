@@ -57,7 +57,7 @@ namespace Falco
         {
             try
             {
-
+                //TODO: Caricare la casella dei clienti
             }
             catch (Exception ex)
             {
@@ -67,7 +67,14 @@ namespace Falco
 
         private void BtnNuovoCliente_Click(object sender, EventArgs e)
         {
+            try
+            {
 
+            }
+            catch (Exception ex)
+            {
+                Utility.MessaggioErrore("Si è verificato il seguente errore: " + ex.Message);
+            }
         }
     }
 }
