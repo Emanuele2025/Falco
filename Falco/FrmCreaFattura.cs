@@ -58,6 +58,9 @@ namespace Falco
             try
             {
                 //TODO: Caricare la casella dei clienti
+                this.Text = Utility.TitoloForm;
+
+                CaricaDati();
             }
             catch (Exception ex)
             {
@@ -75,6 +78,26 @@ namespace Falco
             {
                 Utility.MessaggioErrore("Si è verificato il seguente errore: " + ex.Message);
             }
+        }
+
+
+        private void CaricaDati()
+        {
+
+            try
+            {
+                //Caricare anche comboClienti
+
+
+
+
+            }
+            catch (Exception ex)
+            {
+                Utility.MessaggioErrore("Si è verificato il seguente errore: " + ex.Message);
+            }
+
+
         }
     }
 }
