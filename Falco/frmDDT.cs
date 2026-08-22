@@ -23,6 +23,14 @@ namespace Falco
         private void frmDDT_Load(object sender, EventArgs e)
         {
             this.Text = Utility.TitoloForm;
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+                Utility.MessaggioErrore("Si è verificato il seguente errore: " + ex.Message);
+            }
         }
     }
 }

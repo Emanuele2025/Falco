@@ -31,6 +31,8 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDDT));
             label1 = new Label();
             BtnChiudi = new Button();
+            dtgDatiDTT = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dtgDatiDTT).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -41,7 +43,7 @@
             label1.ForeColor = SystemColors.ControlLightLight;
             label1.Location = new Point(0, 0);
             label1.Name = "label1";
-            label1.Size = new Size(1300, 21);
+            label1.Size = new Size(1403, 21);
             label1.TabIndex = 8;
             label1.Text = "Gestione delle fatture Elettroniche - Gestione documento di Trasporto";
             label1.TextAlign = ContentAlignment.TopCenter;
@@ -51,7 +53,7 @@
             BtnChiudi.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             BtnChiudi.Image = Properties.Resources.chiudi;
             BtnChiudi.ImageAlign = ContentAlignment.MiddleLeft;
-            BtnChiudi.Location = new Point(1181, 681);
+            BtnChiudi.Location = new Point(1269, 731);
             BtnChiudi.Margin = new Padding(3, 2, 3, 2);
             BtnChiudi.Name = "BtnChiudi";
             BtnChiudi.Size = new Size(82, 22);
@@ -60,11 +62,21 @@
             BtnChiudi.UseVisualStyleBackColor = true;
             BtnChiudi.Click += BtnChiudi_Click;
             // 
+            // dtgDatiDTT
+            // 
+            dtgDatiDTT.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dtgDatiDTT.Dock = DockStyle.Top;
+            dtgDatiDTT.Location = new Point(0, 21);
+            dtgDatiDTT.Name = "dtgDatiDTT";
+            dtgDatiDTT.Size = new Size(1403, 597);
+            dtgDatiDTT.TabIndex = 16;
+            // 
             // frmDDT
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1300, 724);
+            ClientSize = new Size(1403, 775);
+            Controls.Add(dtgDatiDTT);
             Controls.Add(BtnChiudi);
             Controls.Add(label1);
             Icon = (Icon)resources.GetObject("$this.Icon");
@@ -72,6 +84,7 @@
             StartPosition = FormStartPosition.CenterScreen;
             Text = "Gestione Documento Di Trasprto";
             Load += frmDDT_Load;
+            ((System.ComponentModel.ISupportInitialize)dtgDatiDTT).EndInit();
             ResumeLayout(false);
         }
 
@@ -79,5 +92,6 @@
 
         private Label label1;
         private Button BtnChiudi;
+        private DataGridView dtgDatiDTT;
     }
 }
