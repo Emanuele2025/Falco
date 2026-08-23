@@ -32,5 +32,28 @@ namespace Falco
                 Utility.MessaggioErrore("Si è verificato il seguente errore: " + ex.Message);
             }
         }
+
+        private void BtnInserisci_Click(object sender, EventArgs e)
+        {
+            //Richiamare la form
+        }
+
+        private void eliminaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //Verificare la selezione del record
+
+                //Messaggio
+
+                //Cancello
+
+
+            }
+            catch (Exception ex)
+            {
+                Utility.MessaggioErrore("Si è verificato il seguente errore: " + ex.Message);
+            }
+        }
     }
 }

@@ -28,11 +28,17 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmDDT));
             label1 = new Label();
             BtnChiudi = new Button();
             dtgDatiDTT = new DataGridView();
+            BtnInserisci = new Button();
+            cmsMenu = new ContextMenuStrip(components);
+            modificaToolStripMenuItem = new ToolStripMenuItem();
+            eliminaToolStripMenuItem = new ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)dtgDatiDTT).BeginInit();
+            cmsMenu.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -71,11 +77,41 @@
             dtgDatiDTT.Size = new Size(1403, 597);
             dtgDatiDTT.TabIndex = 16;
             // 
+            // BtnInserisci
+            // 
+            BtnInserisci.Location = new Point(17, 736);
+            BtnInserisci.Name = "BtnInserisci";
+            BtnInserisci.Size = new Size(75, 23);
+            BtnInserisci.TabIndex = 17;
+            BtnInserisci.Text = "Inserisci";
+            BtnInserisci.UseVisualStyleBackColor = true;
+            BtnInserisci.Click += BtnInserisci_Click;
+            // 
+            // cmsMenu
+            // 
+            cmsMenu.Items.AddRange(new ToolStripItem[] { modificaToolStripMenuItem, eliminaToolStripMenuItem });
+            cmsMenu.Name = "cmsMenu";
+            cmsMenu.Size = new Size(181, 70);
+            // 
+            // modificaToolStripMenuItem
+            // 
+            modificaToolStripMenuItem.Name = "modificaToolStripMenuItem";
+            modificaToolStripMenuItem.Size = new Size(180, 22);
+            modificaToolStripMenuItem.Text = "Modifica..";
+            // 
+            // eliminaToolStripMenuItem
+            // 
+            eliminaToolStripMenuItem.Name = "eliminaToolStripMenuItem";
+            eliminaToolStripMenuItem.Size = new Size(180, 22);
+            eliminaToolStripMenuItem.Text = "Elimina...";
+            eliminaToolStripMenuItem.Click += eliminaToolStripMenuItem_Click;
+            // 
             // frmDDT
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1403, 775);
+            Controls.Add(BtnInserisci);
             Controls.Add(dtgDatiDTT);
             Controls.Add(BtnChiudi);
             Controls.Add(label1);
@@ -85,6 +121,7 @@
             Text = "Gestione Documento Di Trasprto";
             Load += frmDDT_Load;
             ((System.ComponentModel.ISupportInitialize)dtgDatiDTT).EndInit();
+            cmsMenu.ResumeLayout(false);
             ResumeLayout(false);
         }
 
@@ -93,5 +130,9 @@
         private Label label1;
         private Button BtnChiudi;
         private DataGridView dtgDatiDTT;
+        private Button BtnInserisci;
+        private ContextMenuStrip cmsMenu;
+        private ToolStripMenuItem modificaToolStripMenuItem;
+        private ToolStripMenuItem eliminaToolStripMenuItem;
     }
 }
