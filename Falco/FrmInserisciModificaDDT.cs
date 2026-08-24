@@ -17,7 +17,7 @@ namespace Falco
 
         private void FrmInserisciModificaDDT_Load(object sender, EventArgs e)
         {
-            
+
             try
             {
                 this.Text = Utility.TitoloForm;
@@ -28,6 +28,11 @@ namespace Falco
             {
                 Utility.MessaggioErrore("Si è verificato il seguente errore: " + ex.Message);
             }
+        }
+
+        private void BtnChiudi_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
