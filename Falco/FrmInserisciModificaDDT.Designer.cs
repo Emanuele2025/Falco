@@ -52,20 +52,20 @@
             TxtRagioneSocialeCessonario = new TextBox();
             label11 = new Label();
             groupBox3 = new GroupBox();
-            textBox1 = new TextBox();
-            label12 = new Label();
-            textBox2 = new TextBox();
-            label13 = new Label();
-            textBox3 = new TextBox();
-            label14 = new Label();
-            textBox4 = new TextBox();
-            label15 = new Label();
             textBox5 = new TextBox();
             label16 = new Label();
             textBox6 = new TextBox();
             label17 = new Label();
             textBox7 = new TextBox();
             label18 = new Label();
+            textBox1 = new TextBox();
+            label12 = new Label();
+            textBox2 = new TextBox();
+            label13 = new Label();
+            textBox3 = new TextBox();
+            label14 = new Label();
+            TxtVettore = new TextBox();
+            label15 = new Label();
             BtnChiudi = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -105,6 +105,8 @@
             TxtProgressivo.Name = "TxtProgressivo";
             TxtProgressivo.Size = new Size(304, 23);
             TxtProgressivo.TabIndex = 3;
+            TxtProgressivo.Enter += txt_Enter;
+            TxtProgressivo.Leave += txt_Leave;
             // 
             // label3
             // 
@@ -142,6 +144,8 @@
             TxtCodiceFiscaleCedente.Name = "TxtCodiceFiscaleCedente";
             TxtCodiceFiscaleCedente.Size = new Size(409, 23);
             TxtCodiceFiscaleCedente.TabIndex = 11;
+            TxtCodiceFiscaleCedente.Enter += txt_Enter;
+            TxtCodiceFiscaleCedente.Leave += txt_Leave;
             // 
             // label7
             // 
@@ -158,6 +162,8 @@
             TxtPartitaIvaCedente.Name = "TxtPartitaIvaCedente";
             TxtPartitaIvaCedente.Size = new Size(409, 23);
             TxtPartitaIvaCedente.TabIndex = 9;
+            TxtPartitaIvaCedente.Enter += txt_Enter;
+            TxtPartitaIvaCedente.Leave += txt_Leave;
             // 
             // label6
             // 
@@ -174,6 +180,8 @@
             TxtIndirizzoCedente.Name = "TxtIndirizzoCedente";
             TxtIndirizzoCedente.Size = new Size(409, 23);
             TxtIndirizzoCedente.TabIndex = 7;
+            TxtIndirizzoCedente.Enter += txt_Enter;
+            TxtIndirizzoCedente.Leave += txt_Leave;
             // 
             // label5
             // 
@@ -190,6 +198,8 @@
             TxtRagioneSociale.Name = "TxtRagioneSociale";
             TxtRagioneSociale.Size = new Size(409, 23);
             TxtRagioneSociale.TabIndex = 5;
+            TxtRagioneSociale.Enter += txt_Enter;
+            TxtRagioneSociale.Leave += txt_Leave;
             // 
             // label4
             // 
@@ -223,6 +233,8 @@
             TxtCodiceFiscaleCessonario.Name = "TxtCodiceFiscaleCessonario";
             TxtCodiceFiscaleCessonario.Size = new Size(409, 23);
             TxtCodiceFiscaleCessonario.TabIndex = 11;
+            TxtCodiceFiscaleCessonario.Enter += txt_Enter;
+            TxtCodiceFiscaleCessonario.Leave += txt_Leave;
             // 
             // label8
             // 
@@ -239,6 +251,8 @@
             TxtPartitaIvaCessonario.Name = "TxtPartitaIvaCessonario";
             TxtPartitaIvaCessonario.Size = new Size(409, 23);
             TxtPartitaIvaCessonario.TabIndex = 9;
+            TxtPartitaIvaCessonario.Enter += txt_Enter;
+            TxtPartitaIvaCessonario.Leave += txt_Leave;
             // 
             // label9
             // 
@@ -255,6 +269,8 @@
             TxtIndirizzoCessonario.Name = "TxtIndirizzoCessonario";
             TxtIndirizzoCessonario.Size = new Size(409, 23);
             TxtIndirizzoCessonario.TabIndex = 7;
+            TxtIndirizzoCessonario.Enter += txt_Enter;
+            TxtIndirizzoCessonario.Leave += txt_Leave;
             // 
             // label10
             // 
@@ -271,6 +287,8 @@
             TxtRagioneSocialeCessonario.Name = "TxtRagioneSocialeCessonario";
             TxtRagioneSocialeCessonario.Size = new Size(409, 23);
             TxtRagioneSocialeCessonario.TabIndex = 5;
+            TxtRagioneSocialeCessonario.Enter += txt_Enter;
+            TxtRagioneSocialeCessonario.Leave += txt_Leave;
             // 
             // label11
             // 
@@ -295,7 +313,7 @@
             groupBox3.Controls.Add(label13);
             groupBox3.Controls.Add(textBox3);
             groupBox3.Controls.Add(label14);
-            groupBox3.Controls.Add(textBox4);
+            groupBox3.Controls.Add(TxtVettore);
             groupBox3.Controls.Add(label15);
             groupBox3.Location = new Point(18, 357);
             groupBox3.Name = "groupBox3";
@@ -304,76 +322,14 @@
             groupBox3.TabStop = false;
             groupBox3.Text = "Trasporto";
             // 
-            // textBox1
-            // 
-            textBox1.Location = new Point(6, 209);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(409, 23);
-            textBox1.TabIndex = 11;
-            // 
-            // label12
-            // 
-            label12.AutoSize = true;
-            label12.Location = new Point(6, 191);
-            label12.Name = "label12";
-            label12.Size = new Size(118, 15);
-            label12.TabIndex = 10;
-            label12.Text = "Motivo del trasporto:";
-            // 
-            // textBox2
-            // 
-            textBox2.Location = new Point(6, 154);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(409, 23);
-            textBox2.TabIndex = 9;
-            // 
-            // label13
-            // 
-            label13.AutoSize = true;
-            label13.Location = new Point(6, 136);
-            label13.Name = "label13";
-            label13.Size = new Size(90, 15);
-            label13.TabIndex = 8;
-            label13.Text = "Luogo di arrivo:";
-            // 
-            // textBox3
-            // 
-            textBox3.Location = new Point(6, 102);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(409, 23);
-            textBox3.TabIndex = 7;
-            // 
-            // label14
-            // 
-            label14.AutoSize = true;
-            label14.Location = new Point(6, 84);
-            label14.Name = "label14";
-            label14.Size = new Size(92, 15);
-            label14.TabIndex = 6;
-            label14.Text = "Luogo Partenza:";
-            // 
-            // textBox4
-            // 
-            textBox4.Location = new Point(6, 47);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(409, 23);
-            textBox4.TabIndex = 5;
-            // 
-            // label15
-            // 
-            label15.AutoSize = true;
-            label15.Location = new Point(6, 29);
-            label15.Name = "label15";
-            label15.Size = new Size(47, 15);
-            label15.TabIndex = 4;
-            label15.Text = "Vettore:";
-            // 
             // textBox5
             // 
             textBox5.Location = new Point(491, 154);
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(409, 23);
             textBox5.TabIndex = 17;
+            textBox5.Enter += txt_Enter;
+            textBox5.Leave += txt_Leave;
             // 
             // label16
             // 
@@ -390,6 +346,8 @@
             textBox6.Name = "textBox6";
             textBox6.Size = new Size(409, 23);
             textBox6.TabIndex = 15;
+            textBox6.Enter += txt_Enter;
+            textBox6.Leave += txt_Leave;
             // 
             // label17
             // 
@@ -406,6 +364,8 @@
             textBox7.Name = "textBox7";
             textBox7.Size = new Size(409, 23);
             textBox7.TabIndex = 13;
+            textBox7.Enter += txt_Enter;
+            textBox7.Leave += txt_Leave;
             // 
             // label18
             // 
@@ -415,6 +375,78 @@
             label18.Size = new Size(35, 15);
             label18.TabIndex = 12;
             label18.Text = "Peso:";
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(6, 209);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(409, 23);
+            textBox1.TabIndex = 11;
+            textBox1.Enter += txt_Enter;
+            textBox1.Leave += txt_Leave;
+            // 
+            // label12
+            // 
+            label12.AutoSize = true;
+            label12.Location = new Point(6, 191);
+            label12.Name = "label12";
+            label12.Size = new Size(118, 15);
+            label12.TabIndex = 10;
+            label12.Text = "Motivo del trasporto:";
+            // 
+            // textBox2
+            // 
+            textBox2.Location = new Point(6, 154);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(409, 23);
+            textBox2.TabIndex = 9;
+            textBox2.Enter += txt_Enter;
+            textBox2.Leave += txt_Leave;
+            // 
+            // label13
+            // 
+            label13.AutoSize = true;
+            label13.Location = new Point(6, 136);
+            label13.Name = "label13";
+            label13.Size = new Size(90, 15);
+            label13.TabIndex = 8;
+            label13.Text = "Luogo di arrivo:";
+            // 
+            // textBox3
+            // 
+            textBox3.Location = new Point(6, 102);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(409, 23);
+            textBox3.TabIndex = 7;
+            textBox3.Enter += txt_Enter;
+            textBox3.Leave += txt_Leave;
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Location = new Point(6, 84);
+            label14.Name = "label14";
+            label14.Size = new Size(92, 15);
+            label14.TabIndex = 6;
+            label14.Text = "Luogo Partenza:";
+            // 
+            // TxtVettore
+            // 
+            TxtVettore.Location = new Point(6, 47);
+            TxtVettore.Name = "TxtVettore";
+            TxtVettore.Size = new Size(409, 23);
+            TxtVettore.TabIndex = 5;
+            TxtVettore.Enter += txt_Enter;
+            TxtVettore.Leave += txt_Leave;
+            // 
+            // label15
+            // 
+            label15.AutoSize = true;
+            label15.Location = new Point(6, 29);
+            label15.Name = "label15";
+            label15.Size = new Size(47, 15);
+            label15.TabIndex = 4;
+            label15.Text = "Vettore:";
             // 
             // BtnChiudi
             // 
@@ -492,7 +524,7 @@
         private Label label13;
         private TextBox textBox3;
         private Label label14;
-        private TextBox textBox4;
+        private TextBox TxtVettore;
         private Label label15;
         private TextBox textBox5;
         private Label label16;

@@ -23,6 +23,10 @@ namespace Falco
                 this.Text = Utility.TitoloForm;
                 //TODO: Caricamento dati del CEdente e trasporto se
 
+
+
+
+
             }
             catch (Exception ex)
             {
@@ -34,5 +38,24 @@ namespace Falco
         {
             this.Close();
         }
+
+
+        private void txt_Leave(object sender, EventArgs e)
+        {
+            ((TextBox)sender).BackColor = Color.White;
+
+        }
+
+        private void txt_Enter(object sender, EventArgs e)
+        {
+            ((TextBox)sender).BackColor = Color.Yellow;
+        }
+
+
+
+
+
+
+
     }
 }
