@@ -54,19 +54,21 @@
             groupBox3 = new GroupBox();
             textBox5 = new TextBox();
             label16 = new Label();
-            textBox6 = new TextBox();
+            TxtNumeroColli = new TextBox();
             label17 = new Label();
-            textBox7 = new TextBox();
+            TxtPeso = new TextBox();
             label18 = new Label();
-            textBox1 = new TextBox();
+            TxtMotivoTrasporto = new TextBox();
             label12 = new Label();
-            textBox2 = new TextBox();
+            TxtLuogoArrivo = new TextBox();
             label13 = new Label();
-            textBox3 = new TextBox();
+            TxtLuogoPartenza = new TextBox();
             label14 = new Label();
             TxtVettore = new TextBox();
             label15 = new Label();
             BtnChiudi = new Button();
+            BtnInserisci = new Button();
+            Btn = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
@@ -303,15 +305,15 @@
             // 
             groupBox3.Controls.Add(textBox5);
             groupBox3.Controls.Add(label16);
-            groupBox3.Controls.Add(textBox6);
+            groupBox3.Controls.Add(TxtNumeroColli);
             groupBox3.Controls.Add(label17);
-            groupBox3.Controls.Add(textBox7);
+            groupBox3.Controls.Add(TxtPeso);
             groupBox3.Controls.Add(label18);
-            groupBox3.Controls.Add(textBox1);
+            groupBox3.Controls.Add(TxtMotivoTrasporto);
             groupBox3.Controls.Add(label12);
-            groupBox3.Controls.Add(textBox2);
+            groupBox3.Controls.Add(TxtLuogoArrivo);
             groupBox3.Controls.Add(label13);
-            groupBox3.Controls.Add(textBox3);
+            groupBox3.Controls.Add(TxtLuogoPartenza);
             groupBox3.Controls.Add(label14);
             groupBox3.Controls.Add(TxtVettore);
             groupBox3.Controls.Add(label15);
@@ -340,14 +342,14 @@
             label16.TabIndex = 16;
             label16.Text = "Luogo di arrivo:";
             // 
-            // textBox6
+            // TxtNumeroColli
             // 
-            textBox6.Location = new Point(491, 102);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(409, 23);
-            textBox6.TabIndex = 15;
-            textBox6.Enter += txt_Enter;
-            textBox6.Leave += txt_Leave;
+            TxtNumeroColli.Location = new Point(491, 102);
+            TxtNumeroColli.Name = "TxtNumeroColli";
+            TxtNumeroColli.Size = new Size(409, 23);
+            TxtNumeroColli.TabIndex = 15;
+            TxtNumeroColli.Enter += txt_Enter;
+            TxtNumeroColli.Leave += txt_Leave;
             // 
             // label17
             // 
@@ -358,14 +360,14 @@
             label17.TabIndex = 14;
             label17.Text = "Numero Colli:";
             // 
-            // textBox7
+            // TxtPeso
             // 
-            textBox7.Location = new Point(491, 47);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(409, 23);
-            textBox7.TabIndex = 13;
-            textBox7.Enter += txt_Enter;
-            textBox7.Leave += txt_Leave;
+            TxtPeso.Location = new Point(491, 47);
+            TxtPeso.Name = "TxtPeso";
+            TxtPeso.Size = new Size(409, 23);
+            TxtPeso.TabIndex = 13;
+            TxtPeso.Enter += txt_Enter;
+            TxtPeso.Leave += txt_Leave;
             // 
             // label18
             // 
@@ -376,14 +378,14 @@
             label18.TabIndex = 12;
             label18.Text = "Peso:";
             // 
-            // textBox1
+            // TxtMotivoTrasporto
             // 
-            textBox1.Location = new Point(6, 209);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(409, 23);
-            textBox1.TabIndex = 11;
-            textBox1.Enter += txt_Enter;
-            textBox1.Leave += txt_Leave;
+            TxtMotivoTrasporto.Location = new Point(6, 209);
+            TxtMotivoTrasporto.Name = "TxtMotivoTrasporto";
+            TxtMotivoTrasporto.Size = new Size(409, 23);
+            TxtMotivoTrasporto.TabIndex = 11;
+            TxtMotivoTrasporto.Enter += txt_Enter;
+            TxtMotivoTrasporto.Leave += txt_Leave;
             // 
             // label12
             // 
@@ -394,14 +396,14 @@
             label12.TabIndex = 10;
             label12.Text = "Motivo del trasporto:";
             // 
-            // textBox2
+            // TxtLuogoArrivo
             // 
-            textBox2.Location = new Point(6, 154);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(409, 23);
-            textBox2.TabIndex = 9;
-            textBox2.Enter += txt_Enter;
-            textBox2.Leave += txt_Leave;
+            TxtLuogoArrivo.Location = new Point(6, 154);
+            TxtLuogoArrivo.Name = "TxtLuogoArrivo";
+            TxtLuogoArrivo.Size = new Size(409, 23);
+            TxtLuogoArrivo.TabIndex = 9;
+            TxtLuogoArrivo.Enter += txt_Enter;
+            TxtLuogoArrivo.Leave += txt_Leave;
             // 
             // label13
             // 
@@ -412,14 +414,14 @@
             label13.TabIndex = 8;
             label13.Text = "Luogo di arrivo:";
             // 
-            // textBox3
+            // TxtLuogoPartenza
             // 
-            textBox3.Location = new Point(6, 102);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(409, 23);
-            textBox3.TabIndex = 7;
-            textBox3.Enter += txt_Enter;
-            textBox3.Leave += txt_Leave;
+            TxtLuogoPartenza.Location = new Point(6, 102);
+            TxtLuogoPartenza.Name = "TxtLuogoPartenza";
+            TxtLuogoPartenza.Size = new Size(409, 23);
+            TxtLuogoPartenza.TabIndex = 7;
+            TxtLuogoPartenza.Enter += txt_Enter;
+            TxtLuogoPartenza.Leave += txt_Leave;
             // 
             // label14
             // 
@@ -462,11 +464,33 @@
             BtnChiudi.UseVisualStyleBackColor = true;
             BtnChiudi.Click += BtnChiudi_Click;
             // 
+            // BtnInserisci
+            // 
+            BtnInserisci.Location = new Point(26, 645);
+            BtnInserisci.Name = "BtnInserisci";
+            BtnInserisci.Size = new Size(75, 23);
+            BtnInserisci.TabIndex = 17;
+            BtnInserisci.Text = "Inserisci";
+            BtnInserisci.UseVisualStyleBackColor = true;
+            BtnInserisci.Click += BtnInserisci_Click;
+            // 
+            // Btn
+            // 
+            Btn.Location = new Point(116, 645);
+            Btn.Name = "Btn";
+            Btn.Size = new Size(75, 23);
+            Btn.TabIndex = 18;
+            Btn.Text = "Salva";
+            Btn.UseVisualStyleBackColor = true;
+            Btn.Click += Btn_Click;
+            // 
             // FrmInserisciModificaDDT
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1296, 756);
+            Controls.Add(Btn);
+            Controls.Add(BtnInserisci);
             Controls.Add(BtnChiudi);
             Controls.Add(groupBox3);
             Controls.Add(groupBox2);
@@ -518,20 +542,22 @@
         private TextBox TxtRagioneSocialeCessonario;
         private Label label11;
         private GroupBox groupBox3;
-        private TextBox textBox1;
+        private TextBox TxtMotivoTrasporto;
         private Label label12;
-        private TextBox textBox2;
+        private TextBox TxtLuogoArrivo;
         private Label label13;
-        private TextBox textBox3;
+        private TextBox TxtLuogoPartenza;
         private Label label14;
         private TextBox TxtVettore;
         private Label label15;
         private TextBox textBox5;
         private Label label16;
-        private TextBox textBox6;
+        private TextBox TxtNumeroColli;
         private Label label17;
-        private TextBox textBox7;
+        private TextBox TxtPeso;
         private Label label18;
         private Button BtnChiudi;
+        private Button BtnInserisci;
+        private Button Btn;
     }
 }

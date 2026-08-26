@@ -51,11 +51,28 @@ namespace Falco
             ((TextBox)sender).BackColor = Color.Yellow;
         }
 
+        private void BtnInserisci_Click(object sender, EventArgs e)
+        {
+            try
+            {
 
+            }
+            catch (Exception ex)
+            {
+                Utility.MessaggioErrore("Si è verificato il seguente errore: " + ex.Message);
+            }
+        }
 
+        private void Btn_Click(object sender, EventArgs e)
+        {
+            try
+            {
 
-
-
-
+            }
+            catch (Exception ex)
+            {
+                Utility.MessaggioErrore("Si è verificato il seguente errore: " + ex.Message);
+            }
+        }
     }
 }
