@@ -75,6 +75,7 @@ namespace Falco
 
         private void leggiFatturaToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            Cursor.Current = Cursors.WaitCursor;
             try
             {
                 //TODO mettere cursor a clessidra 
@@ -88,11 +89,11 @@ namespace Falco
                 Utility.MessaggioErrore("Si è verificato il seguente errore: " + ex.Message);
             }
             finally
-            { 
-            
-            
-            
-            
+            {
+
+                Cursor.Current = Cursors.Default;
+
+
             }
 
 

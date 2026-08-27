@@ -22,6 +22,7 @@ namespace Falco
 
         private void FrmLeggiFattura_Load(object sender, EventArgs e)
         {
+            Cursor.Current = Cursors.WaitCursor;
             try
             {
                 this.Text = Utility.TitoloForm;
@@ -35,6 +36,11 @@ namespace Falco
             catch (Exception ex)
             {
                 Utility.MessaggioErrore("Si è verificato il seguente errore: " + ex.Message);
+            }
+            finally
+            {
+                Cursor.Current = Cursors.Default;
+
             }
         }
 
