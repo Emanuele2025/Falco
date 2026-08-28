@@ -15,6 +15,10 @@ namespace Falco
             InitializeComponent();
         }
 
+
+        Int32 idAgendaSelezionato = 0;
+
+
         private void BtnChiudi_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -42,11 +46,45 @@ namespace Falco
         {
             try
             {
-                //Verificare la selezione del record
+                if (dtgDatiDTT.SelectedRows.Count == 0)
+                {
+                    MessageBox.Show("Selezionare una riga");
+                    return;
+                }
 
-                //Messaggio
+                if (!Utility.CancellaRecord())
+                {
+                    return;
+                }
+                int idRecord = 0;
+                idRecord = Convert.ToInt32(dtgDatiDTT.SelectedRows[0].Cells["IdDDT"].Value);
+
+                
 
                 //Cancello
+
+
+            }
+            catch (Exception ex)
+            {
+                Utility.MessaggioErrore("Si è verificato il seguente errore: " + ex.Message);
+            }
+        }
+
+        private void MniModifica_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dtgDatiDTT.SelectedRows.Count == 0)
+                {
+                    MessageBox.Show("Selezionare una riga");
+                    return;
+                }
+
+
+                idAgendaSelezionato = Convert.ToInt32(dtgDatiDTT.SelectedRows[0].Cells["IdAgenda"].Value);
+                //TODO: Apro la finestra
+
 
 
             }

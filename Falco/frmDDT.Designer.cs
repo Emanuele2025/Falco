@@ -35,7 +35,7 @@
             dtgDatiDTT = new DataGridView();
             BtnInserisci = new Button();
             cmsMenu = new ContextMenuStrip(components);
-            modificaToolStripMenuItem = new ToolStripMenuItem();
+            MniModifica = new ToolStripMenuItem();
             eliminaToolStripMenuItem = new ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)dtgDatiDTT).BeginInit();
             cmsMenu.SuspendLayout();
@@ -89,21 +89,22 @@
             // 
             // cmsMenu
             // 
-            cmsMenu.Items.AddRange(new ToolStripItem[] { modificaToolStripMenuItem, eliminaToolStripMenuItem });
+            cmsMenu.Items.AddRange(new ToolStripItem[] { MniModifica, eliminaToolStripMenuItem });
             cmsMenu.Name = "cmsMenu";
             cmsMenu.Size = new Size(181, 70);
             // 
-            // modificaToolStripMenuItem
+            // MniModifica
             // 
-            modificaToolStripMenuItem.Name = "modificaToolStripMenuItem";
-            modificaToolStripMenuItem.Size = new Size(180, 22);
-            modificaToolStripMenuItem.Text = "Modifica..";
+            MniModifica.Name = "MniModifica";
+            MniModifica.Size = new Size(180, 22);
+            MniModifica.Text = "Modifica..";
+            MniModifica.Click += MniModifica_Click;
             // 
             // eliminaToolStripMenuItem
             // 
             eliminaToolStripMenuItem.Name = "eliminaToolStripMenuItem";
             eliminaToolStripMenuItem.Size = new Size(180, 22);
-            eliminaToolStripMenuItem.Text = "Elimina...";
+            eliminaToolStripMenuItem.Text = "Elimina";
             eliminaToolStripMenuItem.Click += eliminaToolStripMenuItem_Click;
             // 
             // frmDDT
@@ -132,7 +133,7 @@
         private DataGridView dtgDatiDTT;
         private Button BtnInserisci;
         private ContextMenuStrip cmsMenu;
-        private ToolStripMenuItem modificaToolStripMenuItem;
+        private ToolStripMenuItem MniModifica;
         private ToolStripMenuItem eliminaToolStripMenuItem;
     }
 }
