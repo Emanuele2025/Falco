@@ -16,7 +16,7 @@ namespace Falco
         }
 
 
-        Int32 idAgendaSelezionato = 0;
+        Int32 idDDTSelezionato = 0;
 
 
         private void BtnChiudi_Click(object sender, EventArgs e)
@@ -82,8 +82,9 @@ namespace Falco
                 }
 
 
-                idAgendaSelezionato = Convert.ToInt32(dtgDatiDTT.SelectedRows[0].Cells["IdAgenda"].Value);
-                //TODO: Apro la finestra
+                idDDTSelezionato = Convert.ToInt32(dtgDatiDTT.SelectedRows[0].Cells["IdDDT"].Value);
+                //TODO: Apro la finestra valutare se passare DataRow oppure solo id
+                FrmInserisciModificaDDT frmInserisciModificaDDT = new FrmInserisciModificaDDT();
 
 
 
