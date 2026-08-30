@@ -14,6 +14,8 @@ namespace Falco
         {
             InitializeComponent();
         }
+        public Int32? idDDT;
+
 
         private void FrmInserisciModificaDDT_Load(object sender, EventArgs e)
         {
@@ -22,7 +24,11 @@ namespace Falco
             {
                 this.Text = Utility.TitoloForm;
                 //TODO: Caricamento dati del CEdente e trasporto se
+                if (idDDT != null )
+                {
+                    //modifica
 
+                }
 
 
 

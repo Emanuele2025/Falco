@@ -85,7 +85,9 @@ namespace Falco
                 idDDTSelezionato = Convert.ToInt32(dtgDatiDTT.SelectedRows[0].Cells["IdDDT"].Value);
                 //TODO: Apro la finestra valutare se passare DataRow oppure solo id
                 FrmInserisciModificaDDT frmInserisciModificaDDT = new FrmInserisciModificaDDT();
-
+                frmInserisciModificaDDT.idDDT = null;
+                frmInserisciModificaDDT.ShowDialog();
+                CaricaDati();
 
 
             }
@@ -94,5 +96,26 @@ namespace Falco
                 Utility.MessaggioErrore("Si è verificato il seguente errore: " + ex.Message);
             }
         }
+
+        private void CaricaDati()
+        {
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+                Utility.MessaggioErrore("Si è verificato il seguente errore: " + ex.Message);
+            }
+        
+        
+        
+        
+        
+        
+        }
+
+
+
     }
 }
