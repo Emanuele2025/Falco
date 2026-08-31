@@ -27,7 +27,7 @@ namespace Falco
                 if (idDDT != null )
                 {
                     //modifica
-
+                    BtnSalva.Visible = true;
                 }
 
 
@@ -61,6 +61,9 @@ namespace Falco
         {
             try
             {
+
+
+
 
             }
             catch (Exception ex)

@@ -68,7 +68,7 @@
             label15 = new Label();
             BtnChiudi = new Button();
             BtnInserisci = new Button();
-            Btn = new Button();
+            BtnSalva = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
@@ -106,7 +106,7 @@
             TxtProgressivo.Location = new Point(12, 53);
             TxtProgressivo.Name = "TxtProgressivo";
             TxtProgressivo.Size = new Size(304, 23);
-            TxtProgressivo.TabIndex = 3;
+            TxtProgressivo.TabIndex = 0;
             TxtProgressivo.Enter += txt_Enter;
             TxtProgressivo.Leave += txt_Leave;
             // 
@@ -145,7 +145,7 @@
             TxtCodiceFiscaleCedente.Location = new Point(6, 209);
             TxtCodiceFiscaleCedente.Name = "TxtCodiceFiscaleCedente";
             TxtCodiceFiscaleCedente.Size = new Size(409, 23);
-            TxtCodiceFiscaleCedente.TabIndex = 11;
+            TxtCodiceFiscaleCedente.TabIndex = 4;
             TxtCodiceFiscaleCedente.Enter += txt_Enter;
             TxtCodiceFiscaleCedente.Leave += txt_Leave;
             // 
@@ -163,7 +163,7 @@
             TxtPartitaIvaCedente.Location = new Point(6, 154);
             TxtPartitaIvaCedente.Name = "TxtPartitaIvaCedente";
             TxtPartitaIvaCedente.Size = new Size(409, 23);
-            TxtPartitaIvaCedente.TabIndex = 9;
+            TxtPartitaIvaCedente.TabIndex = 3;
             TxtPartitaIvaCedente.Enter += txt_Enter;
             TxtPartitaIvaCedente.Leave += txt_Leave;
             // 
@@ -181,7 +181,7 @@
             TxtIndirizzoCedente.Location = new Point(6, 102);
             TxtIndirizzoCedente.Name = "TxtIndirizzoCedente";
             TxtIndirizzoCedente.Size = new Size(409, 23);
-            TxtIndirizzoCedente.TabIndex = 7;
+            TxtIndirizzoCedente.TabIndex = 2;
             TxtIndirizzoCedente.Enter += txt_Enter;
             TxtIndirizzoCedente.Leave += txt_Leave;
             // 
@@ -199,7 +199,7 @@
             TxtRagioneSociale.Location = new Point(6, 47);
             TxtRagioneSociale.Name = "TxtRagioneSociale";
             TxtRagioneSociale.Size = new Size(409, 23);
-            TxtRagioneSociale.TabIndex = 5;
+            TxtRagioneSociale.TabIndex = 1;
             TxtRagioneSociale.Enter += txt_Enter;
             TxtRagioneSociale.Leave += txt_Leave;
             // 
@@ -234,7 +234,7 @@
             TxtCodiceFiscaleCessonario.Location = new Point(6, 209);
             TxtCodiceFiscaleCessonario.Name = "TxtCodiceFiscaleCessonario";
             TxtCodiceFiscaleCessonario.Size = new Size(409, 23);
-            TxtCodiceFiscaleCessonario.TabIndex = 11;
+            TxtCodiceFiscaleCessonario.TabIndex = 12;
             TxtCodiceFiscaleCessonario.Enter += txt_Enter;
             TxtCodiceFiscaleCessonario.Leave += txt_Leave;
             // 
@@ -252,7 +252,7 @@
             TxtPartitaIvaCessonario.Location = new Point(6, 154);
             TxtPartitaIvaCessonario.Name = "TxtPartitaIvaCessonario";
             TxtPartitaIvaCessonario.Size = new Size(409, 23);
-            TxtPartitaIvaCessonario.TabIndex = 9;
+            TxtPartitaIvaCessonario.TabIndex = 11;
             TxtPartitaIvaCessonario.Enter += txt_Enter;
             TxtPartitaIvaCessonario.Leave += txt_Leave;
             // 
@@ -270,7 +270,7 @@
             TxtIndirizzoCessonario.Location = new Point(6, 102);
             TxtIndirizzoCessonario.Name = "TxtIndirizzoCessonario";
             TxtIndirizzoCessonario.Size = new Size(409, 23);
-            TxtIndirizzoCessonario.TabIndex = 7;
+            TxtIndirizzoCessonario.TabIndex = 10;
             TxtIndirizzoCessonario.Enter += txt_Enter;
             TxtIndirizzoCessonario.Leave += txt_Leave;
             // 
@@ -288,7 +288,7 @@
             TxtRagioneSocialeCessonario.Location = new Point(6, 47);
             TxtRagioneSocialeCessonario.Name = "TxtRagioneSocialeCessonario";
             TxtRagioneSocialeCessonario.Size = new Size(409, 23);
-            TxtRagioneSocialeCessonario.TabIndex = 5;
+            TxtRagioneSocialeCessonario.TabIndex = 9;
             TxtRagioneSocialeCessonario.Enter += txt_Enter;
             TxtRagioneSocialeCessonario.Leave += txt_Leave;
             // 
@@ -329,7 +329,7 @@
             textBox5.Location = new Point(491, 154);
             textBox5.Name = "textBox5";
             textBox5.Size = new Size(409, 23);
-            textBox5.TabIndex = 17;
+            textBox5.TabIndex = 15;
             textBox5.Enter += txt_Enter;
             textBox5.Leave += txt_Leave;
             // 
@@ -347,7 +347,7 @@
             TxtNumeroColli.Location = new Point(491, 102);
             TxtNumeroColli.Name = "TxtNumeroColli";
             TxtNumeroColli.Size = new Size(409, 23);
-            TxtNumeroColli.TabIndex = 15;
+            TxtNumeroColli.TabIndex = 14;
             TxtNumeroColli.Enter += txt_Enter;
             TxtNumeroColli.Leave += txt_Leave;
             // 
@@ -383,7 +383,7 @@
             TxtMotivoTrasporto.Location = new Point(6, 209);
             TxtMotivoTrasporto.Name = "TxtMotivoTrasporto";
             TxtMotivoTrasporto.Size = new Size(409, 23);
-            TxtMotivoTrasporto.TabIndex = 11;
+            TxtMotivoTrasporto.TabIndex = 8;
             TxtMotivoTrasporto.Enter += txt_Enter;
             TxtMotivoTrasporto.Leave += txt_Leave;
             // 
@@ -401,7 +401,7 @@
             TxtLuogoArrivo.Location = new Point(6, 154);
             TxtLuogoArrivo.Name = "TxtLuogoArrivo";
             TxtLuogoArrivo.Size = new Size(409, 23);
-            TxtLuogoArrivo.TabIndex = 9;
+            TxtLuogoArrivo.TabIndex = 7;
             TxtLuogoArrivo.Enter += txt_Enter;
             TxtLuogoArrivo.Leave += txt_Leave;
             // 
@@ -419,7 +419,7 @@
             TxtLuogoPartenza.Location = new Point(6, 102);
             TxtLuogoPartenza.Name = "TxtLuogoPartenza";
             TxtLuogoPartenza.Size = new Size(409, 23);
-            TxtLuogoPartenza.TabIndex = 7;
+            TxtLuogoPartenza.TabIndex = 6;
             TxtLuogoPartenza.Enter += txt_Enter;
             TxtLuogoPartenza.Leave += txt_Leave;
             // 
@@ -459,7 +459,7 @@
             BtnChiudi.Margin = new Padding(3, 2, 3, 2);
             BtnChiudi.Name = "BtnChiudi";
             BtnChiudi.Size = new Size(82, 22);
-            BtnChiudi.TabIndex = 16;
+            BtnChiudi.TabIndex = 18;
             BtnChiudi.Text = "Chiudi";
             BtnChiudi.UseVisualStyleBackColor = true;
             BtnChiudi.Click += BtnChiudi_Click;
@@ -469,27 +469,28 @@
             BtnInserisci.Location = new Point(26, 645);
             BtnInserisci.Name = "BtnInserisci";
             BtnInserisci.Size = new Size(75, 23);
-            BtnInserisci.TabIndex = 17;
+            BtnInserisci.TabIndex = 16;
             BtnInserisci.Text = "Inserisci";
             BtnInserisci.UseVisualStyleBackColor = true;
             BtnInserisci.Click += BtnInserisci_Click;
             // 
-            // Btn
+            // BtnSalva
             // 
-            Btn.Location = new Point(116, 645);
-            Btn.Name = "Btn";
-            Btn.Size = new Size(75, 23);
-            Btn.TabIndex = 18;
-            Btn.Text = "Salva";
-            Btn.UseVisualStyleBackColor = true;
-            Btn.Click += Btn_Click;
+            BtnSalva.Location = new Point(116, 645);
+            BtnSalva.Name = "BtnSalva";
+            BtnSalva.Size = new Size(75, 23);
+            BtnSalva.TabIndex = 17;
+            BtnSalva.Text = "Salva";
+            BtnSalva.UseVisualStyleBackColor = true;
+            BtnSalva.Visible = false;
+            BtnSalva.Click += Btn_Click;
             // 
             // FrmInserisciModificaDDT
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1296, 756);
-            Controls.Add(Btn);
+            Controls.Add(BtnSalva);
             Controls.Add(BtnInserisci);
             Controls.Add(BtnChiudi);
             Controls.Add(groupBox3);
@@ -558,6 +559,6 @@
         private Label label18;
         private Button BtnChiudi;
         private Button BtnInserisci;
-        private Button Btn;
+        private Button BtnSalva;
     }
 }
