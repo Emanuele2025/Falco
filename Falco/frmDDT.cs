@@ -97,10 +97,15 @@ namespace Falco
             }
         }
 
+        //Per il caricamento dei dati
         private void CaricaDati()
         {
             try
             {
+
+
+
+
 
             }
             catch (Exception ex)
