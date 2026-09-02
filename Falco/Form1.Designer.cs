@@ -43,7 +43,7 @@
             fattureInviateToolStripMenuItem = new ToolStripMenuItem();
             leggiFatturaToolStripMenuItem = new ToolStripMenuItem();
             dTTToolStripMenuItem = new ToolStripMenuItem();
-            documentoDiTrasportoToolStripMenuItem = new ToolStripMenuItem();
+            MniDocumentoDDT = new ToolStripMenuItem();
             opzioniToolStripMenuItem = new ToolStripMenuItem();
             impostazioniToolStripMenuItem = new ToolStripMenuItem();
             toolStripMenuItem1 = new ToolStripMenuItem();
@@ -86,7 +86,7 @@
             // 
             esciToolStripMenuItem.Image = Properties.Resources.Esci;
             esciToolStripMenuItem.Name = "esciToolStripMenuItem";
-            esciToolStripMenuItem.Size = new Size(94, 22);
+            esciToolStripMenuItem.Size = new Size(184, 26);
             esciToolStripMenuItem.Text = "Esci";
             esciToolStripMenuItem.Click += esciToolStripMenuItem_Click;
             // 
@@ -100,7 +100,7 @@
             // mniAnagrafica
             // 
             mniAnagrafica.Name = "mniAnagrafica";
-            mniAnagrafica.Size = new Size(180, 22);
+            mniAnagrafica.Size = new Size(140, 22);
             mniAnagrafica.Text = "Anagrafica...";
             mniAnagrafica.Click += mniAnagrafica_Click;
             // 
@@ -150,16 +150,17 @@
             // 
             // dTTToolStripMenuItem
             // 
-            dTTToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { documentoDiTrasportoToolStripMenuItem });
+            dTTToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { MniDocumentoDDT });
             dTTToolStripMenuItem.Name = "dTTToolStripMenuItem";
             dTTToolStripMenuItem.Size = new Size(41, 20);
             dTTToolStripMenuItem.Text = "DDT";
             // 
-            // documentoDiTrasportoToolStripMenuItem
+            // MniDocumentoDDT
             // 
-            documentoDiTrasportoToolStripMenuItem.Name = "documentoDiTrasportoToolStripMenuItem";
-            documentoDiTrasportoToolStripMenuItem.Size = new Size(204, 22);
-            documentoDiTrasportoToolStripMenuItem.Text = "Documento Di Trasporto";
+            MniDocumentoDDT.Name = "MniDocumentoDDT";
+            MniDocumentoDDT.Size = new Size(213, 22);
+            MniDocumentoDDT.Text = "Documento Di Trasporto...";
+            MniDocumentoDDT.Click += MniDocumentoDDT_Click;
             // 
             // opzioniToolStripMenuItem
             // 
@@ -227,7 +228,7 @@
         private ToolStripMenuItem fattureRicevuteToolStripMenuItem;
         private ToolStripMenuItem fattureInviateToolStripMenuItem;
         private ToolStripMenuItem dTTToolStripMenuItem;
-        private ToolStripMenuItem documentoDiTrasportoToolStripMenuItem;
+        private ToolStripMenuItem MniDocumentoDDT;
         private ToolStripMenuItem impostazioniToolStripMenuItem;
         private ToolStripMenuItem leggiFatturaToolStripMenuItem;
     }

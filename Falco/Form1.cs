@@ -101,7 +101,12 @@ namespace Falco
 
 
 
-         
+
+        }
+
+        private void MniDocumentoDDT_Click(object sender, EventArgs e)
+        {
+            //Richiamare la form
         }
     }
 }
