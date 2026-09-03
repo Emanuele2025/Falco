@@ -59,7 +59,7 @@ namespace Falco
                 int idRecord = 0;
                 idRecord = Convert.ToInt32(dtgDatiDTT.SelectedRows[0].Cells["IdDDT"].Value);
 
-                
+
 
                 //Cancello
 
@@ -112,15 +112,36 @@ namespace Falco
             {
                 Utility.MessaggioErrore("Si è verificato il seguente errore: " + ex.Message);
             }
-        
-        
-        
-        
-        
-        
+
+
+
+
+
+
         }
 
+        private void dtgDatiDTT_CellMouseDown(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            try
+            {
+                //Verifico il tasto detro e se non ha fatto click nell'intestazione delle grafiglia o fuori dalle celle
+                if (e.Button != MouseButtons.Right)
+                    return;
+
+                //Escludo intestazioni e griglia
+                if (e.RowIndex < 0 || e.ColumnIndex < 0)
+                    return;
 
 
+                cmsMenu.Show(Cursor.Position);
+
+
+
+            }
+            catch (Exception ex)
+            {
+                Utility.MessaggioErrore("Si è verificato il seguente errore: " + ex.Message);
+            }
+        }
     }
 }

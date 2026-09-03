@@ -76,6 +76,7 @@
             dtgDatiDTT.Name = "dtgDatiDTT";
             dtgDatiDTT.Size = new Size(1403, 597);
             dtgDatiDTT.TabIndex = 16;
+            dtgDatiDTT.CellMouseDown += dtgDatiDTT_CellMouseDown;
             // 
             // BtnInserisci
             // 
@@ -91,19 +92,19 @@
             // 
             cmsMenu.Items.AddRange(new ToolStripItem[] { MniModifica, eliminaToolStripMenuItem });
             cmsMenu.Name = "cmsMenu";
-            cmsMenu.Size = new Size(181, 70);
+            cmsMenu.Size = new Size(128, 48);
             // 
             // MniModifica
             // 
             MniModifica.Name = "MniModifica";
-            MniModifica.Size = new Size(180, 22);
+            MniModifica.Size = new Size(127, 22);
             MniModifica.Text = "Modifica..";
             MniModifica.Click += MniModifica_Click;
             // 
             // eliminaToolStripMenuItem
             // 
             eliminaToolStripMenuItem.Name = "eliminaToolStripMenuItem";
-            eliminaToolStripMenuItem.Size = new Size(180, 22);
+            eliminaToolStripMenuItem.Size = new Size(127, 22);
             eliminaToolStripMenuItem.Text = "Elimina";
             eliminaToolStripMenuItem.Click += eliminaToolStripMenuItem_Click;
             // 
