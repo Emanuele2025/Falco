@@ -91,14 +91,14 @@ namespace Falco
 
                 DtoFattura fattura = new DtoFattura();
                 // Header (dati mittente/destinatario)
-                var header = doc.Descendants( "FatturaElettronicaHeader").FirstOrDefault();
+                var header = doc.Descendants("FatturaElettronicaHeader").FirstOrDefault();
                 if (header != null)
                 {
-                    var mittente = header.Descendants(  "CedentePrestatore").FirstOrDefault();
+                    var mittente = header.Descendants("CedentePrestatore").FirstOrDefault();
                     if (mittente != null)
                     {
                         fattura.RagioneSocialeMittente = mittente
-                            .Descendants( "Denominazione").FirstOrDefault()?.Value ?? "";
+                            .Descendants("Denominazione").FirstOrDefault()?.Value ?? "";
                         fattura.PartitaIvaMittente = mittente
                             .Descendants("IdFiscaleIVA")
                             .Descendants("IdCode").FirstOrDefault()?.Value ?? "";
@@ -107,53 +107,53 @@ namespace Falco
 
                     }
 
-                    var destinatario = header.Descendants( "CessionarioCommittente").FirstOrDefault();
+                    var destinatario = header.Descendants("CessionarioCommittente").FirstOrDefault();
                     if (destinatario != null)
                     {
                         fattura.RagioneSocialeDestinatario = destinatario
-                            .Descendants( "Denominazione").FirstOrDefault()?.Value ?? "";
+                            .Descendants("Denominazione").FirstOrDefault()?.Value ?? "";
                     }
                 }
 
                 // Dati generali
-                var datiGenerali = doc.Descendants( "DatiGenerali").FirstOrDefault();
+                var datiGenerali = doc.Descendants("DatiGenerali").FirstOrDefault();
                 if (datiGenerali != null)
                 {
-                    var dg = datiGenerali.Descendants( "DatiGeneraliDocumento").FirstOrDefault();
+                    var dg = datiGenerali.Descendants("DatiGeneraliDocumento").FirstOrDefault();
                     if (dg != null)
                     {
-                        fattura.NumeroFattura = dg.Descendants( "Numero").FirstOrDefault()?.Value ?? "";
+                        fattura.NumeroFattura = dg.Descendants("Numero").FirstOrDefault()?.Value ?? "";
 
-                        string dataStr = dg.Descendants( "Data").FirstOrDefault()?.Value ?? "";
+                        string dataStr = dg.Descendants("Data").FirstOrDefault()?.Value ?? "";
                         if (DateTime.TryParse(dataStr, out var data))
                             fattura.DataFattura = data;
                     }
                 }
 
                 // Linee di dettaglio
-                var body = doc.Descendants( "FatturaElettronicaBody").FirstOrDefault();
+                var body = doc.Descendants("FatturaElettronicaBody").FirstOrDefault();
                 if (body != null)
                 {
-                    var linee = body.Descendants( "DettaglioLinee");
+                    var linee = body.Descendants("DettaglioLinee");
                     foreach (var linea in linee)
                     {
                         var dettaglio = new Dettagli
                         {
-                            Descrizione = linea.Descendants( "Descrizione").FirstOrDefault()?.Value ?? "",
-                            Quantita = decimal.Parse(linea.Descendants( "Quantita").FirstOrDefault()?.Value ?? "0"),
-                            PrezzoUnitario = decimal.Parse(linea.Descendants( "PrezzoUnitario").FirstOrDefault()?.Value ?? "0") / 100,
-                            Importo = decimal.Parse(linea.Descendants( "ImportoLinea").FirstOrDefault()?.Value ?? "0")/100,
-                            AliquotaIva = decimal.Parse(linea.Descendants( "AliquotaIVA").FirstOrDefault()?.Value ?? "0")
+                            Descrizione = linea.Descendants("Descrizione").FirstOrDefault()?.Value ?? "",
+                            Quantita = decimal.Parse(linea.Descendants("Quantita").FirstOrDefault()?.Value ?? "0"),
+                            PrezzoUnitario = decimal.Parse(linea.Descendants("PrezzoUnitario").FirstOrDefault()?.Value ?? "0") / 100,
+                            Importo = decimal.Parse(linea.Descendants("ImportoLinea").FirstOrDefault()?.Value ?? "0") / 100,
+                            AliquotaIva = decimal.Parse(linea.Descendants("AliquotaIVA").FirstOrDefault()?.Value ?? "0")
                         };
                         fattura.DettagliFattura.Add(dettaglio);
                     }
 
                     // Totale
-                    var riepilogo = body.Descendants( "DatiRiepilogo").FirstOrDefault();
+                    var riepilogo = body.Descendants("DatiRiepilogo").FirstOrDefault();
                     if (riepilogo != null)
                     {
                         fattura.ImportoTotale = decimal.Parse(
-                            riepilogo.Descendants( "ImponibileImporto").FirstOrDefault()?.Value ?? "0");
+                            riepilogo.Descendants("ImponibileImporto").FirstOrDefault()?.Value ?? "0");
                     }
                 }
 
@@ -162,9 +162,9 @@ namespace Falco
                 TxtIndirizzo.Text = fattura.IndirizzoFornitore;
                 TxtNumeroFattura.Text = fattura.NumeroFattura;
                 TxtNomeCliente.Text = fattura.RagioneSocialeDestinatario;
-               // string TotaleFattura = "";
+                // string TotaleFattura = "";
                 var Dettagli = fattura.DettagliFattura.ToList();
-                Dettagli.Add(new Dettagli { Descrizione="Totale Fattura", Importo =  fattura.ImportoTotale / 100  });
+                Dettagli.Add(new Dettagli { Descrizione = "Totale Fattura", Importo = fattura.ImportoTotale / 100 });
                 //TxtIndirizzoCliente.Text = fattura
                 dgvDatiFattura.DataSource = Dettagli;
                 //if (xmlContent.Contains("FatturaElettronica"))
@@ -191,31 +191,31 @@ namespace Falco
 
 
         }
-//        private void MostraFatturaSemplificata(FatturaElettronicaSemplificata fattura)
-//        {
-//            var header = fattura.FatturaElettronicaHeader;
-//            var body = fattura.FatturaElettronicaBody;
+        //        private void MostraFatturaSemplificata(FatturaElettronicaSemplificata fattura)
+        //        {
+        //            var header = fattura.FatturaElettronicaHeader;
+        //            var body = fattura.FatturaElettronicaBody;
 
-//            string mittente = header.CedentePrestatore.DatiAnagrafici.Anagrafica.Denominazione;
-//            string cliente = header.CessionarioCommittente.DatiAnagrafici.Anagrafica.Denominazione;
-//            var datiDoc = body.DatiGenerali.DatiGeneraliDocumento;
+        //            string mittente = header.CedentePrestatore.DatiAnagrafici.Anagrafica.Denominazione;
+        //            string cliente = header.CessionarioCommittente.DatiAnagrafici.Anagrafica.Denominazione;
+        //            var datiDoc = body.DatiGenerali.DatiGeneraliDocumento;
 
-//            string valore = $@"FORMATO: FATTURA SEMPLIFICATA
-//MITTENTE: {mittente}
-//CLIENTE: {cliente}
+        //            string valore = $@"FORMATO: FATTURA SEMPLIFICATA
+        //MITTENTE: {mittente}
+        //CLIENTE: {cliente}
 
-//FATTURA N: {datiDoc.Numero} del {datiDoc.Data:dd/MM/yyyy}
-//TOTALE: € {datiDoc.ImportoTotaleDocumento}";
+        //FATTURA N: {datiDoc.Numero} del {datiDoc.Data:dd/MM/yyyy}
+        //TOTALE: € {datiDoc.ImportoTotaleDocumento}";
 
-//            var righe = body.DatiBeniServizi.DettaglioLinee.Select(r => new {
-//                Riga = r.NumeroLinea,
-//                Descrizione = r.Descrizione,
-//                Quantita = r.Quantita,
-//                Prezzo = r.PrezzoUnitario,
-//                Totale = r.PrezzoTotale
-//            }).ToList();
-//            dgvDatiFattura.DataSource = righe;
-//        }
+        //            var righe = body.DatiBeniServizi.DettaglioLinee.Select(r => new {
+        //                Riga = r.NumeroLinea,
+        //                Descrizione = r.Descrizione,
+        //                Quantita = r.Quantita,
+        //                Prezzo = r.PrezzoUnitario,
+        //                Totale = r.PrezzoTotale
+        //            }).ToList();
+        //            dgvDatiFattura.DataSource = righe;
+        //        }
 
 
 
@@ -232,14 +232,20 @@ namespace Falco
                 return;
             }
             LeggiFattura();
-          var fattura =  LeggiFatturaXml(TxtPercorsoCartella.Text.Trim());
+            var fattura = LeggiFatturaXml(TxtPercorsoCartella.Text.Trim());
             //Gestire per i vari campi
             //TODO: vedere anche le altre classi di fattura
-             //Trovare indirizzo + IVA + indirizzo cliente e mittente TxtIndirizzoCliente.Text = fattura.FatturaElettronicaHeader.CessionarioCommittente
+            //Trovare indirizzo + IVA + indirizzo cliente e mittente TxtIndirizzoCliente.Text = fattura.FatturaElettronicaHeader.CessionarioCommittente
             TxtIndirizzo.Text = fattura.FatturaElettronicaHeader.CessionarioCommittente.Sede.Indirizzo + " " + fattura.FatturaElettronicaHeader.CessionarioCommittente.Sede.CAP + " " + fattura.FatturaElettronicaHeader.CessionarioCommittente.Sede.Comune;
             TxtIndirizzoCliente.Text = fattura.FatturaElettronicaHeader.CedentePrestatore.Sede.Indirizzo + " " + fattura.FatturaElettronicaHeader.CedentePrestatore.Sede.CAP + " " + fattura.FatturaElettronicaHeader.CedentePrestatore.Sede.Comune;
         }
 
+
+        /// <summary>
+        /// Tramite serializzazione
+        /// </summary>
+        /// <param name="percorsoFile"></param>
+        /// <returns></returns>
         public FatturaElettronicaType LeggiFatturaXml(string percorsoFile)
         {
             XmlSerializer serializer = new XmlSerializer(typeof(FatturaElettronicaType));
@@ -271,6 +277,18 @@ namespace Falco
             using (XmlWriter writer = XmlWriter.Create(percorsoFile, settings))
             {
                 serializer.Serialize(writer, fattura, namespaces);
+            }
+        }
+
+        private void BtnSalva_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+                Utility.MessaggioErrore(ex.Message);
             }
         }
     }

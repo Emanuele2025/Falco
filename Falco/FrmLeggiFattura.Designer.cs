@@ -60,13 +60,14 @@
             TxtNomeCliente = new TextBox();
             label10 = new Label();
             dgvDatiFattura = new DataGridView();
-            tltInformazioni = new ToolTip(components);
-            BtnLeggiFattura = new Button();
             Descrizione = new DataGridViewTextBoxColumn();
             Quantita = new DataGridViewTextBoxColumn();
             PrezzoUnitario = new DataGridViewTextBoxColumn();
             IVA = new DataGridViewTextBoxColumn();
             Importo = new DataGridViewTextBoxColumn();
+            tltInformazioni = new ToolTip(components);
+            BtnLeggiFattura = new Button();
+            BtnSalva = new Button();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dgvDatiFattura).BeginInit();
@@ -342,16 +343,6 @@
             dgvDatiFattura.Size = new Size(1139, 271);
             dgvDatiFattura.TabIndex = 17;
             // 
-            // BtnLeggiFattura
-            // 
-            BtnLeggiFattura.Location = new Point(14, 64);
-            BtnLeggiFattura.Name = "BtnLeggiFattura";
-            BtnLeggiFattura.Size = new Size(75, 23);
-            BtnLeggiFattura.TabIndex = 18;
-            BtnLeggiFattura.Text = "Leggi fattura";
-            BtnLeggiFattura.UseVisualStyleBackColor = true;
-            BtnLeggiFattura.Click += BtnLeggiFattura_Click;
-            // 
             // Descrizione
             // 
             Descrizione.DataPropertyName = "Descrizione";
@@ -398,11 +389,32 @@
             Importo.Name = "Importo";
             Importo.Width = 300;
             // 
+            // BtnLeggiFattura
+            // 
+            BtnLeggiFattura.Location = new Point(14, 64);
+            BtnLeggiFattura.Name = "BtnLeggiFattura";
+            BtnLeggiFattura.Size = new Size(75, 23);
+            BtnLeggiFattura.TabIndex = 18;
+            BtnLeggiFattura.Text = "Leggi fattura";
+            BtnLeggiFattura.UseVisualStyleBackColor = true;
+            BtnLeggiFattura.Click += BtnLeggiFattura_Click;
+            // 
+            // BtnSalva
+            // 
+            BtnSalva.Location = new Point(965, 645);
+            BtnSalva.Name = "BtnSalva";
+            BtnSalva.Size = new Size(75, 23);
+            BtnSalva.TabIndex = 19;
+            BtnSalva.Text = "Salva";
+            BtnSalva.UseVisualStyleBackColor = true;
+            BtnSalva.Click += BtnSalva_Click;
+            // 
             // FrmLeggiFattura
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1163, 687);
+            Controls.Add(BtnSalva);
             Controls.Add(BtnLeggiFattura);
             Controls.Add(dgvDatiFattura);
             Controls.Add(groupBox2);
@@ -463,5 +475,6 @@
         private DataGridViewTextBoxColumn PrezzoUnitario;
         private DataGridViewTextBoxColumn IVA;
         private DataGridViewTextBoxColumn Importo;
+        private Button BtnSalva;
     }
 }
