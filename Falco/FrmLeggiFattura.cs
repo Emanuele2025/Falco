@@ -284,6 +284,15 @@ namespace Falco
         {
             try
             {
+                //TODO: SAlva la fattura nel database
+
+
+
+
+
+
+
+
 
             }
             catch (Exception ex)
