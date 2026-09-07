@@ -20,7 +20,7 @@ namespace Falco
             try
             {
                 this.Text = Utility.TitoloForm;
-
+                CaricaDati();
 
 
             }
@@ -34,5 +34,57 @@ namespace Falco
         {
             this.Close();
         }
+
+        private void MniElimina_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (dtgDatiAnagrafica.SelectedRows.Count == 0)
+                {
+                    Utility.MessaggioInfo("Selezionare una riga.");
+                    return;
+                }
+
+
+
+
+
+               
+
+
+
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+        }
+
+
+
+        private void CaricaDati()
+        {
+            try
+            {
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+        
+        
+        
+        
+        
+        }
+
+
+
+
+
+
     }
 }

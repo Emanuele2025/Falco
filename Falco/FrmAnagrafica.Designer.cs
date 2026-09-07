@@ -92,6 +92,7 @@
             MniElimina.Name = "MniElimina";
             MniElimina.Size = new Size(180, 22);
             MniElimina.Text = "Elimina";
+            MniElimina.Click += MniElimina_Click;
             // 
             // FrmAnagrafica
             // 
