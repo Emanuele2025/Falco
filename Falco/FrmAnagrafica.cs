@@ -44,7 +44,10 @@ namespace Falco
                     Utility.MessaggioInfo("Selezionare una riga.");
                     return;
                 }
-
+                if (!Utility.CancellaRecord())
+                {
+                    return;
+                }
 
 
 
@@ -56,8 +59,7 @@ namespace Falco
             }
             catch (Exception ex)
             {
-
-                throw;
+                Utility.MessaggioErrore("Si è verificato il seguente errore: " + ex.Message);
             }
         }
 
@@ -69,10 +71,9 @@ namespace Falco
             {
 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                throw;
+                Utility.MessaggioErrore("Si è verificato il seguente errore: " + ex.Message);
             }
         
         
