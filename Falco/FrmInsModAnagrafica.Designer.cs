@@ -1,6 +1,6 @@
 ﻿namespace Falco
 {
-    partial class FrmAnagrafica
+    partial class FrmInsModAnagrafica
     {
         /// <summary>
         /// Required designer variable.
@@ -28,15 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
             label1 = new Label();
             BtnChiudi = new Button();
-            dtgDatiAnagrafica = new DataGridView();
-            CmsMenu = new ContextMenuStrip(components);
-            MniModifica = new ToolStripMenuItem();
-            MniElimina = new ToolStripMenuItem();
-            ((System.ComponentModel.ISupportInitialize)dtgDatiAnagrafica).BeginInit();
-            CmsMenu.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -47,8 +40,8 @@
             label1.ForeColor = SystemColors.ControlLightLight;
             label1.Location = new Point(0, 0);
             label1.Name = "label1";
-            label1.Size = new Size(1293, 21);
-            label1.TabIndex = 8;
+            label1.Size = new Size(1324, 21);
+            label1.TabIndex = 9;
             label1.Text = "Gestione delle fatture Elettroniche - Anagrafica Clienti";
             label1.TextAlign = ContentAlignment.TopCenter;
             // 
@@ -57,57 +50,25 @@
             BtnChiudi.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             BtnChiudi.Image = Properties.Resources.chiudi;
             BtnChiudi.ImageAlign = ContentAlignment.MiddleLeft;
-            BtnChiudi.Location = new Point(1199, 645);
+            BtnChiudi.Location = new Point(1220, 532);
             BtnChiudi.Margin = new Padding(3, 2, 3, 2);
             BtnChiudi.Name = "BtnChiudi";
             BtnChiudi.Size = new Size(82, 22);
-            BtnChiudi.TabIndex = 16;
+            BtnChiudi.TabIndex = 17;
             BtnChiudi.Text = "Chiudi";
             BtnChiudi.UseVisualStyleBackColor = true;
-            BtnChiudi.Click += BtnChiudi_Click;
             // 
-            // dtgDatiAnagrafica
-            // 
-            dtgDatiAnagrafica.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dtgDatiAnagrafica.Dock = DockStyle.Top;
-            dtgDatiAnagrafica.Location = new Point(0, 21);
-            dtgDatiAnagrafica.Name = "dtgDatiAnagrafica";
-            dtgDatiAnagrafica.Size = new Size(1293, 526);
-            dtgDatiAnagrafica.TabIndex = 17;
-            // 
-            // CmsMenu
-            // 
-            CmsMenu.Items.AddRange(new ToolStripItem[] { MniModifica, MniElimina });
-            CmsMenu.Name = "CmsMenu";
-            CmsMenu.Size = new Size(131, 48);
-            // 
-            // MniModifica
-            // 
-            MniModifica.Name = "MniModifica";
-            MniModifica.Size = new Size(130, 22);
-            MniModifica.Text = "Modifica...";
-            // 
-            // MniElimina
-            // 
-            MniElimina.Name = "MniElimina";
-            MniElimina.Size = new Size(130, 22);
-            MniElimina.Text = "Elimina";
-            MniElimina.Click += MniElimina_Click;
-            // 
-            // FrmAnagrafica
+            // FrmInsModAnagrafica
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1293, 678);
-            Controls.Add(dtgDatiAnagrafica);
+            ClientSize = new Size(1324, 565);
             Controls.Add(BtnChiudi);
             Controls.Add(label1);
-            Name = "FrmAnagrafica";
+            Name = "FrmInsModAnagrafica";
             StartPosition = FormStartPosition.CenterScreen;
-            Text = "Gestione anagrafica Clienti";
-            Load += FrmAnagrafica_Load;
-            ((System.ComponentModel.ISupportInitialize)dtgDatiAnagrafica).EndInit();
-            CmsMenu.ResumeLayout(false);
+            Text = "Falco - Inserimento modifica Anagrafica";
+            Load += FrmInsModAnagrafica_Load;
             ResumeLayout(false);
         }
 
@@ -115,9 +76,5 @@
 
         private Label label1;
         private Button BtnChiudi;
-        private DataGridView dtgDatiAnagrafica;
-        private ContextMenuStrip CmsMenu;
-        private ToolStripMenuItem MniModifica;
-        private ToolStripMenuItem MniElimina;
     }
 }
