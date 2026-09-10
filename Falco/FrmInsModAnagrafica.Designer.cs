@@ -30,6 +30,8 @@
         {
             label1 = new Label();
             BtnChiudi = new Button();
+            label2 = new Label();
+            textBox1 = new TextBox();
             SuspendLayout();
             // 
             // label1
@@ -58,11 +60,29 @@
             BtnChiudi.Text = "Chiudi";
             BtnChiudi.UseVisualStyleBackColor = true;
             // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.Location = new Point(35, 76);
+            label2.Name = "label2";
+            label2.Size = new Size(38, 15);
+            label2.TabIndex = 18;
+            label2.Text = "label2";
+            // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(39, 99);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(267, 23);
+            textBox1.TabIndex = 19;
+            // 
             // FrmInsModAnagrafica
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1324, 565);
+            Controls.Add(textBox1);
+            Controls.Add(label2);
             Controls.Add(BtnChiudi);
             Controls.Add(label1);
             Name = "FrmInsModAnagrafica";
@@ -70,11 +90,14 @@
             Text = "Falco - Inserimento modifica Anagrafica";
             Load += FrmInsModAnagrafica_Load;
             ResumeLayout(false);
+            PerformLayout();
         }
 
         #endregion
 
         private Label label1;
         private Button BtnChiudi;
+        private Label label2;
+        private TextBox textBox1;
     }
 }

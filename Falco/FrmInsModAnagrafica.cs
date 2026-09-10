@@ -19,6 +19,13 @@ namespace Falco
         {
             try
             {
+                //TODO: gestione del colore status delle casse
+                //OGgetto contesto inserire 
+                //Varie funzionalit
+
+
+
+
 
             }
             catch (Exception ex)
