@@ -15,6 +15,7 @@ namespace Falco
         private void Form1_Load(object sender, EventArgs e)
         {
             //https://www.agenziaentrate.gov.it/portale/specifiche-tecniche-versione-1.9.1-%C2%A0-utilizzabili-dal-15-maggio-2026-
+            //documentazione https://www.fatturapa.gov.it/it/news/Nuove-funzionalita-per-laccesso-al-sistema-di-accreditamento-e-la-gestione-del-canale-trasmissivo-SdiSFTP/
 
 
             //https://www.agenziaentrate.gov.it/portale/specifiche-tecniche-versione-1.9
@@ -107,6 +108,45 @@ namespace Falco
         private void MniDocumentoDDT_Click(object sender, EventArgs e)
         {
             //Richiamare la form
+            Cursor.Current = Cursors.WaitCursor;
+            try
+            {
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+
+                Cursor.Current = Cursors.Default;
+
+
+            }
+        }
+
+        private void impostazioniToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+
+                throw;
+            }
+            finally
+            {
+
+                Cursor.Current = Cursors.Default;
+
+
+            }
+
         }
     }
 }

@@ -36,12 +36,12 @@
             clientiToolStripMenuItem = new ToolStripMenuItem();
             mniAnagrafica = new ToolStripMenuItem();
             fatturaToolStripMenuItem = new ToolStripMenuItem();
-            creaToolStripMenuItem = new ToolStripMenuItem();
-            inviateToolStripMenuItem = new ToolStripMenuItem();
-            gestioneToolStripMenuItem = new ToolStripMenuItem();
-            fattureRicevuteToolStripMenuItem = new ToolStripMenuItem();
-            fattureInviateToolStripMenuItem = new ToolStripMenuItem();
-            leggiFatturaToolStripMenuItem = new ToolStripMenuItem();
+            MniCrea = new ToolStripMenuItem();
+            MniInviate = new ToolStripMenuItem();
+            MniGestione = new ToolStripMenuItem();
+            MniFattureRicevute = new ToolStripMenuItem();
+            MniFattureInviate = new ToolStripMenuItem();
+            MniLeggiFattura = new ToolStripMenuItem();
             dTTToolStripMenuItem = new ToolStripMenuItem();
             MniDocumentoDDT = new ToolStripMenuItem();
             opzioniToolStripMenuItem = new ToolStripMenuItem();
@@ -106,47 +106,47 @@
             // 
             // fatturaToolStripMenuItem
             // 
-            fatturaToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { creaToolStripMenuItem, inviateToolStripMenuItem, gestioneToolStripMenuItem, fattureRicevuteToolStripMenuItem, fattureInviateToolStripMenuItem, leggiFatturaToolStripMenuItem });
+            fatturaToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { MniCrea, MniInviate, MniGestione, MniFattureRicevute, MniFattureInviate, MniLeggiFattura });
             fatturaToolStripMenuItem.Name = "fatturaToolStripMenuItem";
             fatturaToolStripMenuItem.Size = new Size(56, 20);
             fatturaToolStripMenuItem.Text = "Fattura";
             // 
-            // creaToolStripMenuItem
+            // MniCrea
             // 
-            creaToolStripMenuItem.Name = "creaToolStripMenuItem";
-            creaToolStripMenuItem.Size = new Size(180, 22);
-            creaToolStripMenuItem.Text = "Crea";
+            MniCrea.Name = "MniCrea";
+            MniCrea.Size = new Size(180, 22);
+            MniCrea.Text = "Crea";
             // 
-            // inviateToolStripMenuItem
+            // MniInviate
             // 
-            inviateToolStripMenuItem.Name = "inviateToolStripMenuItem";
-            inviateToolStripMenuItem.Size = new Size(180, 22);
-            inviateToolStripMenuItem.Text = "Inviate";
+            MniInviate.Name = "MniInviate";
+            MniInviate.Size = new Size(180, 22);
+            MniInviate.Text = "Inviate";
             // 
-            // gestioneToolStripMenuItem
+            // MniGestione
             // 
-            gestioneToolStripMenuItem.Name = "gestioneToolStripMenuItem";
-            gestioneToolStripMenuItem.Size = new Size(180, 22);
-            gestioneToolStripMenuItem.Text = "Gestione";
+            MniGestione.Name = "MniGestione";
+            MniGestione.Size = new Size(180, 22);
+            MniGestione.Text = "Gestione";
             // 
-            // fattureRicevuteToolStripMenuItem
+            // MniFattureRicevute
             // 
-            fattureRicevuteToolStripMenuItem.Name = "fattureRicevuteToolStripMenuItem";
-            fattureRicevuteToolStripMenuItem.Size = new Size(180, 22);
-            fattureRicevuteToolStripMenuItem.Text = "Fatture Ricevute...";
+            MniFattureRicevute.Name = "MniFattureRicevute";
+            MniFattureRicevute.Size = new Size(180, 22);
+            MniFattureRicevute.Text = "Fatture Ricevute...";
             // 
-            // fattureInviateToolStripMenuItem
+            // MniFattureInviate
             // 
-            fattureInviateToolStripMenuItem.Name = "fattureInviateToolStripMenuItem";
-            fattureInviateToolStripMenuItem.Size = new Size(180, 22);
-            fattureInviateToolStripMenuItem.Text = "Fatture Inviate...";
+            MniFattureInviate.Name = "MniFattureInviate";
+            MniFattureInviate.Size = new Size(180, 22);
+            MniFattureInviate.Text = "Fatture Inviate...";
             // 
-            // leggiFatturaToolStripMenuItem
+            // MniLeggiFattura
             // 
-            leggiFatturaToolStripMenuItem.Name = "leggiFatturaToolStripMenuItem";
-            leggiFatturaToolStripMenuItem.Size = new Size(180, 22);
-            leggiFatturaToolStripMenuItem.Text = "Leggi Fattura...";
-            leggiFatturaToolStripMenuItem.Click += leggiFatturaToolStripMenuItem_Click;
+            MniLeggiFattura.Name = "MniLeggiFattura";
+            MniLeggiFattura.Size = new Size(180, 22);
+            MniLeggiFattura.Text = "Leggi Fattura...";
+            MniLeggiFattura.Click += leggiFatturaToolStripMenuItem_Click;
             // 
             // dTTToolStripMenuItem
             // 
@@ -172,8 +172,9 @@
             // impostazioniToolStripMenuItem
             // 
             impostazioniToolStripMenuItem.Name = "impostazioniToolStripMenuItem";
-            impostazioniToolStripMenuItem.Size = new Size(151, 22);
+            impostazioniToolStripMenuItem.Size = new Size(180, 22);
             impostazioniToolStripMenuItem.Text = "Impostazioni...";
+            impostazioniToolStripMenuItem.Click += impostazioniToolStripMenuItem_Click;
             // 
             // toolStripMenuItem1
             // 
@@ -217,19 +218,19 @@
         private ToolStripMenuItem fileToolStripMenuItem;
         private ToolStripMenuItem esciToolStripMenuItem;
         private ToolStripMenuItem fatturaToolStripMenuItem;
-        private ToolStripMenuItem creaToolStripMenuItem;
+        private ToolStripMenuItem MniCrea;
         private ToolStripMenuItem opzioniToolStripMenuItem;
         private ToolStripMenuItem toolStripMenuItem1;
         private ToolStripMenuItem informazioniToolStripMenuItem;
         private ToolStripMenuItem clientiToolStripMenuItem;
         private ToolStripMenuItem mniAnagrafica;
-        private ToolStripMenuItem inviateToolStripMenuItem;
-        private ToolStripMenuItem gestioneToolStripMenuItem;
-        private ToolStripMenuItem fattureRicevuteToolStripMenuItem;
-        private ToolStripMenuItem fattureInviateToolStripMenuItem;
+        private ToolStripMenuItem MniInviate;
+        private ToolStripMenuItem MniGestione;
+        private ToolStripMenuItem MniFattureRicevute;
+        private ToolStripMenuItem MniFattureInviate;
         private ToolStripMenuItem dTTToolStripMenuItem;
         private ToolStripMenuItem MniDocumentoDDT;
         private ToolStripMenuItem impostazioniToolStripMenuItem;
-        private ToolStripMenuItem leggiFatturaToolStripMenuItem;
+        private ToolStripMenuItem MniLeggiFattura;
     }
 }
