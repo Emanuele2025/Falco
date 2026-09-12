@@ -55,6 +55,7 @@ namespace Falco
 
         private void FrmCreaFattura_Load(object sender, EventArgs e)
         {
+            Cursor.Current = Cursors.WaitCursor;
             try
             {
                 //TODO: Caricare la casella dei clienti
@@ -65,6 +66,11 @@ namespace Falco
             catch (Exception ex)
             {
                 Utility.MessaggioErrore("Si è verificato il seguente errore: " + ex.Message);
+            }
+            finally
+            {
+                Cursor.Current = Cursors.Default;
+
             }
         }
 
@@ -79,6 +85,24 @@ namespace Falco
                 Utility.MessaggioErrore("Si è verificato il seguente errore: " + ex.Message);
             }
         }
+
+        #region funzioni
+
+        private void txt_Leave(object sender, EventArgs e)
+        {
+            ((TextBox)sender).BackColor = Color.White;
+
+        }
+
+        private void txt_Enter(object sender, EventArgs e)
+        {
+            ((TextBox)sender).BackColor = Color.Yellow;
+        }
+
+
+
+       
+
 
 
         private void CaricaDati()
@@ -99,5 +123,11 @@ namespace Falco
 
 
         }
+
+
+        #endregion
+
+
+
     }
 }
