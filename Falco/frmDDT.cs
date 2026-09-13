@@ -77,7 +77,7 @@ namespace Falco
             {
                 if (dtgDatiDTT.SelectedRows.Count == 0)
                 {
-                    MessageBox.Show("Selezionare una riga");
+                    MessageBox.Show("Selezionare una riga.");
                     return;
                 }
 
@@ -85,7 +85,7 @@ namespace Falco
                 idDDTSelezionato = Convert.ToInt32(dtgDatiDTT.SelectedRows[0].Cells["IdDDT"].Value);
                 //TODO: Apro la finestra valutare se passare DataRow oppure solo id
                 FrmInserisciModificaDDT frmInserisciModificaDDT = new FrmInserisciModificaDDT();
-                frmInserisciModificaDDT.idDDT = null;
+                frmInserisciModificaDDT.idDDT = idDDTSelezionato;
                 frmInserisciModificaDDT.ShowDialog();
                 CaricaDati();
 

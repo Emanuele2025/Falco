@@ -28,6 +28,7 @@ namespace Falco
                 {
                     //modifica
                     BtnSalva.Visible = true;
+                    BtnInserisci.Visible = false;
                 }
 
 
