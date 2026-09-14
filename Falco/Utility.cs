@@ -18,6 +18,11 @@ namespace Falco
 
         public const string TitoloForm = "Falco - Software gratuito per la gestione della fattura elettronica ";
 
+        public const string Modifica = "Modifica effettuata con successo. ";
+
+        public const string Inserimento = "Inserimento effettuato con successo. ";
+
+        public const string Errore = "Si è verificato il seguente errore: ";
 
 
 
