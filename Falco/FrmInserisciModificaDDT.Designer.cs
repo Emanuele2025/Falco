@@ -69,6 +69,8 @@
             BtnChiudi = new Button();
             BtnInserisci = new Button();
             BtnSalva = new Button();
+            label19 = new Label();
+            CmbCausale = new ComboBox();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
@@ -485,11 +487,31 @@
             BtnSalva.Visible = false;
             BtnSalva.Click += Btn_Click;
             // 
+            // label19
+            // 
+            label19.AutoSize = true;
+            label19.Location = new Point(548, 35);
+            label19.Name = "label19";
+            label19.Size = new Size(51, 15);
+            label19.TabIndex = 19;
+            label19.Text = "Causale:";
+            // 
+            // CmbCausale
+            // 
+            CmbCausale.DropDownStyle = ComboBoxStyle.DropDownList;
+            CmbCausale.FormattingEnabled = true;
+            CmbCausale.Location = new Point(545, 59);
+            CmbCausale.Name = "CmbCausale";
+            CmbCausale.Size = new Size(403, 23);
+            CmbCausale.TabIndex = 20;
+            // 
             // FrmInserisciModificaDDT
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1296, 756);
+            Controls.Add(CmbCausale);
+            Controls.Add(label19);
             Controls.Add(BtnSalva);
             Controls.Add(BtnInserisci);
             Controls.Add(BtnChiudi);
@@ -560,5 +582,7 @@
         private Button BtnChiudi;
         private Button BtnInserisci;
         private Button BtnSalva;
+        private Label label19;
+        private ComboBox CmbCausale;
     }
 }

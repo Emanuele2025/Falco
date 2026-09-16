@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Falco.Modelli;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -63,13 +64,19 @@ namespace Falco
             try
             {
 
+                DDTCorpo dttCorpo = new DDTCorpo
+                {
+                    CaualeTrasporto = CmbCausale.ValueMember
 
+
+
+                };
 
 
             }
             catch (Exception ex)
             {
-                Utility.MessaggioErrore("Si è verificato il seguente errore: " + ex.Message);
+                Utility.MessaggioErrore(Utility.Errore + ex.Message);
             }
         }
 
@@ -81,7 +88,7 @@ namespace Falco
             }
             catch (Exception ex)
             {
-                Utility.MessaggioErrore("Si è verificato il seguente errore: " + ex.Message);
+                Utility.MessaggioErrore(Utility.Errore + ex.Message);
             }
         }
     }
