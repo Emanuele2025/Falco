@@ -25,7 +25,7 @@ namespace Falco
             {
                 this.Text = Utility.TitoloForm;
                 //TODO: Caricamento dati del CEdente e trasporto se
-                if (idDDT != null )
+                if (idDDT != null)
                 {
                     //modifica
                     BtnSalva.Visible = true;
@@ -66,7 +66,10 @@ namespace Falco
 
                 DDTCorpo dttCorpo = new DDTCorpo
                 {
-                    CaualeTrasporto = CmbCausale.ValueMember
+                    CaualeTrasporto = CmbCausale.ValueMember,
+                    CedenteCodiceFiscale = TxtCodiceFiscaleCedente.Text.Trim(),
+                    CedentePartitaIVA = TxtPartitaIvaCedente.Text.Trim(),
+                    CedenteRagioneSociale = TxtRagioneSocialeCessonario.Text.Trim()
 
 
 
