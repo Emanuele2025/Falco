@@ -69,7 +69,12 @@ namespace Falco
                     CaualeTrasporto = CmbCausale.ValueMember,
                     CedenteCodiceFiscale = TxtCodiceFiscaleCedente.Text.Trim(),
                     CedentePartitaIVA = TxtPartitaIvaCedente.Text.Trim(),
-                    CedenteRagioneSociale = TxtRagioneSocialeCessonario.Text.Trim()
+                    CedenteRagioneSociale = TxtRagioneSocialeCessonario.Text.Trim(),
+                    CessionarioCodiceFiscale = TxtCodiceFiscaleCessonario.Text.Trim(),
+                    CessionarioIndirizzo = TxtIndirizzoCessonario.Text.Trim(),
+                    CessionarioPartitaIVA = TxtPartitaIvaCessonario.Text.Trim(),
+                    CessionarioRagioneSociale = TxtRagioneSocialeCessonario.Text.Trim(),
+                    Data = DtpData.Value
 
 
 

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             label1 = new Label();
-            dateTimePicker1 = new DateTimePicker();
+            DtpData = new DateTimePicker();
             label2 = new Label();
             TxtProgressivo = new TextBox();
             label3 = new Label();
@@ -85,14 +85,14 @@
             label1.TabIndex = 0;
             label1.Text = "Data:";
             // 
-            // dateTimePicker1
+            // DtpData
             // 
-            dateTimePicker1.Location = new Point(333, 53);
-            dateTimePicker1.MaxDate = new DateTime(2099, 12, 31, 0, 0, 0, 0);
-            dateTimePicker1.MinDate = new DateTime(2026, 1, 1, 0, 0, 0, 0);
-            dateTimePicker1.Name = "dateTimePicker1";
-            dateTimePicker1.Size = new Size(200, 23);
-            dateTimePicker1.TabIndex = 1;
+            DtpData.Location = new Point(333, 53);
+            DtpData.MaxDate = new DateTime(2099, 12, 31, 0, 0, 0, 0);
+            DtpData.MinDate = new DateTime(2026, 1, 1, 0, 0, 0, 0);
+            DtpData.Name = "DtpData";
+            DtpData.Size = new Size(200, 23);
+            DtpData.TabIndex = 1;
             // 
             // label2
             // 
@@ -521,7 +521,7 @@
             Controls.Add(label3);
             Controls.Add(TxtProgressivo);
             Controls.Add(label2);
-            Controls.Add(dateTimePicker1);
+            Controls.Add(DtpData);
             Controls.Add(label1);
             MaximizeBox = false;
             MinimizeBox = false;
@@ -542,7 +542,7 @@
         #endregion
 
         private Label label1;
-        private DateTimePicker dateTimePicker1;
+        private DateTimePicker DtpData;
         private Label label2;
         private TextBox TxtProgressivo;
         private Label label3;
