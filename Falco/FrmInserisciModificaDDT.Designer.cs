@@ -52,7 +52,7 @@
             TxtRagioneSocialeCessonario = new TextBox();
             label11 = new Label();
             groupBox3 = new GroupBox();
-            textBox5 = new TextBox();
+            TxtPartitaIvaVettore = new TextBox();
             label16 = new Label();
             TxtNumeroColli = new TextBox();
             label17 = new Label();
@@ -71,6 +71,8 @@
             BtnSalva = new Button();
             label19 = new Label();
             CmbCausale = new ComboBox();
+            textBox1 = new TextBox();
+            label20 = new Label();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
             groupBox3.SuspendLayout();
@@ -305,7 +307,7 @@
             // 
             // groupBox3
             // 
-            groupBox3.Controls.Add(textBox5);
+            groupBox3.Controls.Add(TxtPartitaIvaVettore);
             groupBox3.Controls.Add(label16);
             groupBox3.Controls.Add(TxtNumeroColli);
             groupBox3.Controls.Add(label17);
@@ -326,23 +328,23 @@
             groupBox3.TabStop = false;
             groupBox3.Text = "Trasporto";
             // 
-            // textBox5
+            // TxtPartitaIvaVettore
             // 
-            textBox5.Location = new Point(491, 154);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(409, 23);
-            textBox5.TabIndex = 15;
-            textBox5.Enter += txt_Enter;
-            textBox5.Leave += txt_Leave;
+            TxtPartitaIvaVettore.Location = new Point(491, 154);
+            TxtPartitaIvaVettore.Name = "TxtPartitaIvaVettore";
+            TxtPartitaIvaVettore.Size = new Size(409, 23);
+            TxtPartitaIvaVettore.TabIndex = 15;
+            TxtPartitaIvaVettore.Enter += txt_Enter;
+            TxtPartitaIvaVettore.Leave += txt_Leave;
             // 
             // label16
             // 
             label16.AutoSize = true;
             label16.Location = new Point(491, 136);
             label16.Name = "label16";
-            label16.Size = new Size(90, 15);
+            label16.Size = new Size(102, 15);
             label16.TabIndex = 16;
-            label16.Text = "Luogo di arrivo:";
+            label16.Text = "Partita Iva Vettore:";
             // 
             // TxtNumeroColli
             // 
@@ -505,11 +507,30 @@
             CmbCausale.Size = new Size(403, 23);
             CmbCausale.TabIndex = 20;
             // 
+            // textBox1
+            // 
+            textBox1.Location = new Point(954, 56);
+            textBox1.MaxLength = 4;
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(304, 23);
+            textBox1.TabIndex = 21;
+            // 
+            // label20
+            // 
+            label20.AutoSize = true;
+            label20.Location = new Point(954, 38);
+            label20.Name = "label20";
+            label20.Size = new Size(81, 15);
+            label20.TabIndex = 22;
+            label20.Text = "Numero Colli:";
+            // 
             // FrmInserisciModificaDDT
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1296, 756);
+            Controls.Add(textBox1);
+            Controls.Add(label20);
             Controls.Add(CmbCausale);
             Controls.Add(label19);
             Controls.Add(BtnSalva);
@@ -573,7 +594,7 @@
         private Label label14;
         private TextBox TxtVettore;
         private Label label15;
-        private TextBox textBox5;
+        private TextBox TxtPartitaIvaVettore;
         private Label label16;
         private TextBox TxtNumeroColli;
         private Label label17;
@@ -584,5 +605,7 @@
         private Button BtnSalva;
         private Label label19;
         private ComboBox CmbCausale;
+        private TextBox textBox1;
+        private Label label20;
     }
 }

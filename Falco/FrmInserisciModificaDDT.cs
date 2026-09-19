@@ -74,7 +74,15 @@ namespace Falco
                     CessionarioIndirizzo = TxtIndirizzoCessonario.Text.Trim(),
                     CessionarioPartitaIVA = TxtPartitaIvaCessonario.Text.Trim(),
                     CessionarioRagioneSociale = TxtRagioneSocialeCessonario.Text.Trim(),
-                    Data = DtpData.Value
+                    Data = DtpData.Value,
+                    Destinazione = TxtLuogoArrivo.Text.Trim(),
+                    LuoghiPartenza = TxtLuogoPartenza.Text.Trim(),
+
+                    NumColli = (TxtNumeroColli.Text.Trim() != "") ? Convert.ToInt32(TxtNumeroColli.Text.Trim()) : 0,
+
+                    NumeroProgressivo = TxtProgressivo.Text.Trim(),
+                    VettoreNome = TxtVettore.Text.Trim(),
+                    VettorePartitaIVA = TxtPartitaIvaVettore.Text.Trim()
 
 
 
