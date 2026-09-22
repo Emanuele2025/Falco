@@ -71,7 +71,7 @@
             BtnSalva = new Button();
             label19 = new Label();
             CmbCausale = new ComboBox();
-            textBox1 = new TextBox();
+            TxtNumeroVettura = new TextBox();
             label20 = new Label();
             groupBox1.SuspendLayout();
             groupBox2.SuspendLayout();
@@ -507,29 +507,29 @@
             CmbCausale.Size = new Size(403, 23);
             CmbCausale.TabIndex = 20;
             // 
-            // textBox1
+            // TxtNumeroVettura
             // 
-            textBox1.Location = new Point(954, 56);
-            textBox1.MaxLength = 4;
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(304, 23);
-            textBox1.TabIndex = 21;
+            TxtNumeroVettura.Location = new Point(954, 56);
+            TxtNumeroVettura.MaxLength = 4;
+            TxtNumeroVettura.Name = "TxtNumeroVettura";
+            TxtNumeroVettura.Size = new Size(304, 23);
+            TxtNumeroVettura.TabIndex = 21;
             // 
             // label20
             // 
             label20.AutoSize = true;
             label20.Location = new Point(954, 38);
             label20.Name = "label20";
-            label20.Size = new Size(81, 15);
+            label20.Size = new Size(94, 15);
             label20.TabIndex = 22;
-            label20.Text = "Numero Colli:";
+            label20.Text = "Numero Vettura:";
             // 
             // FrmInserisciModificaDDT
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1296, 756);
-            Controls.Add(textBox1);
+            Controls.Add(TxtNumeroVettura);
             Controls.Add(label20);
             Controls.Add(CmbCausale);
             Controls.Add(label19);
@@ -605,7 +605,7 @@
         private Button BtnSalva;
         private Label label19;
         private ComboBox CmbCausale;
-        private TextBox textBox1;
+        private TextBox TxtNumeroVettura;
         private Label label20;
     }
 }
