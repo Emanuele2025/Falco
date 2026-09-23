@@ -83,7 +83,9 @@ namespace Falco
                     NumeroProgressivo = TxtProgressivo.Text.Trim(),
                     VettoreNome = TxtVettore.Text.Trim(),
                     VettorePartitaIVA = TxtPartitaIvaVettore.Text.Trim(),
-                     NumLetteraVettura = TxtNumeroVettura.Text.Trim()
+                    NumLetteraVettura = TxtNumeroVettura.Text.Trim(),
+                    PesoTotale = (TxtPeso.Text.Trim() != "") ? Convert.ToInt32(TxtPeso.Text.Trim()) : 0,
+                    
 
 
 
