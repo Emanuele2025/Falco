@@ -300,5 +300,53 @@ namespace Falco
                 Utility.MessaggioErrore(ex.Message);
             }
         }
+
+
+
+
+//        private void MostraFatturaOrdinaria(FatturaElettronicaType fattura)
+//        {
+//            var header = fattura.FatturaElettronicaHeader;
+//            var body = fattura.FatturaElettronicaBody[0]; // di solito 1 solo body
+
+//            string mittente = header.CedentePrestatore.DatiAnagrafici.Anagrafica.ItemsElementName
+//                             ?? $"{header.CedentePrestatore.DatiAnagrafici.Anagrafica.Nome} {header.CedentePrestatore.DatiAnagrafici.Anagrafica.Cognome}";
+//            string mittentePIVA = header.CedentePrestatore.DatiAnagrafici.IdFiscaleIVA?.IdCodice;
+
+//            string cliente = header.CessionarioCommittente.DatiAnagrafici.Anagrafica.Denominazione
+//                            ?? $"{header.CessionarioCommittente.DatiAnagrafici.Anagrafica.Nome} {header.CessionarioCommittente.DatiAnagrafici.Anagrafica.Cognome}";
+//            string clientePIVA = header.CessionarioCommittente.DatiAnagrafici.IdFiscaleIVA?.IdCodice;
+
+//            var datiDoc = body.DatiGenerali.DatiGeneraliDocumento;
+
+//            txtDati.Text = $@"FORMATO: {header.FormatoTrasmissione}
+//MITTENTE: {mittente} - P.IVA {mittentePIVA}
+//CLIENTE: {cliente} - P.IVA {clientePIVA}
+
+//FATTURA N: {datiDoc.Numero} del {datiDoc.Data:dd/MM/yyyy}
+//TOTALE: € {datiDoc.ImportoTotaleDocumento}
+//CAUSALE: {string.Join(", ", datiDoc.Causale ?? Array.Empty<string>())}";
+
+//            // Carico le righe nel DataGrid
+//            var righe = body.DatiBeniServizi.DettaglioLinee.Select(r => new {
+//                Riga = r.NumeroLinea,
+//                Descrizione = r.Descrizione,
+//                Quantita = r.Quantita,
+//                Prezzo = r.PrezzoUnitario,
+//                AliquotaIVA = r.AliquotaIVA,
+//                Totale = r.PrezzoTotale
+//            }).ToList();
+//            dgvRighe.DataSource = righe;
+//        }
+
+
+
+
+
+
+
+
+
+
     }
 }
