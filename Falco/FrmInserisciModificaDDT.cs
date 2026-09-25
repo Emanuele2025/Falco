@@ -63,6 +63,11 @@ namespace Falco
         {
             try
             {
+                List<DatoMerci> merci = new List<DatoMerci>();
+                //Scorro
+                //merci.Add()
+
+
 
                 DDTCorpo dttCorpo = new DDTCorpo
                 {
@@ -85,7 +90,7 @@ namespace Falco
                     VettorePartitaIVA = TxtPartitaIvaVettore.Text.Trim(),
                     NumLetteraVettura = TxtNumeroVettura.Text.Trim(),
                     PesoTotale = (TxtPeso.Text.Trim() != "") ? Convert.ToInt32(TxtPeso.Text.Trim()) : 0,
-                    
+                    Merci = merci
 
 
 
