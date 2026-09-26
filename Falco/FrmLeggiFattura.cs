@@ -297,7 +297,7 @@ namespace Falco
             }
             catch (Exception ex)
             {
-                Utility.MessaggioErrore(ex.Message);
+                Utility.MessaggioErrore(Utility.Errore + ex.Message);
             }
         }
 
