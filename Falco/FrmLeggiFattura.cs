@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.Security.Cryptography;
 using System.Text;
 using System.Windows.Forms;
 using System.Xml;
@@ -226,18 +227,29 @@ namespace Falco
 
         private void BtnLeggiFattura_Click(object sender, EventArgs e)
         {
-            if (TxtPercorsoCartella.Text.Trim() == "")
+            try
             {
-                Utility.MessaggioInfo("Selezionare una fattura");
-                return;
+                if (TxtPercorsoCartella.Text.Trim() == "")
+                {
+                    Utility.MessaggioInfo("Selezionare una fattura");
+                    return;
+                }
+
+                LeggiFattura();
+                var fattura = LeggiFatturaXml(TxtPercorsoCartella.Text.Trim());
+                //Gestire per i vari campi
+                //TODO: vedere anche le altre classi di fattura
+                //Trovare indirizzo + IVA + indirizzo cliente e mittente TxtIndirizzoCliente.Text = fattura.FatturaElettronicaHeader.CessionarioCommittente
+                TxtIndirizzo.Text = fattura.FatturaElettronicaHeader.CessionarioCommittente.Sede.Indirizzo + " " + fattura.FatturaElettronicaHeader.CessionarioCommittente.Sede.CAP + " " + fattura.FatturaElettronicaHeader.CessionarioCommittente.Sede.Comune;
+                TxtIndirizzoCliente.Text = fattura.FatturaElettronicaHeader.CedentePrestatore.Sede.Indirizzo + " " + fattura.FatturaElettronicaHeader.CedentePrestatore.Sede.CAP + " " + fattura.FatturaElettronicaHeader.CedentePrestatore.Sede.Comune;
+
             }
-            LeggiFattura();
-            var fattura = LeggiFatturaXml(TxtPercorsoCartella.Text.Trim());
-            //Gestire per i vari campi
-            //TODO: vedere anche le altre classi di fattura
-            //Trovare indirizzo + IVA + indirizzo cliente e mittente TxtIndirizzoCliente.Text = fattura.FatturaElettronicaHeader.CessionarioCommittente
-            TxtIndirizzo.Text = fattura.FatturaElettronicaHeader.CessionarioCommittente.Sede.Indirizzo + " " + fattura.FatturaElettronicaHeader.CessionarioCommittente.Sede.CAP + " " + fattura.FatturaElettronicaHeader.CessionarioCommittente.Sede.Comune;
-            TxtIndirizzoCliente.Text = fattura.FatturaElettronicaHeader.CedentePrestatore.Sede.Indirizzo + " " + fattura.FatturaElettronicaHeader.CedentePrestatore.Sede.CAP + " " + fattura.FatturaElettronicaHeader.CedentePrestatore.Sede.Comune;
+            catch (Exception ex)
+            {
+                Utility.MessaggioErrore(Utility.Errore + ex.Message);
+            }
+
+
         }
 
 
@@ -248,12 +260,24 @@ namespace Falco
         /// <returns></returns>
         public FatturaElettronicaType LeggiFatturaXml(string percorsoFile)
         {
+            //Verifico il tipo di fattura (fattura elettronica oppure Semplificata)
+            string xmlContent = File.ReadAllText(percorsoFile);
+            if (xmlContent.Contains("FatturaElettronica"))
+            {
+
+            }
+            else if (xmlContent.Contains("FatturaElettronicaSemplificata"))
+            {
+
+            }
             XmlSerializer serializer = new XmlSerializer(typeof(FatturaElettronicaType));
 
             using (StreamReader reader = new StreamReader(percorsoFile))
             {
                 return (FatturaElettronicaType)serializer.Deserialize(reader);
             }
+
+
         }
         // Trasforma la tua classe C# in un file XML pronto per lo SDI
         public void CreaFatturaXml(FatturaElettronicaType fattura, string percorsoFile)
@@ -304,40 +328,40 @@ namespace Falco
 
 
 
-//        private void MostraFatturaOrdinaria(FatturaElettronicaType fattura)
-//        {
-//            var header = fattura.FatturaElettronicaHeader;
-//            var body = fattura.FatturaElettronicaBody[0]; // di solito 1 solo body
+        //        private void MostraFatturaOrdinaria(FatturaElettronicaType fattura)
+        //        {
+        //            var header = fattura.FatturaElettronicaHeader;
+        //            var body = fattura.FatturaElettronicaBody[0]; // di solito 1 solo body
 
-//            string mittente = header.CedentePrestatore.DatiAnagrafici.Anagrafica.ItemsElementName
-//                             ?? $"{header.CedentePrestatore.DatiAnagrafici.Anagrafica.Nome} {header.CedentePrestatore.DatiAnagrafici.Anagrafica.Cognome}";
-//            string mittentePIVA = header.CedentePrestatore.DatiAnagrafici.IdFiscaleIVA?.IdCodice;
+        //            string mittente = header.CedentePrestatore.DatiAnagrafici.Anagrafica.ItemsElementName
+        //                             ?? $"{header.CedentePrestatore.DatiAnagrafici.Anagrafica.Nome} {header.CedentePrestatore.DatiAnagrafici.Anagrafica.Cognome}";
+        //            string mittentePIVA = header.CedentePrestatore.DatiAnagrafici.IdFiscaleIVA?.IdCodice;
 
-//            string cliente = header.CessionarioCommittente.DatiAnagrafici.Anagrafica.Denominazione
-//                            ?? $"{header.CessionarioCommittente.DatiAnagrafici.Anagrafica.Nome} {header.CessionarioCommittente.DatiAnagrafici.Anagrafica.Cognome}";
-//            string clientePIVA = header.CessionarioCommittente.DatiAnagrafici.IdFiscaleIVA?.IdCodice;
+        //            string cliente = header.CessionarioCommittente.DatiAnagrafici.Anagrafica.Denominazione
+        //                            ?? $"{header.CessionarioCommittente.DatiAnagrafici.Anagrafica.Nome} {header.CessionarioCommittente.DatiAnagrafici.Anagrafica.Cognome}";
+        //            string clientePIVA = header.CessionarioCommittente.DatiAnagrafici.IdFiscaleIVA?.IdCodice;
 
-//            var datiDoc = body.DatiGenerali.DatiGeneraliDocumento;
+        //            var datiDoc = body.DatiGenerali.DatiGeneraliDocumento;
 
-//            txtDati.Text = $@"FORMATO: {header.FormatoTrasmissione}
-//MITTENTE: {mittente} - P.IVA {mittentePIVA}
-//CLIENTE: {cliente} - P.IVA {clientePIVA}
+        //            txtDati.Text = $@"FORMATO: {header.FormatoTrasmissione}
+        //MITTENTE: {mittente} - P.IVA {mittentePIVA}
+        //CLIENTE: {cliente} - P.IVA {clientePIVA}
 
-//FATTURA N: {datiDoc.Numero} del {datiDoc.Data:dd/MM/yyyy}
-//TOTALE: € {datiDoc.ImportoTotaleDocumento}
-//CAUSALE: {string.Join(", ", datiDoc.Causale ?? Array.Empty<string>())}";
+        //FATTURA N: {datiDoc.Numero} del {datiDoc.Data:dd/MM/yyyy}
+        //TOTALE: € {datiDoc.ImportoTotaleDocumento}
+        //CAUSALE: {string.Join(", ", datiDoc.Causale ?? Array.Empty<string>())}";
 
-//            // Carico le righe nel DataGrid
-//            var righe = body.DatiBeniServizi.DettaglioLinee.Select(r => new {
-//                Riga = r.NumeroLinea,
-//                Descrizione = r.Descrizione,
-//                Quantita = r.Quantita,
-//                Prezzo = r.PrezzoUnitario,
-//                AliquotaIVA = r.AliquotaIVA,
-//                Totale = r.PrezzoTotale
-//            }).ToList();
-//            dgvRighe.DataSource = righe;
-//        }
+        //            // Carico le righe nel DataGrid
+        //            var righe = body.DatiBeniServizi.DettaglioLinee.Select(r => new {
+        //                Riga = r.NumeroLinea,
+        //                Descrizione = r.Descrizione,
+        //                Quantita = r.Quantita,
+        //                Prezzo = r.PrezzoUnitario,
+        //                AliquotaIVA = r.AliquotaIVA,
+        //                Totale = r.PrezzoTotale
+        //            }).ToList();
+        //            dgvRighe.DataSource = righe;
+        //        }
 
 
 
