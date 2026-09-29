@@ -252,7 +252,7 @@ namespace Falco
 
         }
 
-
+        //TODO: sistemare meglio, prima di questa chiamata chiamare un tipo o altro
         /// <summary>
         /// Tramite serializzazione
         /// </summary>
