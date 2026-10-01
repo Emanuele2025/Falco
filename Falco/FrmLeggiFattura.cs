@@ -236,13 +236,24 @@ namespace Falco
                 }
 
                 LeggiFattura();
-                var fattura = LeggiFatturaXml(TxtPercorsoCartella.Text.Trim());
-                //Gestire per i vari campi
-                //TODO: vedere anche le altre classi di fattura
-                //Trovare indirizzo + IVA + indirizzo cliente e mittente TxtIndirizzoCliente.Text = fattura.FatturaElettronicaHeader.CessionarioCommittente
-                TxtIndirizzo.Text = fattura.FatturaElettronicaHeader.CessionarioCommittente.Sede.Indirizzo + " " + fattura.FatturaElettronicaHeader.CessionarioCommittente.Sede.CAP + " " + fattura.FatturaElettronicaHeader.CessionarioCommittente.Sede.Comune;
-                TxtIndirizzoCliente.Text = fattura.FatturaElettronicaHeader.CedentePrestatore.Sede.Indirizzo + " " + fattura.FatturaElettronicaHeader.CedentePrestatore.Sede.CAP + " " + fattura.FatturaElettronicaHeader.CedentePrestatore.Sede.Comune;
+                string xmlContent = File.ReadAllText(TxtPercorsoCartella.Text.Trim());
+                if (xmlContent.Contains("FatturaElettronica"))
+                {
+                    var fattura = LeggiFatturaXml(TxtPercorsoCartella.Text.Trim());
+                    //Gestire per i vari campi
+                    //TODO: vedere anche le altre classi di fattura
+                    //Trovare indirizzo + IVA + indirizzo cliente e mittente TxtIndirizzoCliente.Text = fattura.FatturaElettronicaHeader.CessionarioCommittente
+                    TxtIndirizzo.Text = fattura.FatturaElettronicaHeader.CessionarioCommittente.Sede.Indirizzo + " " + fattura.FatturaElettronicaHeader.CessionarioCommittente.Sede.CAP + " " + fattura.FatturaElettronicaHeader.CessionarioCommittente.Sede.Comune;
+                    TxtIndirizzoCliente.Text = fattura.FatturaElettronicaHeader.CedentePrestatore.Sede.Indirizzo + " " + fattura.FatturaElettronicaHeader.CedentePrestatore.Sede.CAP + " " + fattura.FatturaElettronicaHeader.CedentePrestatore.Sede.Comune;
 
+
+                }
+                else if (xmlContent.Contains("FatturaElettronicaSemplificata"))
+                {
+
+                }
+                
+               
             }
             catch (Exception ex)
             {
@@ -261,15 +272,7 @@ namespace Falco
         public FatturaElettronicaType LeggiFatturaXml(string percorsoFile)
         {
             //Verifico il tipo di fattura (fattura elettronica oppure Semplificata)
-            string xmlContent = File.ReadAllText(percorsoFile);
-            if (xmlContent.Contains("FatturaElettronica"))
-            {
-
-            }
-            else if (xmlContent.Contains("FatturaElettronicaSemplificata"))
-            {
-
-            }
+           
             XmlSerializer serializer = new XmlSerializer(typeof(FatturaElettronicaType));
 
             using (StreamReader reader = new StreamReader(percorsoFile))
