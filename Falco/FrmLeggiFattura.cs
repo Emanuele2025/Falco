@@ -183,7 +183,7 @@ namespace Falco
             }
             catch (Exception ex)
             {
-                Utility.MessaggioErrore(ex.Message);
+                Utility.MessaggioErrore(Utility.Errore + ex.Message);
 
             }
 
@@ -250,6 +250,7 @@ namespace Falco
                 }
                 else if (xmlContent.Contains("FatturaElettronicaSemplificata"))
                 {
+                    //Funzione per quella semplificata
 
                 }
                 
