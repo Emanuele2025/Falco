@@ -31,7 +31,7 @@
             label1 = new Label();
             BtnChiudi = new Button();
             label2 = new Label();
-            textBox1 = new TextBox();
+            TxtRagioneSociale = new TextBox();
             textBox2 = new TextBox();
             label3 = new Label();
             textBox3 = new TextBox();
@@ -40,7 +40,7 @@
             label5 = new Label();
             textBox5 = new TextBox();
             label6 = new Label();
-            textBox6 = new TextBox();
+            TxtIndirizzo = new TextBox();
             label7 = new Label();
             textBox7 = new TextBox();
             label8 = new Label();
@@ -58,6 +58,8 @@
             label14 = new Label();
             textBox14 = new TextBox();
             label15 = new Label();
+            BtnSalva = new Button();
+            BtnInserisci = new Button();
             SuspendLayout();
             // 
             // label1
@@ -91,18 +93,18 @@
             label2.AutoSize = true;
             label2.Location = new Point(19, 35);
             label2.Name = "label2";
-            label2.Size = new Size(38, 15);
+            label2.Size = new Size(93, 15);
             label2.TabIndex = 18;
-            label2.Text = "label2";
+            label2.Text = "Ragione Sociale:";
             // 
-            // textBox1
+            // TxtRagioneSociale
             // 
-            textBox1.Location = new Point(23, 58);
-            textBox1.Name = "textBox1";
-            textBox1.Size = new Size(267, 23);
-            textBox1.TabIndex = 19;
-            textBox1.Enter += txt_Enter;
-            textBox1.Leave += txt_Leave;
+            TxtRagioneSociale.Location = new Point(19, 53);
+            TxtRagioneSociale.Name = "TxtRagioneSociale";
+            TxtRagioneSociale.Size = new Size(267, 23);
+            TxtRagioneSociale.TabIndex = 19;
+            TxtRagioneSociale.Enter += txt_Enter;
+            TxtRagioneSociale.Leave += txt_Leave;
             // 
             // textBox2
             // 
@@ -118,9 +120,9 @@
             label3.AutoSize = true;
             label3.Location = new Point(356, 104);
             label3.Name = "label3";
-            label3.Size = new Size(38, 15);
+            label3.Size = new Size(39, 15);
             label3.TabIndex = 20;
-            label3.Text = "label3";
+            label3.Text = "Email:";
             // 
             // textBox3
             // 
@@ -136,9 +138,9 @@
             label4.AutoSize = true;
             label4.Location = new Point(356, 50);
             label4.Name = "label4";
-            label4.Size = new Size(38, 15);
+            label4.Size = new Size(129, 15);
             label4.TabIndex = 22;
-            label4.Text = "label4";
+            label4.Text = "Perfona di Riferimento:";
             // 
             // textBox4
             // 
@@ -154,9 +156,9 @@
             label5.AutoSize = true;
             label5.Location = new Point(23, 217);
             label5.Name = "label5";
-            label5.Size = new Size(38, 15);
+            label5.Size = new Size(56, 15);
             label5.TabIndex = 24;
-            label5.Text = "label5";
+            label5.Text = "Telefono:";
             // 
             // textBox5
             // 
@@ -172,27 +174,27 @@
             label6.AutoSize = true;
             label6.Location = new Point(23, 163);
             label6.Name = "label6";
-            label6.Size = new Size(38, 15);
+            label6.Size = new Size(148, 15);
             label6.TabIndex = 26;
-            label6.Text = "label6";
+            label6.Text = "Partita Iva / Codice Fiscale:";
             // 
-            // textBox6
+            // TxtIndirizzo
             // 
-            textBox6.Location = new Point(23, 121);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(267, 23);
-            textBox6.TabIndex = 29;
-            textBox6.Enter += txt_Enter;
-            textBox6.Leave += txt_Leave;
+            TxtIndirizzo.Location = new Point(23, 121);
+            TxtIndirizzo.Name = "TxtIndirizzo";
+            TxtIndirizzo.Size = new Size(267, 23);
+            TxtIndirizzo.TabIndex = 29;
+            TxtIndirizzo.Enter += txt_Enter;
+            TxtIndirizzo.Leave += txt_Leave;
             // 
             // label7
             // 
             label7.AutoSize = true;
             label7.Location = new Point(19, 98);
             label7.Name = "label7";
-            label7.Size = new Size(38, 15);
+            label7.Size = new Size(54, 15);
             label7.TabIndex = 28;
-            label7.Text = "label7";
+            label7.Text = "Indirizzo:";
             // 
             // textBox7
             // 
@@ -208,9 +210,9 @@
             label8.AutoSize = true;
             label8.Location = new Point(356, 163);
             label8.Name = "label8";
-            label8.Size = new Size(38, 15);
+            label8.Size = new Size(30, 15);
             label8.TabIndex = 32;
-            label8.Text = "label8";
+            label8.Text = "Sito:";
             // 
             // textBox8
             // 
@@ -226,9 +228,9 @@
             label9.AutoSize = true;
             label9.Location = new Point(356, 217);
             label9.Name = "label9";
-            label9.Size = new Size(38, 15);
+            label9.Size = new Size(33, 15);
             label9.TabIndex = 30;
-            label9.Text = "label9";
+            label9.Text = "Iban:";
             // 
             // textBox9
             // 
@@ -338,11 +340,32 @@
             label15.TabIndex = 42;
             label15.Text = "label15";
             // 
+            // BtnSalva
+            // 
+            BtnSalva.Location = new Point(122, 516);
+            BtnSalva.Name = "BtnSalva";
+            BtnSalva.Size = new Size(75, 23);
+            BtnSalva.TabIndex = 47;
+            BtnSalva.Text = "Salva";
+            BtnSalva.UseVisualStyleBackColor = true;
+            BtnSalva.Visible = false;
+            // 
+            // BtnInserisci
+            // 
+            BtnInserisci.Location = new Point(32, 516);
+            BtnInserisci.Name = "BtnInserisci";
+            BtnInserisci.Size = new Size(75, 23);
+            BtnInserisci.TabIndex = 46;
+            BtnInserisci.Text = "Inserisci";
+            BtnInserisci.UseVisualStyleBackColor = true;
+            // 
             // FrmInsModAnagrafica
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1324, 565);
+            Controls.Add(BtnSalva);
+            Controls.Add(BtnInserisci);
             Controls.Add(textBox13);
             Controls.Add(label14);
             Controls.Add(textBox14);
@@ -359,7 +382,7 @@
             Controls.Add(label8);
             Controls.Add(textBox8);
             Controls.Add(label9);
-            Controls.Add(textBox6);
+            Controls.Add(TxtIndirizzo);
             Controls.Add(label7);
             Controls.Add(textBox5);
             Controls.Add(label6);
@@ -369,7 +392,7 @@
             Controls.Add(label4);
             Controls.Add(textBox2);
             Controls.Add(label3);
-            Controls.Add(textBox1);
+            Controls.Add(TxtRagioneSociale);
             Controls.Add(label2);
             Controls.Add(BtnChiudi);
             Controls.Add(label1);
@@ -386,7 +409,7 @@
         private Label label1;
         private Button BtnChiudi;
         private Label label2;
-        private TextBox textBox1;
+        private TextBox TxtRagioneSociale;
         private TextBox textBox2;
         private Label label3;
         private TextBox textBox3;
@@ -395,7 +418,7 @@
         private Label label5;
         private TextBox textBox5;
         private Label label6;
-        private TextBox textBox6;
+        private TextBox TxtIndirizzo;
         private Label label7;
         private TextBox textBox7;
         private Label label8;
@@ -413,5 +436,7 @@
         private Label label14;
         private TextBox textBox14;
         private Label label15;
+        private Button BtnSalva;
+        private Button BtnInserisci;
     }
 }

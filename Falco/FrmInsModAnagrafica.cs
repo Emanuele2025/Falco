@@ -22,7 +22,7 @@ namespace Falco
                 //TODO: gestione del colore status delle casse
                 //OGgetto contesto inserire 
                 //Varie funzionalit
-
+                CaricaDati();
 
 
 
@@ -30,8 +30,7 @@ namespace Falco
             }
             catch (Exception ex)
             {
-
-                throw;
+                Utility.MessaggioErrore(Utility.Errore + ex.Message);
             }
         }
 
@@ -46,5 +45,25 @@ namespace Falco
         {
             ((TextBox)sender).BackColor = Color.Yellow;
         }
+
+        #region Funzionalità
+
+        private void CaricaDati()
+        { 
+        
+        
+        
+        
+        
+        
+        
+        }
+
+
+        #endregion
+
+
+
+
     }
 }
