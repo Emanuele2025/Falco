@@ -32,13 +32,13 @@
             BtnChiudi = new Button();
             label2 = new Label();
             TxtRagioneSociale = new TextBox();
-            textBox2 = new TextBox();
+            TxtPersonaRiferimento = new TextBox();
             label3 = new Label();
             textBox3 = new TextBox();
             label4 = new Label();
-            textBox4 = new TextBox();
+            TxtTelefono = new TextBox();
             label5 = new Label();
-            textBox5 = new TextBox();
+            TxtPartitaIva = new TextBox();
             label6 = new Label();
             TxtIndirizzo = new TextBox();
             label7 = new Label();
@@ -54,7 +54,7 @@
             label12 = new Label();
             textBox12 = new TextBox();
             label13 = new Label();
-            textBox13 = new TextBox();
+            TxtNote = new TextBox();
             label14 = new Label();
             textBox14 = new TextBox();
             label15 = new Label();
@@ -106,14 +106,14 @@
             TxtRagioneSociale.Enter += txt_Enter;
             TxtRagioneSociale.Leave += txt_Leave;
             // 
-            // textBox2
+            // TxtPersonaRiferimento
             // 
-            textBox2.Location = new Point(356, 68);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(267, 23);
-            textBox2.TabIndex = 21;
-            textBox2.Enter += txt_Enter;
-            textBox2.Leave += txt_Leave;
+            TxtPersonaRiferimento.Location = new Point(356, 68);
+            TxtPersonaRiferimento.Name = "TxtPersonaRiferimento";
+            TxtPersonaRiferimento.Size = new Size(267, 23);
+            TxtPersonaRiferimento.TabIndex = 21;
+            TxtPersonaRiferimento.Enter += txt_Enter;
+            TxtPersonaRiferimento.Leave += txt_Leave;
             // 
             // label3
             // 
@@ -138,18 +138,18 @@
             label4.AutoSize = true;
             label4.Location = new Point(356, 50);
             label4.Name = "label4";
-            label4.Size = new Size(129, 15);
+            label4.Size = new Size(130, 15);
             label4.TabIndex = 22;
-            label4.Text = "Perfona di Riferimento:";
+            label4.Text = "Persona di Riferimento:";
             // 
-            // textBox4
+            // TxtTelefono
             // 
-            textBox4.Location = new Point(23, 235);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(267, 23);
-            textBox4.TabIndex = 25;
-            textBox4.Enter += txt_Enter;
-            textBox4.Leave += txt_Leave;
+            TxtTelefono.Location = new Point(23, 235);
+            TxtTelefono.Name = "TxtTelefono";
+            TxtTelefono.Size = new Size(267, 23);
+            TxtTelefono.TabIndex = 25;
+            TxtTelefono.Enter += txt_Enter;
+            TxtTelefono.Leave += txt_Leave;
             // 
             // label5
             // 
@@ -160,14 +160,14 @@
             label5.TabIndex = 24;
             label5.Text = "Telefono:";
             // 
-            // textBox5
+            // TxtPartitaIva
             // 
-            textBox5.Location = new Point(23, 181);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(267, 23);
-            textBox5.TabIndex = 27;
-            textBox5.Enter += txt_Enter;
-            textBox5.Leave += txt_Leave;
+            TxtPartitaIva.Location = new Point(23, 181);
+            TxtPartitaIva.Name = "TxtPartitaIva";
+            TxtPartitaIva.Size = new Size(267, 23);
+            TxtPartitaIva.TabIndex = 27;
+            TxtPartitaIva.Enter += txt_Enter;
+            TxtPartitaIva.Leave += txt_Leave;
             // 
             // label6
             // 
@@ -246,9 +246,9 @@
             label10.AutoSize = true;
             label10.Location = new Point(657, 50);
             label10.Name = "label10";
-            label10.Size = new Size(44, 15);
+            label10.Size = new Size(78, 15);
             label10.TabIndex = 36;
-            label10.Text = "label10";
+            label10.Text = "Indirizzo PEC:";
             // 
             // textBox10
             // 
@@ -264,9 +264,9 @@
             label11.AutoSize = true;
             label11.Location = new Point(657, 104);
             label11.Name = "label11";
-            label11.Size = new Size(44, 15);
+            label11.Size = new Size(47, 15);
             label11.TabIndex = 34;
-            label11.Text = "label11";
+            label11.Text = "Settore:";
             // 
             // textBox11
             // 
@@ -304,14 +304,15 @@
             label13.TabIndex = 38;
             label13.Text = "label13";
             // 
-            // textBox13
+            // TxtNote
             // 
-            textBox13.Location = new Point(949, 122);
-            textBox13.Name = "textBox13";
-            textBox13.Size = new Size(267, 23);
-            textBox13.TabIndex = 45;
-            textBox13.Enter += txt_Enter;
-            textBox13.Leave += txt_Leave;
+            TxtNote.Location = new Point(949, 122);
+            TxtNote.Multiline = true;
+            TxtNote.Name = "TxtNote";
+            TxtNote.Size = new Size(267, 136);
+            TxtNote.TabIndex = 45;
+            TxtNote.Enter += txt_Enter;
+            TxtNote.Leave += txt_Leave;
             // 
             // label14
             // 
@@ -336,9 +337,9 @@
             label15.AutoSize = true;
             label15.Location = new Point(949, 104);
             label15.Name = "label15";
-            label15.Size = new Size(44, 15);
+            label15.Size = new Size(33, 15);
             label15.TabIndex = 42;
-            label15.Text = "label15";
+            label15.Text = "Note";
             // 
             // BtnSalva
             // 
@@ -358,6 +359,7 @@
             BtnInserisci.TabIndex = 46;
             BtnInserisci.Text = "Inserisci";
             BtnInserisci.UseVisualStyleBackColor = true;
+            BtnInserisci.Click += BtnInserisci_Click;
             // 
             // FrmInsModAnagrafica
             // 
@@ -366,7 +368,7 @@
             ClientSize = new Size(1324, 565);
             Controls.Add(BtnSalva);
             Controls.Add(BtnInserisci);
-            Controls.Add(textBox13);
+            Controls.Add(TxtNote);
             Controls.Add(label14);
             Controls.Add(textBox14);
             Controls.Add(label15);
@@ -384,13 +386,13 @@
             Controls.Add(label9);
             Controls.Add(TxtIndirizzo);
             Controls.Add(label7);
-            Controls.Add(textBox5);
+            Controls.Add(TxtPartitaIva);
             Controls.Add(label6);
-            Controls.Add(textBox4);
+            Controls.Add(TxtTelefono);
             Controls.Add(label5);
             Controls.Add(textBox3);
             Controls.Add(label4);
-            Controls.Add(textBox2);
+            Controls.Add(TxtPersonaRiferimento);
             Controls.Add(label3);
             Controls.Add(TxtRagioneSociale);
             Controls.Add(label2);
@@ -410,13 +412,13 @@
         private Button BtnChiudi;
         private Label label2;
         private TextBox TxtRagioneSociale;
-        private TextBox textBox2;
+        private TextBox TxtPersonaRiferimento;
         private Label label3;
         private TextBox textBox3;
         private Label label4;
-        private TextBox textBox4;
+        private TextBox TxtTelefono;
         private Label label5;
-        private TextBox textBox5;
+        private TextBox TxtPartitaIva;
         private Label label6;
         private TextBox TxtIndirizzo;
         private Label label7;
@@ -432,7 +434,7 @@
         private Label label12;
         private TextBox textBox12;
         private Label label13;
-        private TextBox textBox13;
+        private TextBox TxtNote;
         private Label label14;
         private TextBox textBox14;
         private Label label15;

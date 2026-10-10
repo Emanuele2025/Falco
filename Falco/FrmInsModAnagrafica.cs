@@ -49,14 +49,14 @@ namespace Falco
         #region Funzionalità
 
         private void CaricaDati()
-        { 
-        
-        
-        
-        
-        
-        
-        
+        {
+
+
+
+
+
+
+
         }
 
 
@@ -65,5 +65,16 @@ namespace Falco
 
 
 
+        private void BtnInserisci_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+                Utility.MessaggioErrore(Utility.Errore + ex.Message);
+            }
+        }
     }
 }
