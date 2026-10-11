@@ -51,7 +51,14 @@ namespace Falco
         private void CaricaDati()
         {
 
+            try
+            {
 
+            }
+            catch (Exception ex)
+            {
+                Utility.MessaggioErrore(Utility.Errore + ex.Message);
+            }
 
 
 
@@ -69,6 +76,22 @@ namespace Falco
         {
             try
             {
+
+                if (TxtRagioneSociale.Text.Trim() == "")
+                {
+                    Utility.MessaggioInfo("Il campo denominazione sociale è obbligatorio. ");
+                    return;
+                }
+
+
+
+
+
+
+
+
+
+
 
             }
             catch (Exception ex)
