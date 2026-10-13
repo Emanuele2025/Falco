@@ -10,6 +10,10 @@ namespace Falco
 {
     public partial class FrmInsModAnagrafica : Form
     {
+
+        public int? IdCliente;
+
+
         public FrmInsModAnagrafica()
         {
             InitializeComponent();
@@ -53,6 +57,12 @@ namespace Falco
 
             try
             {
+                if (IdCliente.HasValue)
+                {
+
+                    //TODO: carico i dati del cliente
+
+                }
 
             }
             catch (Exception ex)

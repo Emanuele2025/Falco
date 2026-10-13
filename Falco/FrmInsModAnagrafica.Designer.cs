@@ -34,7 +34,7 @@
             TxtRagioneSociale = new TextBox();
             TxtPersonaRiferimento = new TextBox();
             label3 = new Label();
-            textBox3 = new TextBox();
+            TxtEmail = new TextBox();
             label4 = new Label();
             TxtTelefono = new TextBox();
             label5 = new Label();
@@ -42,13 +42,13 @@
             label6 = new Label();
             TxtIndirizzo = new TextBox();
             label7 = new Label();
-            textBox7 = new TextBox();
+            TxtIban = new TextBox();
             label8 = new Label();
-            textBox8 = new TextBox();
+            TxtSito = new TextBox();
             label9 = new Label();
-            textBox9 = new TextBox();
+            TxtSettore = new TextBox();
             label10 = new Label();
-            textBox10 = new TextBox();
+            TxtPec = new TextBox();
             label11 = new Label();
             textBox11 = new TextBox();
             label12 = new Label();
@@ -124,14 +124,14 @@
             label3.TabIndex = 20;
             label3.Text = "Email:";
             // 
-            // textBox3
+            // TxtEmail
             // 
-            textBox3.Location = new Point(356, 122);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(267, 23);
-            textBox3.TabIndex = 23;
-            textBox3.Enter += txt_Enter;
-            textBox3.Leave += txt_Leave;
+            TxtEmail.Location = new Point(356, 122);
+            TxtEmail.Name = "TxtEmail";
+            TxtEmail.Size = new Size(267, 23);
+            TxtEmail.TabIndex = 23;
+            TxtEmail.Enter += txt_Enter;
+            TxtEmail.Leave += txt_Leave;
             // 
             // label4
             // 
@@ -196,14 +196,14 @@
             label7.TabIndex = 28;
             label7.Text = "Indirizzo:";
             // 
-            // textBox7
+            // TxtIban
             // 
-            textBox7.Location = new Point(356, 235);
-            textBox7.Name = "textBox7";
-            textBox7.Size = new Size(267, 23);
-            textBox7.TabIndex = 33;
-            textBox7.Enter += txt_Enter;
-            textBox7.Leave += txt_Leave;
+            TxtIban.Location = new Point(356, 235);
+            TxtIban.Name = "TxtIban";
+            TxtIban.Size = new Size(267, 23);
+            TxtIban.TabIndex = 33;
+            TxtIban.Enter += txt_Enter;
+            TxtIban.Leave += txt_Leave;
             // 
             // label8
             // 
@@ -214,14 +214,14 @@
             label8.TabIndex = 32;
             label8.Text = "Sito:";
             // 
-            // textBox8
+            // TxtSito
             // 
-            textBox8.Location = new Point(356, 181);
-            textBox8.Name = "textBox8";
-            textBox8.Size = new Size(267, 23);
-            textBox8.TabIndex = 31;
-            textBox8.Enter += txt_Enter;
-            textBox8.Leave += txt_Leave;
+            TxtSito.Location = new Point(356, 181);
+            TxtSito.Name = "TxtSito";
+            TxtSito.Size = new Size(267, 23);
+            TxtSito.TabIndex = 31;
+            TxtSito.Enter += txt_Enter;
+            TxtSito.Leave += txt_Leave;
             // 
             // label9
             // 
@@ -232,14 +232,14 @@
             label9.TabIndex = 30;
             label9.Text = "Iban:";
             // 
-            // textBox9
+            // TxtSettore
             // 
-            textBox9.Location = new Point(657, 122);
-            textBox9.Name = "textBox9";
-            textBox9.Size = new Size(267, 23);
-            textBox9.TabIndex = 37;
-            textBox9.Enter += txt_Enter;
-            textBox9.Leave += txt_Leave;
+            TxtSettore.Location = new Point(657, 122);
+            TxtSettore.Name = "TxtSettore";
+            TxtSettore.Size = new Size(267, 23);
+            TxtSettore.TabIndex = 37;
+            TxtSettore.Enter += txt_Enter;
+            TxtSettore.Leave += txt_Leave;
             // 
             // label10
             // 
@@ -250,14 +250,14 @@
             label10.TabIndex = 36;
             label10.Text = "Indirizzo PEC:";
             // 
-            // textBox10
+            // TxtPec
             // 
-            textBox10.Location = new Point(657, 68);
-            textBox10.Name = "textBox10";
-            textBox10.Size = new Size(267, 23);
-            textBox10.TabIndex = 35;
-            textBox10.Enter += txt_Enter;
-            textBox10.Leave += txt_Leave;
+            TxtPec.Location = new Point(657, 68);
+            TxtPec.Name = "TxtPec";
+            TxtPec.Size = new Size(267, 23);
+            TxtPec.TabIndex = 35;
+            TxtPec.Enter += txt_Enter;
+            TxtPec.Leave += txt_Leave;
             // 
             // label11
             // 
@@ -376,13 +376,13 @@
             Controls.Add(label12);
             Controls.Add(textBox12);
             Controls.Add(label13);
-            Controls.Add(textBox9);
+            Controls.Add(TxtSettore);
             Controls.Add(label10);
-            Controls.Add(textBox10);
+            Controls.Add(TxtPec);
             Controls.Add(label11);
-            Controls.Add(textBox7);
+            Controls.Add(TxtIban);
             Controls.Add(label8);
-            Controls.Add(textBox8);
+            Controls.Add(TxtSito);
             Controls.Add(label9);
             Controls.Add(TxtIndirizzo);
             Controls.Add(label7);
@@ -390,7 +390,7 @@
             Controls.Add(label6);
             Controls.Add(TxtTelefono);
             Controls.Add(label5);
-            Controls.Add(textBox3);
+            Controls.Add(TxtEmail);
             Controls.Add(label4);
             Controls.Add(TxtPersonaRiferimento);
             Controls.Add(label3);
@@ -414,7 +414,7 @@
         private TextBox TxtRagioneSociale;
         private TextBox TxtPersonaRiferimento;
         private Label label3;
-        private TextBox textBox3;
+        private TextBox TxtEmail;
         private Label label4;
         private TextBox TxtTelefono;
         private Label label5;
@@ -422,13 +422,13 @@
         private Label label6;
         private TextBox TxtIndirizzo;
         private Label label7;
-        private TextBox textBox7;
+        private TextBox TxtIban;
         private Label label8;
-        private TextBox textBox8;
+        private TextBox TxtSito;
         private Label label9;
-        private TextBox textBox9;
+        private TextBox TxtSettore;
         private Label label10;
-        private TextBox textBox10;
+        private TextBox TxtPec;
         private Label label11;
         private TextBox textBox11;
         private Label label12;
