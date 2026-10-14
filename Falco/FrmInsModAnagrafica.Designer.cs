@@ -52,7 +52,7 @@
             label11 = new Label();
             textBox11 = new TextBox();
             label12 = new Label();
-            textBox12 = new TextBox();
+            TxtAlbo = new TextBox();
             label13 = new Label();
             TxtNote = new TextBox();
             label14 = new Label();
@@ -282,18 +282,18 @@
             label12.AutoSize = true;
             label12.Location = new Point(657, 163);
             label12.Name = "label12";
-            label12.Size = new Size(44, 15);
+            label12.Size = new Size(32, 15);
             label12.TabIndex = 40;
-            label12.Text = "label12";
+            label12.Text = "Albo";
             // 
-            // textBox12
+            // TxtAlbo
             // 
-            textBox12.Location = new Point(657, 181);
-            textBox12.Name = "textBox12";
-            textBox12.Size = new Size(267, 23);
-            textBox12.TabIndex = 39;
-            textBox12.Enter += txt_Enter;
-            textBox12.Leave += txt_Leave;
+            TxtAlbo.Location = new Point(657, 181);
+            TxtAlbo.Name = "TxtAlbo";
+            TxtAlbo.Size = new Size(267, 23);
+            TxtAlbo.TabIndex = 39;
+            TxtAlbo.Enter += txt_Enter;
+            TxtAlbo.Leave += txt_Leave;
             // 
             // label13
             // 
@@ -350,6 +350,7 @@
             BtnSalva.Text = "Salva";
             BtnSalva.UseVisualStyleBackColor = true;
             BtnSalva.Visible = false;
+            BtnSalva.Click += BtnSalva_Click;
             // 
             // BtnInserisci
             // 
@@ -374,7 +375,7 @@
             Controls.Add(label15);
             Controls.Add(textBox11);
             Controls.Add(label12);
-            Controls.Add(textBox12);
+            Controls.Add(TxtAlbo);
             Controls.Add(label13);
             Controls.Add(TxtSettore);
             Controls.Add(label10);
@@ -432,7 +433,7 @@
         private Label label11;
         private TextBox textBox11;
         private Label label12;
-        private TextBox textBox12;
+        private TextBox TxtAlbo;
         private Label label13;
         private TextBox TxtNote;
         private Label label14;

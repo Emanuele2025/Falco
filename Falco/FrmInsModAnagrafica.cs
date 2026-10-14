@@ -109,5 +109,17 @@ namespace Falco
                 Utility.MessaggioErrore(Utility.Errore + ex.Message);
             }
         }
+
+        private void BtnSalva_Click(object sender, EventArgs e)
+        {
+            try
+            {
+
+            }
+            catch (Exception ex) 
+            {
+                Utility.MessaggioErrore(Utility.Errore + ex.Message);
+            }
+        }
     }
 }
