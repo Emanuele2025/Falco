@@ -50,7 +50,7 @@
             label10 = new Label();
             TxtPec = new TextBox();
             label11 = new Label();
-            textBox11 = new TextBox();
+            TxtNazione = new TextBox();
             label12 = new Label();
             TxtAlbo = new TextBox();
             label13 = new Label();
@@ -268,23 +268,23 @@
             label11.TabIndex = 34;
             label11.Text = "Settore:";
             // 
-            // textBox11
+            // TxtNazione
             // 
-            textBox11.Location = new Point(657, 235);
-            textBox11.Name = "textBox11";
-            textBox11.Size = new Size(267, 23);
-            textBox11.TabIndex = 41;
-            textBox11.Enter += txt_Enter;
-            textBox11.Leave += txt_Leave;
+            TxtNazione.Location = new Point(657, 235);
+            TxtNazione.Name = "TxtNazione";
+            TxtNazione.Size = new Size(267, 23);
+            TxtNazione.TabIndex = 41;
+            TxtNazione.Enter += txt_Enter;
+            TxtNazione.Leave += txt_Leave;
             // 
             // label12
             // 
             label12.AutoSize = true;
             label12.Location = new Point(657, 163);
             label12.Name = "label12";
-            label12.Size = new Size(32, 15);
+            label12.Size = new Size(35, 15);
             label12.TabIndex = 40;
-            label12.Text = "Albo";
+            label12.Text = "Albo:";
             // 
             // TxtAlbo
             // 
@@ -300,9 +300,9 @@
             label13.AutoSize = true;
             label13.Location = new Point(657, 217);
             label13.Name = "label13";
-            label13.Size = new Size(44, 15);
+            label13.Size = new Size(53, 15);
             label13.TabIndex = 38;
-            label13.Text = "label13";
+            label13.Text = "Nazione:";
             // 
             // TxtNote
             // 
@@ -373,7 +373,7 @@
             Controls.Add(label14);
             Controls.Add(textBox14);
             Controls.Add(label15);
-            Controls.Add(textBox11);
+            Controls.Add(TxtNazione);
             Controls.Add(label12);
             Controls.Add(TxtAlbo);
             Controls.Add(label13);
@@ -431,7 +431,7 @@
         private Label label10;
         private TextBox TxtPec;
         private Label label11;
-        private TextBox textBox11;
+        private TextBox TxtNazione;
         private Label label12;
         private TextBox TxtAlbo;
         private Label label13;

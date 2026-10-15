@@ -23,6 +23,7 @@ namespace Falco
         {
             try
             {
+                this.Text = Utility.TitoloForm;
                 //TODO: gestione del colore status delle casse
                 //OGgetto contesto inserire 
                 //Varie funzionalit
@@ -114,6 +115,16 @@ namespace Falco
         {
             try
             {
+                if (TxtRagioneSociale.Text.Trim() == "")
+                {
+                    Utility.MessaggioInfo("Il campo denominazione sociale è obbligatorio. ");
+                    return;
+                }
+
+
+
+
+
 
             }
             catch (Exception ex) 
