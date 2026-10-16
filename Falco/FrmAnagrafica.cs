@@ -27,7 +27,7 @@ namespace Falco
             }
             catch (Exception ex)
             {
-                Utility.MessaggioErrore("Si è verificato il seguente errore: " + ex.Message);
+                Utility.MessaggioErrore(Utility.Errore + ex.Message);
             }
             finally
             {
@@ -58,7 +58,7 @@ namespace Falco
 
 
 
-               
+
 
 
 
@@ -81,17 +81,27 @@ namespace Falco
             {
                 Utility.MessaggioErrore("Si è verificato il seguente errore: " + ex.Message);
             }
-        
-        
-        
-        
-        
+
+
+
+
+
         }
 
+        private void BtnInserisci_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                //TODO: apre il form di anagrafica
 
 
 
+            }
+            catch (Exception ex)
+            {
 
-
+                throw;
+            }
+        }
     }
 }

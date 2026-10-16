@@ -35,6 +35,7 @@
             CmsMenu = new ContextMenuStrip(components);
             MniModifica = new ToolStripMenuItem();
             MniElimina = new ToolStripMenuItem();
+            BtnInserisci = new Button();
             ((System.ComponentModel.ISupportInitialize)dtgDatiAnagrafica).BeginInit();
             CmsMenu.SuspendLayout();
             SuspendLayout();
@@ -94,11 +95,22 @@
             MniElimina.Text = "Elimina";
             MniElimina.Click += MniElimina_Click;
             // 
+            // BtnInserisci
+            // 
+            BtnInserisci.Location = new Point(27, 622);
+            BtnInserisci.Name = "BtnInserisci";
+            BtnInserisci.Size = new Size(75, 23);
+            BtnInserisci.TabIndex = 18;
+            BtnInserisci.Text = "Inserisci";
+            BtnInserisci.UseVisualStyleBackColor = true;
+            BtnInserisci.Click += BtnInserisci_Click;
+            // 
             // FrmAnagrafica
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1293, 678);
+            Controls.Add(BtnInserisci);
             Controls.Add(dtgDatiAnagrafica);
             Controls.Add(BtnChiudi);
             Controls.Add(label1);
@@ -119,5 +131,6 @@
         private ContextMenuStrip CmsMenu;
         private ToolStripMenuItem MniModifica;
         private ToolStripMenuItem MniElimina;
+        private Button BtnInserisci;
     }
 }
