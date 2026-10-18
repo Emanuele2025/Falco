@@ -65,7 +65,7 @@ namespace Falco
             }
             catch (Exception ex)
             {
-                Utility.MessaggioErrore("Si è verificato il seguente errore: " + ex.Message);
+                Utility.MessaggioErrore(Utility.Errore + ex.Message);
             }
         }
 
@@ -79,7 +79,7 @@ namespace Falco
             }
             catch (Exception ex)
             {
-                Utility.MessaggioErrore("Si è verificato il seguente errore: " + ex.Message);
+                Utility.MessaggioErrore(Utility.Errore + ex.Message);
             }
 
 
@@ -99,8 +99,7 @@ namespace Falco
             }
             catch (Exception ex)
             {
-
-                throw;
+                Utility.MessaggioErrore(Utility.Errore + ex.Message);
             }
         }
     }
