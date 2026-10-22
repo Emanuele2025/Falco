@@ -315,6 +315,27 @@ namespace Falco
                 //TODO: SAlva la fattura nel database
 
 
+                //Non funziona, crea un file xml, ma genera un errore
+                //FatturaXmlGenerator.GeneraFatturaXml(new Fattura
+                //{
+                //    Numero = TxtNumeroFattura.Text,
+                //    Data = DateTime.Now, // Sostituire con la data reale della fattura
+                //    Mittente = new Cliente
+                //    {
+                //        RagioneSociale = txtNomeFornitore.Text,
+                //        PartitaIva = TxtPartitaIva.Text,
+                //        Indirizzo = TxtIndirizzo.Text
+                //    },
+                //    Destinatario = new Cliente
+                //    {
+                //        RagioneSociale = TxtNomeCliente.Text,
+                //        Indirizzo = TxtIndirizzoCliente.Text
+                //    },
+                //    Causale = "Causale esempio",
+                //    TipoDocumento = "TD01", // Tipo documento: Fattura
+                //    CIG = "CIG esempio",
+                //    CUP = "CUP esempio"
+                //}, "c:\\Varie\\FatturaSalvata.xml");   
 
 
 
