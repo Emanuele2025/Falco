@@ -52,6 +52,9 @@ namespace Falco
                 }
                 if (!Utility.CancellaRecord())
                 {
+
+
+                    CaricaDati();
                     return;
                 }
 
