@@ -72,6 +72,9 @@ namespace Falco
         private void mniAnagrafica_Click(object sender, EventArgs e)
         {
             //Apre la form dell'anagrafica
+            Cursor.Current = Cursors.WaitCursor;
+
+            Cursor.Current = Cursors.Default;
 
         }
 

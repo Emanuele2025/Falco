@@ -99,8 +99,8 @@ namespace Falco
 
 
 
-
-
+                Utility.MessaggioInfo(Utility.Inserimento);
+                this.Close();
 
 
 
@@ -123,7 +123,7 @@ namespace Falco
 
 
 
-
+                this.Close();
 
 
             }

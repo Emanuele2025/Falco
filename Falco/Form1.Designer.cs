@@ -48,6 +48,9 @@
             impostazioniToolStripMenuItem = new ToolStripMenuItem();
             toolStripMenuItem1 = new ToolStripMenuItem();
             informazioniToolStripMenuItem = new ToolStripMenuItem();
+            preventiviToolStripMenuItem = new ToolStripMenuItem();
+            MniCreaNuovoPreventivo = new ToolStripMenuItem();
+            MniPreventivoGestione = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -67,7 +70,7 @@
             // menuStrip1
             // 
             menuStrip1.ImageScalingSize = new Size(20, 20);
-            menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, clientiToolStripMenuItem, fatturaToolStripMenuItem, dTTToolStripMenuItem, opzioniToolStripMenuItem, toolStripMenuItem1 });
+            menuStrip1.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, clientiToolStripMenuItem, preventiviToolStripMenuItem, fatturaToolStripMenuItem, dTTToolStripMenuItem, opzioniToolStripMenuItem, toolStripMenuItem1 });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Padding = new Padding(5, 2, 0, 2);
@@ -100,7 +103,7 @@
             // mniAnagrafica
             // 
             mniAnagrafica.Name = "mniAnagrafica";
-            mniAnagrafica.Size = new Size(140, 22);
+            mniAnagrafica.Size = new Size(180, 22);
             mniAnagrafica.Text = "Anagrafica...";
             mniAnagrafica.Click += mniAnagrafica_Click;
             // 
@@ -172,7 +175,7 @@
             // impostazioniToolStripMenuItem
             // 
             impostazioniToolStripMenuItem.Name = "impostazioniToolStripMenuItem";
-            impostazioniToolStripMenuItem.Size = new Size(180, 22);
+            impostazioniToolStripMenuItem.Size = new Size(151, 22);
             impostazioniToolStripMenuItem.Text = "Impostazioni...";
             impostazioniToolStripMenuItem.Click += impostazioniToolStripMenuItem_Click;
             // 
@@ -187,9 +190,30 @@
             // 
             informazioniToolStripMenuItem.Image = Properties.Resources.Informazioni;
             informazioniToolStripMenuItem.Name = "informazioniToolStripMenuItem";
-            informazioniToolStripMenuItem.Size = new Size(150, 22);
+            informazioniToolStripMenuItem.Size = new Size(184, 26);
             informazioniToolStripMenuItem.Text = "Informazioni...";
             informazioniToolStripMenuItem.Click += informazioniToolStripMenuItem_Click;
+            // 
+            // preventiviToolStripMenuItem
+            // 
+            preventiviToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { MniCreaNuovoPreventivo, MniPreventivoGestione });
+            preventiviToolStripMenuItem.Name = "preventiviToolStripMenuItem";
+            preventiviToolStripMenuItem.Size = new Size(71, 20);
+            preventiviToolStripMenuItem.Text = "Preventivi";
+            // 
+            // MniCreaNuovoPreventivo
+            // 
+            MniCreaNuovoPreventivo.Name = "MniCreaNuovoPreventivo";
+            MniCreaNuovoPreventivo.Size = new Size(180, 22);
+            MniCreaNuovoPreventivo.Text = "Nuovo...";
+            MniCreaNuovoPreventivo.ToolTipText = "Apre la finesta per la creazione di nuovi preventivi";
+            // 
+            // MniPreventivoGestione
+            // 
+            MniPreventivoGestione.Name = "MniPreventivoGestione";
+            MniPreventivoGestione.Size = new Size(180, 22);
+            MniPreventivoGestione.Text = "Gestione...";
+            MniPreventivoGestione.ToolTipText = "Permette la gestione dei preventivi già creati";
             // 
             // Form1
             // 
@@ -232,5 +256,8 @@
         private ToolStripMenuItem MniDocumentoDDT;
         private ToolStripMenuItem impostazioniToolStripMenuItem;
         private ToolStripMenuItem MniLeggiFattura;
+        private ToolStripMenuItem preventiviToolStripMenuItem;
+        private ToolStripMenuItem MniCreaNuovoPreventivo;
+        private ToolStripMenuItem MniPreventivoGestione;
     }
 }
