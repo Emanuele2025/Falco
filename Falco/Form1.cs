@@ -83,7 +83,7 @@ namespace Falco
             Cursor.Current = Cursors.WaitCursor;
             try
             {
-                //TODO mettere cursor a clessidra 
+                
                 FrmLeggiFattura leggiFattura = new FrmLeggiFattura();
                 leggiFattura.ShowDialog();
 
@@ -117,10 +117,9 @@ namespace Falco
             {
 
             }
-            catch (Exception)
+            catch (Exception ex)
             {
-
-                throw;
+                Utility.MessaggioErrore(Utility.Errore + ex.Message);
             }
             finally
             {
@@ -140,8 +139,7 @@ namespace Falco
             }
             catch (Exception ex)
             {
-
-                throw;
+                Utility.MessaggioErrore(Utility.Errore + ex.Message);
             }
             finally
             {
