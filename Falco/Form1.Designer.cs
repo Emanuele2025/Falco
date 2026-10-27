@@ -35,6 +35,9 @@
             esciToolStripMenuItem = new ToolStripMenuItem();
             clientiToolStripMenuItem = new ToolStripMenuItem();
             mniAnagrafica = new ToolStripMenuItem();
+            preventiviToolStripMenuItem = new ToolStripMenuItem();
+            MniCreaNuovoPreventivo = new ToolStripMenuItem();
+            MniPreventivoGestione = new ToolStripMenuItem();
             fatturaToolStripMenuItem = new ToolStripMenuItem();
             MniCrea = new ToolStripMenuItem();
             MniInviate = new ToolStripMenuItem();
@@ -48,9 +51,6 @@
             impostazioniToolStripMenuItem = new ToolStripMenuItem();
             toolStripMenuItem1 = new ToolStripMenuItem();
             informazioniToolStripMenuItem = new ToolStripMenuItem();
-            preventiviToolStripMenuItem = new ToolStripMenuItem();
-            MniCreaNuovoPreventivo = new ToolStripMenuItem();
-            MniPreventivoGestione = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -89,7 +89,7 @@
             // 
             esciToolStripMenuItem.Image = Properties.Resources.Esci;
             esciToolStripMenuItem.Name = "esciToolStripMenuItem";
-            esciToolStripMenuItem.Size = new Size(184, 26);
+            esciToolStripMenuItem.Size = new Size(94, 22);
             esciToolStripMenuItem.Text = "Esci";
             esciToolStripMenuItem.Click += esciToolStripMenuItem_Click;
             // 
@@ -103,9 +103,32 @@
             // mniAnagrafica
             // 
             mniAnagrafica.Name = "mniAnagrafica";
-            mniAnagrafica.Size = new Size(180, 22);
+            mniAnagrafica.Size = new Size(140, 22);
             mniAnagrafica.Text = "Anagrafica...";
             mniAnagrafica.Click += mniAnagrafica_Click;
+            // 
+            // preventiviToolStripMenuItem
+            // 
+            preventiviToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { MniCreaNuovoPreventivo, MniPreventivoGestione });
+            preventiviToolStripMenuItem.Name = "preventiviToolStripMenuItem";
+            preventiviToolStripMenuItem.Size = new Size(71, 20);
+            preventiviToolStripMenuItem.Text = "Preventivi";
+            // 
+            // MniCreaNuovoPreventivo
+            // 
+            MniCreaNuovoPreventivo.Name = "MniCreaNuovoPreventivo";
+            MniCreaNuovoPreventivo.Size = new Size(180, 22);
+            MniCreaNuovoPreventivo.Text = "Nuovo...";
+            MniCreaNuovoPreventivo.ToolTipText = "Apre la finesta per la creazione di nuovi preventivi";
+            MniCreaNuovoPreventivo.Click += MniCreaNuovoPreventivo_Click;
+            // 
+            // MniPreventivoGestione
+            // 
+            MniPreventivoGestione.Name = "MniPreventivoGestione";
+            MniPreventivoGestione.Size = new Size(180, 22);
+            MniPreventivoGestione.Text = "Gestione...";
+            MniPreventivoGestione.ToolTipText = "Permette la gestione dei preventivi già creati";
+            MniPreventivoGestione.Click += MniPreventivoGestione_Click;
             // 
             // fatturaToolStripMenuItem
             // 
@@ -175,7 +198,7 @@
             // impostazioniToolStripMenuItem
             // 
             impostazioniToolStripMenuItem.Name = "impostazioniToolStripMenuItem";
-            impostazioniToolStripMenuItem.Size = new Size(151, 22);
+            impostazioniToolStripMenuItem.Size = new Size(180, 22);
             impostazioniToolStripMenuItem.Text = "Impostazioni...";
             impostazioniToolStripMenuItem.Click += impostazioniToolStripMenuItem_Click;
             // 
@@ -190,30 +213,9 @@
             // 
             informazioniToolStripMenuItem.Image = Properties.Resources.Informazioni;
             informazioniToolStripMenuItem.Name = "informazioniToolStripMenuItem";
-            informazioniToolStripMenuItem.Size = new Size(184, 26);
+            informazioniToolStripMenuItem.Size = new Size(150, 22);
             informazioniToolStripMenuItem.Text = "Informazioni...";
             informazioniToolStripMenuItem.Click += informazioniToolStripMenuItem_Click;
-            // 
-            // preventiviToolStripMenuItem
-            // 
-            preventiviToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { MniCreaNuovoPreventivo, MniPreventivoGestione });
-            preventiviToolStripMenuItem.Name = "preventiviToolStripMenuItem";
-            preventiviToolStripMenuItem.Size = new Size(71, 20);
-            preventiviToolStripMenuItem.Text = "Preventivi";
-            // 
-            // MniCreaNuovoPreventivo
-            // 
-            MniCreaNuovoPreventivo.Name = "MniCreaNuovoPreventivo";
-            MniCreaNuovoPreventivo.Size = new Size(180, 22);
-            MniCreaNuovoPreventivo.Text = "Nuovo...";
-            MniCreaNuovoPreventivo.ToolTipText = "Apre la finesta per la creazione di nuovi preventivi";
-            // 
-            // MniPreventivoGestione
-            // 
-            MniPreventivoGestione.Name = "MniPreventivoGestione";
-            MniPreventivoGestione.Size = new Size(180, 22);
-            MniPreventivoGestione.Text = "Gestione...";
-            MniPreventivoGestione.ToolTipText = "Permette la gestione dei preventivi già creati";
             // 
             // Form1
             // 

@@ -83,7 +83,7 @@ namespace Falco
             Cursor.Current = Cursors.WaitCursor;
             try
             {
-                
+
                 FrmLeggiFattura leggiFattura = new FrmLeggiFattura();
                 leggiFattura.ShowDialog();
 
@@ -149,6 +149,46 @@ namespace Falco
 
             }
 
+        }
+
+        private void MniCreaNuovoPreventivo_Click(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+                Utility.MessaggioErrore(Utility.Errore + ex.Message);
+            }
+            finally
+            {
+
+                Cursor.Current = Cursors.Default;
+
+
+            }
+        }
+
+        private void MniPreventivoGestione_Click(object sender, EventArgs e)
+        {
+            Cursor.Current = Cursors.WaitCursor;
+            try
+            {
+
+            }
+            catch (Exception ex)
+            {
+                Utility.MessaggioErrore(Utility.Errore + ex.Message);
+            }
+            finally
+            {
+
+                Cursor.Current = Cursors.Default;
+
+
+            }
         }
     }
 }
