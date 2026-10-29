@@ -18,6 +18,13 @@ namespace Falco
         private void FrmPreventivo_Load(object sender, EventArgs e)
         {
             this.Text = Utility.TitoloForm;
+            //TODO: Due form, inserimento e visualizzazione.
+            //Inserimento, cancellazione e visualizzazione.
+            //Visualizzazione, griglia, menu e pulsante inserisci. 
+
+
+
+
         }
     }
 }
