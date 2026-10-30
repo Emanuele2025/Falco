@@ -21,10 +21,45 @@ namespace Falco
             //TODO: Due form, inserimento e visualizzazione.
             //Inserimento, cancellazione e visualizzazione.
             //Visualizzazione, griglia, menu e pulsante inserisci. 
-
+            try
+            {
+                CaricaDati();
+            }
+            catch (Exception ex)
+            {
+                Utility.MessaggioErrore(Utility.Errore + ex.Message);
+            }
 
 
 
         }
+
+
+
+        private void CaricaDati()
+        {
+            try
+            {
+
+
+
+
+            }
+            catch (Exception ex)
+            {
+                Utility.MessaggioErrore(Utility.Errore + ex.Message);
+            }
+        
+        
+        
+        
+        
+        
+        }
+
+
+
+
+
     }
 }
