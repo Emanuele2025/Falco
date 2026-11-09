@@ -29,6 +29,8 @@
         private void InitializeComponent()
         {
             label1 = new Label();
+            dgvDatiPreventivi = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dgvDatiPreventivi).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -44,21 +46,33 @@
             label1.Text = "Gestione delle fatture Elettroniche - Preventivi";
             label1.TextAlign = ContentAlignment.TopCenter;
             // 
+            // dgvDatiPreventivi
+            // 
+            dgvDatiPreventivi.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvDatiPreventivi.Dock = DockStyle.Top;
+            dgvDatiPreventivi.Location = new Point(0, 21);
+            dgvDatiPreventivi.Name = "dgvDatiPreventivi";
+            dgvDatiPreventivi.Size = new Size(800, 270);
+            dgvDatiPreventivi.TabIndex = 11;
+            // 
             // FrmPreventivo
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(dgvDatiPreventivi);
             Controls.Add(label1);
             Name = "FrmPreventivo";
             StartPosition = FormStartPosition.CenterScreen;
             Text = "FrmPreventivo";
             Load += FrmPreventivo_Load;
+            ((System.ComponentModel.ISupportInitialize)dgvDatiPreventivi).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
         private Label label1;
+        private DataGridView dgvDatiPreventivi;
     }
 }

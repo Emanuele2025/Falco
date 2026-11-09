@@ -23,13 +23,18 @@ namespace Falco
             //Visualizzazione, griglia, menu e pulsante inserisci. 
             try
             {
+                Cursor.Current = Cursors.WaitCursor;
                 CaricaDati();
             }
             catch (Exception ex)
             {
                 Utility.MessaggioErrore(Utility.Errore + ex.Message);
             }
+            finally
+            {
+                Cursor.Current = Cursors.Default;
 
+            }
 
 
         }
@@ -42,18 +47,14 @@ namespace Falco
             {
 
 
-
+                //dgvDatiPreventivi.DataSource =
 
             }
             catch (Exception ex)
             {
                 Utility.MessaggioErrore(Utility.Errore + ex.Message);
             }
-        
-        
-        
-        
-        
+
         
         }
 
