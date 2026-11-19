@@ -50,6 +50,7 @@ namespace Falco
                 string risultato = numero.ConvertiEuroInLettere();
                 // MessageBox.Show(risultato);
 
+                //Creazione delle tabelle del datatabase
 
 
 
@@ -58,7 +59,7 @@ namespace Falco
             }
             catch (Exception ex)
             {
-                Utility.MessaggioErrore("Si è verificato il seguente errore: " + ex.Message);
+                Utility.MessaggioErrore(Utility.Errore + ex.Message);
             }
 
         }
