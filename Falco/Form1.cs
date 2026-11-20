@@ -51,6 +51,8 @@ namespace Falco
                 // MessageBox.Show(risultato);
 
                 //Creazione delle tabelle del datatabase
+                //Anagrafica
+                //Clienti
 
 
 
@@ -92,7 +94,7 @@ namespace Falco
             }
             catch (Exception ex)
             {
-                Utility.MessaggioErrore("Si è verificato il seguente errore: " + ex.Message);
+                Utility.MessaggioErrore(Utility.Errore + ex.Message);
             }
             finally
             {
