@@ -76,7 +76,8 @@ namespace Falco
         {
             //Apre la form dell'anagrafica
             Cursor.Current = Cursors.WaitCursor;
-
+            FrmAnagrafica anagrafica = new FrmAnagrafica();
+            anagrafica.ShowDialog();
             Cursor.Current = Cursors.Default;
 
         }
