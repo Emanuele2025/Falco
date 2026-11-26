@@ -1,3 +1,8 @@
+using Falco.Modelli;
+using Microsoft.VisualBasic.Logging;
+using System.Runtime.ConstrainedExecution;
+using static System.Runtime.InteropServices.JavaScript.JSType;
+
 namespace Falco
 {
     public partial class Form1 : Form
@@ -41,6 +46,9 @@ namespace Falco
             //Strumento online https://www.freeconvert.com/it
 
 
+
+
+
             try
             {
 
@@ -53,6 +61,78 @@ namespace Falco
                 //Creazione delle tabelle del datatabase
                 //Anagrafica
                 //Clienti
+                //                A.Anagrafica azienda
+                //Deve consentire di configurare una o più aziende.
+                //Campi:
+                //•	Ragione sociale.
+                //•	Partita IVA e codice fiscale.
+                //•	Indirizzo, CAP, Comune e provincia.
+                //•	Regime fiscale.
+                //•	Codice attività ATECO.
+                //•	Numero REA e dati CCIAA, se applicabili.
+                //•	IBAN.
+                //•	Telefono, email e PEC.
+                //•	Logo aziendale.
+                //•	Codice destinatario.
+                //•	Dati relativi alla cassa previdenziale, se applicabili.
+
+                //B.Clienti e fornitori
+                //Per ogni cliente:
+                //•	Ragione sociale e dati anagrafici.
+                //•	Partita IVA e codice fiscale.
+                //•	Indirizzo di fatturazione.
+                //•	Codice destinatario SDI.
+                //•	PEC.
+                //•	Paese di appartenenza.
+                //•	Condizioni di pagamento.
+                //•	IBAN, se necessario.
+                //•	Note e storico delle fatture.
+
+                //È importante gestire anche clienti privati, aziende estere e Pubbliche Amministrazioni.
+                //C.Prodotti e servizi
+                //Archivio degli articoli con:
+                //•	Codice articolo.
+                //•	Descrizione.
+                //•	Prezzo di vendita.
+                //•	Unità di misura.
+                //•	Aliquota IVA.
+                //•	Natura IVA per operazioni non soggette, non imponibili o esenti.
+                //•	Eventuale codice EAN.
+                //•	Categoria merceologica.
+                //Il programma dovrebbe poter recuperare automaticamente prezzo e aliquota IVA quando inserisci un articolo in fattura.
+
+                //TIPO di fatturazione
+                //                Tipo documento
+
+                //Funzione
+
+                //TD01
+
+                //Fattura
+
+                //TD02
+
+                //Acconto / anticipo su fattura
+
+                //TD04
+
+                //Nota di credito
+
+                //TD05
+
+                //Nota di debito
+
+                //TD06
+
+                //Parcella
+
+                //TD24
+
+                //Fattura differita
+
+                //TD25
+
+                //Fattura differita specifica
 
 
 
