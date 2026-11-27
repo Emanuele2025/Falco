@@ -1,5 +1,6 @@
 using Falco.Modelli;
 using Microsoft.VisualBasic.Logging;
+using System.Reflection;
 using System.Runtime.ConstrainedExecution;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
@@ -45,7 +46,8 @@ namespace Falco
             // supportofatturapa@agenziaentrate.it
             //Strumento online https://www.freeconvert.com/it
 
-
+            //Possibile comando per aggiornare il database
+            //Scaffold - DbContext "Server=myserver\mydb;Database=mydb;Trusted_Connection=True;" Microsoft.EntityFrameworkCore.SqlServer - OutputDir Models - f
 
 
 
